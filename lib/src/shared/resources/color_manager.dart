@@ -18,11 +18,17 @@ class ColorThemeManager {
   static Color colorGreyBox = HexColor.fromHex('#F0F2F5');
   static Color colorHoloGreyPrimary = HexColor.fromHex('#2E3D3D');
   static Color redColor = HexColor.fromHex('#ff1414');
-  static Color lightRedColor = HexColor.fromHex('#ffe8e8');
+  static Color redLight = HexColor.fromHex('#ffa67c');
+  static Color redLight2 = HexColor.fromHex('#fdf6f8');
 
-  static Color accent1 = HexColor.fromHex('#E4935D');
-  static Color accent2 = HexColor.fromHex('#BEABA1');
-  static Color lightBlue = HexColor.fromHex('#2FBFDE');
+  static Color green = HexColor.fromHex('#1c8139');
+  static Color greenLight = HexColor.fromHex('#93ffd9');
+  static Color greenLight2 = HexColor.fromHex('#f4fefa');
+
+  static Color blue = HexColor.fromHex('#1b8afd');
+  static Color lightBlue = HexColor.fromHex('#7fbdff');
+  static Color lightBlue2 = HexColor.fromHex('#b6d8ff');
+
   static Color transparent = Colors.transparent;
 }
 

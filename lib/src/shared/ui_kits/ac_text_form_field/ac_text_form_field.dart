@@ -18,6 +18,7 @@ class ACTextFormField extends StatelessWidget {
     this.borderColor,
     this.hintStyle,
     this.style,
+    this.maxLines,
   });
   final TextEditingController controller;
   final FocusNode? focusNode;
@@ -32,6 +33,7 @@ class ACTextFormField extends StatelessWidget {
   final bool? readOnly;
   final String hintText;
   final Widget? suffixIcon;
+  final int? maxLines;
 
   @override
   Widget build(BuildContext context) {
@@ -45,11 +47,13 @@ class ACTextFormField extends StatelessWidget {
       keyboardType: textInputType ?? ((isPasswordField ?? false) ? TextInputType.visiblePassword : null),
       textInputAction: textInputAction,
       inputFormatters: inputFormatters,
+      maxLines: maxLines ?? 1,
       style: style ?? Theme.of(context).textTheme.displayMedium,
       decoration: InputDecoration(
         hintText: hintText,
         hintStyle: hintStyle ?? Theme.of(context).textTheme.bodyMedium,
         suffixIcon: suffixIcon,
+        labelText: hintText,
         enabledBorder: OutlineInputBorder(
             borderSide: BorderSide(
               width: 2,

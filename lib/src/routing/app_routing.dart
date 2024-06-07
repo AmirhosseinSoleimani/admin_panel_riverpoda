@@ -15,9 +15,21 @@ class Routes {
 
   static final routes = GoRouter(
       navigatorKey: parentNavigatorKey,
-      initialLocation: HomePage.homePageName,
+      initialLocation: LoginPage.loginPageName,
       debugLogDiagnostics: true,
       routes: [
+        GoRoute(
+            path: LoginPage.loginPageName,
+            name: LoginPage.loginPageName,
+            pageBuilder: (BuildContext context, GoRouterState state) {
+              return CustomTransitionPage(
+                key: state.pageKey,
+                transitionDuration: Duration.zero,
+                transitionsBuilder:
+                    (context, animation, secondaryAnimation, child) => child,
+                child: const LoginPage(),
+              );
+            }),
         StatefulShellRoute.indexedStack(
           builder: (context, state, navigationShell) {
             return DashboardPage(navigationShell: navigationShell);

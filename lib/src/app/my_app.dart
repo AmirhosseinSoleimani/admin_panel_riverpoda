@@ -23,9 +23,10 @@ class MyApp extends StatelessWidget {
         GlobalWidgetsLocalizations.delegate,
         GlobalCupertinoLocalizations.delegate,
       ],
+      locale: const Locale('fa'),
       supportedLocales: const [
         Locale('en'), // English
-        Locale('fa'), // Spanish
+        Locale('fa'), // Persian
       ],
       routerConfig: Routes.routes,
       debugShowCheckedModeBanner: false,

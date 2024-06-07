@@ -17,21 +17,21 @@ class LightAppThemeData extends AppThemeData {
       indicatorColor: ColorThemeManager.primary,
 
       colorScheme: ColorScheme(
-        primary: ColorThemeManager.primary,
-        onPrimary: ColorThemeManager.accent2,
+        primary: ColorThemeManager.blue,
+        onPrimary: ColorThemeManager.lightBlue,
 
         secondary: ColorThemeManager.greyStrong,
         onSecondary: ColorThemeManager.greyMedium,
 
         error: ColorThemeManager.redColor,
-        onError: ColorThemeManager.lightRedColor,
+        onError: ColorThemeManager.redLight,
 
         surface: ColorThemeManager.whiteColor,
         onSurface: ColorThemeManager.colorHoloGreyPrimary,
 
         tertiary: ColorThemeManager.colorBlack,
 
-        surfaceContainer: Colors.yellowAccent,
+        surfaceContainer: ColorThemeManager.lightBlue2,
         secondaryContainer: ColorThemeManager.grey,
 
         brightness: Brightness.light,

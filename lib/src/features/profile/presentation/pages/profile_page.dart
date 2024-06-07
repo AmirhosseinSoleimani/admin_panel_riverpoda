@@ -1,3 +1,6 @@
+import 'package:admin_panel/src/features/profile/presentation/pages/widgets/large_screen.dart';
+import 'package:admin_panel/src/features/profile/presentation/pages/widgets/small_screen.dart';
+import 'package:admin_panel/src/shared/ui_kits/responsive_widget/responsive_widget.dart';
 import 'package:flutter/material.dart';
 
 class ProfilePage extends StatelessWidget {
@@ -6,8 +9,13 @@ class ProfilePage extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Scaffold(
-      body: Text('ProfilePage'),
+    return const Scaffold(
+      body: SingleChildScrollView(
+        child: ResponsiveWidget(
+          smallScreen: SmallScreenProfile(),
+          largeScreen: LargeScreenProfile(),
+        ),
+      ),
     );
   }
 }

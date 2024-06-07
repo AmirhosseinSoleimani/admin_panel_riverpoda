@@ -41,40 +41,39 @@ class ACElevatedButton extends StatelessWidget {
       child: ElevatedButton(
         style: ButtonStyle(
           elevation:
-          elevation == null ? null : WidgetStateProperty.all(elevation),
+              elevation == null ? null : WidgetStateProperty.all(elevation),
           shadowColor: WidgetStateColor.resolveWith((states) =>
-          backgroundColor ?? Theme.of(context).colorScheme.primary),
+              backgroundColor ?? Theme.of(context).colorScheme.primary),
           shape: WidgetStateProperty.all(
             RoundedRectangleBorder(
               borderRadius: BorderRadius.circular(borderRadius ?? 0),
             ),
           ),
           backgroundColor: WidgetStateColor.resolveWith((states) =>
-          backgroundColor ?? Theme.of(context).colorScheme.primary),
+              backgroundColor ?? Theme.of(context).colorScheme.primary),
         ),
         onPressed: onTap,
         child: Padding(
           padding: EdgeInsets.all(buttonPadding ?? 0.0),
           child: showLoading ?? false
               ? Center(
-              child: SpinKitThreeBounce(
-                color: Theme.of(context).colorScheme.surface,
-                size: 30,
-              ))
+                  child: SpinKitThreeBounce(
+                  color: Theme.of(context).colorScheme.surface,
+                  size: 30,
+                ))
               : Center(
-            child: FittedBox(
-              child: child ??
-                  Text(
-                    title ?? '',
-                    textAlign: TextAlign.center,
-                    style: style ??
-                        Theme.of(context).textTheme.titleMedium?.copyWith(
-                            fontWeight: FontWeight.bold,
-                            color: titleColor
+                  child: child ??
+                      FittedBox(
+                        child: Text(
+                          title ?? '',
+                          textAlign: TextAlign.center,
+                          style: style ??
+                              Theme.of(context).textTheme.titleMedium?.copyWith(
+                                  fontWeight: FontWeight.bold,
+                                  color: titleColor),
                         ),
-                  ),
-            ),
-          ),
+                      ),
+                ),
         ),
       ),
     );
