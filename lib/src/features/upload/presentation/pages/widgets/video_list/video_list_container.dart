@@ -1,16 +1,18 @@
+import 'package:admin_panel/src/features/upload/presentation/bloc/uplead_cubit.dart';
 import 'package:admin_panel/src/shared/resources/resources.dart';
 import 'package:flutter/material.dart';
-
+import 'package:go_router/go_router.dart';
 import 'delete_video.dart';
-import 'edit_video/edit_video.dart';
 
 class VideoListContainer extends StatelessWidget {
-  const VideoListContainer({super.key, required this.titleVideo, required this.descriptionVideo, required this.publisherVideo, required this.datePublishVideo, required this.index});
+  const VideoListContainer({super.key, required this.titleVideo, required this.descriptionVideo, required this.publisherVideo, required this.datePublishVideo, required this.index, required this.url, required this.id});
   final int index;
   final String titleVideo;
   final String descriptionVideo;
   final String publisherVideo;
   final String datePublishVideo;
+  final String url;
+  final String id;
 
   @override
   Widget build(BuildContext context) {
@@ -51,7 +53,16 @@ class VideoListContainer extends StatelessWidget {
               width: AppSize.s48,
               child: Row(
                 children: [
-                  EditVideo(title: titleVideo, description: descriptionVideo,),
+                  InkWell(
+                    onTap: () {
+                      UploadCubit.title = titleVideo;
+                      UploadCubit.url = url;
+                      UploadCubit.description = descriptionVideo;
+                      UploadCubit.id = id;
+                      context.goNamed('/edit-content');
+                    },
+                    child: Icon(IconManager.pen, size: AppSize.s24, color: ColorThemeManager.primary,),
+                  ),
                   const DeleteVideo(),
                 ],
               ),

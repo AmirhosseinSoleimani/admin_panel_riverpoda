@@ -1,6 +1,8 @@
+import 'package:admin_panel/src/features/upload/presentation/bloc/uplead_cubit.dart';
 import 'package:admin_panel/src/shared/resources/resources.dart';
 import 'package:admin_panel/src/shared/ui_kits/ac_text_form_field/ac_text_form_field.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:flutter_gen/gen_l10n/app_localizations.dart';
 class DescriptionVideo extends StatefulWidget {
   const DescriptionVideo({super.key, required this.title, required this.description});
@@ -31,6 +33,14 @@ class _DescriptionVideoState extends State<DescriptionVideo> {
         Space.h16,
         ACTextFormField(controller: videoDescription, hintText: textLocalization.description, maxLines: 6,),
         Space.h16,
+        InkWell(
+          onTap: () {
+            context.read<UploadCubit>().updateUsers(videoTitle.text, videoDescription.text);
+          },
+          child: Text(
+              textLocalization.saveEdit
+          ),
+        ),
         Text(
           '12k views 5d ago',
           style: Theme.of(context).textTheme.bodyMedium?.copyWith(color: Theme.of(context).colorScheme.onSurface),

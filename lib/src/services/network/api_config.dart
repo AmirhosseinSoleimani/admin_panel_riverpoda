@@ -8,4 +8,5 @@ class ApiConfig {
   static const Duration connectionTimeout = Duration(seconds: 30);
 
   static const String getAllUsers = '$baseApiUrl/users';
+  static const String getAllContent = '$baseApiUrl/content';
 }

@@ -1,90 +1,89 @@
 import 'package:admin_panel/src/features/upload/presentation/pages/widgets/video_list/edit_video/video_player_widget.dart';
 import 'package:admin_panel/src/shared/resources/resources.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter_bloc/flutter_bloc.dart';
+import '../../../../../../../di/di_setup.dart';
+import '../../../../bloc/uplead_cubit.dart';
 import 'description_video.dart';
 import 'package:flutter_gen/gen_l10n/app_localizations.dart';
 
 class EditVideo extends StatelessWidget {
-  const EditVideo({super.key, required this.title, required this.description});
-  final String title;
-  final String description;
+  const EditVideo({super.key});
 
   @override
   Widget build(BuildContext context) {
     final textLocalization = AppLocalizations.of(context)!;
-    return InkWell(
-      onTap: () {
-        showDialog(
-          context: context,
-          builder: (BuildContext context) {
-            return Dialog(
-              child: Padding(
-                padding: const EdgeInsets.all(AppPadding.p16),
-                child: ListView(
-                  shrinkWrap: true,
-                  children: [
-                    Container(
-                      width: double.infinity,
-                      height: MediaQuery.of(context).size.height * 0.5,
-                      decoration: BoxDecoration(
-                        borderRadius: BorderRadius.circular(AppSize.s12),
-                      ),
-                      child: const VideoPlayerWidget(),
-                    ),
-                    Divider(
-                      thickness: AppSize.s1,
-                      color: Theme.of(context).colorScheme.onSurface,
-                    ),
-                    Space.h16,
-                    DescriptionVideo(title: title, description: description,),
-                    Space.h16,
-                    Container(
-                      padding: const EdgeInsets.all(AppPadding.p8),
-                      width: double.infinity,
-                      decoration: BoxDecoration(
-                        borderRadius: BorderRadius.circular(AppSize.s12),
-                        color: Theme.of(context).colorScheme.secondaryContainer,
-                      ),
-                      child: Padding(
-                        padding: const EdgeInsets.symmetric(horizontal: AppPadding.p8),
-                        child: Column(
-                          mainAxisAlignment: MainAxisAlignment.start,
-                          crossAxisAlignment: CrossAxisAlignment.start,
-                          children: [
-                            Text(textLocalization.comment,style: Theme.of(context).textTheme.titleMedium,),
-                            Space.h16,
-                            Column(
-                              children: [
-                                TextFormField(
-                                  decoration: InputDecoration(
-                                      border: OutlineInputBorder(
-                                        borderRadius: BorderRadius.circular(AppSize.s12),
-                                        borderSide: BorderSide(
-                                          color: Theme.of(context).colorScheme.onSurface,
-                                        ),
-                                      ),
-                                      hintText: textLocalization.addComment
+    return BlocProvider(
+        create: (BuildContext context) {
+          var bloc = getIt<UploadCubit>();
+          bloc.getAllContent();
+          return bloc;
+        },
+      child: Scaffold(
+        body: Padding(
+          padding: const EdgeInsets.all(AppPadding.p16),
+          child: ListView(
+            shrinkWrap: true,
+            children: [
+              Container(
+                width: double.infinity,
+                height: MediaQuery.of(context).size.height * 0.5,
+                decoration: BoxDecoration(
+                  borderRadius: BorderRadius.circular(AppSize.s12),
+                ),
+                child: VideoPlayerWidget(url: UploadCubit.url,),
+              ),
+              Divider(
+                thickness: AppSize.s1,
+                color: Theme.of(context).colorScheme.onSurface,
+              ),
+              Space.h16,
+              DescriptionVideo(title: UploadCubit.title, description: UploadCubit.description,),
+              Space.h16,
+              Container(
+                padding: const EdgeInsets.all(AppPadding.p8),
+                width: double.infinity,
+                decoration: BoxDecoration(
+                  borderRadius: BorderRadius.circular(AppSize.s12),
+                  color: Theme.of(context).colorScheme.secondaryContainer,
+                ),
+                child: Padding(
+                  padding: const EdgeInsets.symmetric(horizontal: AppPadding.p8),
+                  child: Column(
+                    mainAxisAlignment: MainAxisAlignment.start,
+                    crossAxisAlignment: CrossAxisAlignment.start,
+                    children: [
+                      Text(textLocalization.comment,style: Theme.of(context).textTheme.titleMedium,),
+                      Space.h16,
+                      Column(
+                        children: [
+                          TextFormField(
+                            decoration: InputDecoration(
+                                border: OutlineInputBorder(
+                                  borderRadius: BorderRadius.circular(AppSize.s12),
+                                  borderSide: BorderSide(
+                                    color: Theme.of(context).colorScheme.onSurface,
                                   ),
                                 ),
-                                commentContainer(context),
-                                commentContainer(context),
-                                commentContainer(context),
-                                commentContainer(context),
-                              ],
-                            )
-                          ],
-                        ),
-                      ),
-                    ),
-                  ],
+                                hintText: textLocalization.addComment
+                            ),
+                          ),
+                          commentContainer(context),
+                          commentContainer(context),
+                          commentContainer(context),
+                          commentContainer(context),
+                        ],
+                      )
+                    ],
+                  ),
                 ),
               ),
-            );
-          },
-        );
-      },
-      child: Icon(IconManager.pen, size: AppSize.s24, color: ColorThemeManager.primary,),
+            ],
+          ),
+        ),
+      ),
     );
+
   }
 }
 

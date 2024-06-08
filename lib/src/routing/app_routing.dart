@@ -1,4 +1,5 @@
 import 'package:admin_panel/src/features/features.dart';
+import 'package:admin_panel/src/features/upload/presentation/pages/widgets/video_list/edit_video/edit_video.dart';
 import 'package:admin_panel/src/features/user_manager/presentation/pages/widgets/add_user/add_user.dart';
 import 'package:admin_panel/src/features/user_manager/presentation/pages/widgets/edit_user/edit_user.dart';
 import 'package:flutter/material.dart';
@@ -20,6 +21,18 @@ class Routes {
       initialLocation: LoginPage.loginPageName,
       debugLogDiagnostics: true,
       routes: [
+        GoRoute(
+            path: '/edit-content',
+            name: '/edit-content',
+            pageBuilder: (BuildContext context, GoRouterState state) {
+              return CustomTransitionPage(
+                key: state.pageKey,
+                transitionDuration: Duration.zero,
+                transitionsBuilder:
+                    (context, animation, secondaryAnimation, child) => child,
+                child: const EditVideo(),
+              );
+            }),
         GoRoute(
             path: '/add-user',
             name: '/add-user',
