@@ -2,9 +2,10 @@ import 'package:admin_panel/src/features/user_manager/presentation/pages/widgets
 import 'package:admin_panel/src/features/user_manager/presentation/pages/widgets/edit_user/edit_user.dart';
 import 'package:admin_panel/src/shared/resources/resources.dart';
 import 'package:flutter/material.dart';
+import 'package:go_router/go_router.dart';
 
 class UserListContainerSmall extends StatelessWidget {
-  const UserListContainerSmall({super.key, required this.firstName, required this.lastName, required this.userName, required this.email, required this.gender, required this.enrolled, required this.index, required this.phoneNumber, required this.birthday, required this.job});
+  const UserListContainerSmall({super.key, required this.firstName, required this.lastName, required this.userName, required this.email, required this.gender, required this.enrolled, required this.index, required this.phoneNumber, required this.birthday, required this.job, required this.id, required this.onTap});
   final int index;
   final String firstName;
   final String lastName;
@@ -15,6 +16,8 @@ class UserListContainerSmall extends StatelessWidget {
   final String phoneNumber;
   final String birthday;
   final String job;
+  final String id;
+  final VoidCallback onTap;
 
   @override
   Widget build(BuildContext context) {
@@ -54,29 +57,29 @@ class UserListContainerSmall extends StatelessWidget {
                             mainAxisAlignment: MainAxisAlignment.start,
                             crossAxisAlignment: CrossAxisAlignment.start,
                             children: [
-                              FittedBox(child: Text('$firstName $lastName', style: Theme.of(context).textTheme.bodyMedium?.copyWith(fontSize: AppSize.s12),)),
-                              FittedBox(child: Text(userName, style: Theme.of(context).textTheme.bodySmall?.copyWith(fontSize: AppSize.s12),)),
+                              Text('$firstName $lastName', style: Theme.of(context).textTheme.bodyMedium?.copyWith(fontSize: AppSize.s12),),
+                              Text(userName, style: Theme.of(context).textTheme.bodySmall?.copyWith(fontSize: AppSize.s12),),
                             ],
                           )),
                       Expanded(
                         flex: 2,
-                        child: FittedBox(child: Text(email, style: Theme.of(context).textTheme.bodyMedium)),
+                        child: Text(email, style: Theme.of(context).textTheme.bodyMedium),
                       ),
                       SizedBox(
                         width: AppSize.s48,
                         child: Row(
                           children: [
-                            EditUser(
-                              userName: userName,
-                              firstName: firstName,
-                              lastName: lastName,
-                              email: email,
-                              gender: gender,
-                              phoneNumber: phoneNumber,
-                              birthday: birthday,
-                              job: job,
+                            InkWell(
+                              onTap: () {
+                                context.goNamed('/edit');
+                              },
+                              child: Icon(
+                                IconManager.pen,
+                                size: AppSize.s24,
+                                color: Theme.of(context).colorScheme.primary,
+                              ),
                             ),
-                            const DeleteUser(),
+                            DeleteUser(id: id,),
                           ],
                         ),
                       ),

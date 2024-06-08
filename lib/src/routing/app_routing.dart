@@ -1,4 +1,6 @@
 import 'package:admin_panel/src/features/features.dart';
+import 'package:admin_panel/src/features/user_manager/presentation/pages/widgets/add_user/add_user.dart';
+import 'package:admin_panel/src/features/user_manager/presentation/pages/widgets/edit_user/edit_user.dart';
 import 'package:flutter/material.dart';
 import 'package:go_router/go_router.dart';
 
@@ -18,6 +20,30 @@ class Routes {
       initialLocation: LoginPage.loginPageName,
       debugLogDiagnostics: true,
       routes: [
+        GoRoute(
+            path: '/add-user',
+            name: '/add-user',
+            pageBuilder: (BuildContext context, GoRouterState state) {
+              return CustomTransitionPage(
+                key: state.pageKey,
+                transitionDuration: Duration.zero,
+                transitionsBuilder:
+                    (context, animation, secondaryAnimation, child) => child,
+                child: const AddUser(),
+              );
+            }),
+        GoRoute(
+            path: '/edit',
+            name: '/edit',
+            pageBuilder: (BuildContext context, GoRouterState state) {
+              return CustomTransitionPage(
+                key: state.pageKey,
+                transitionDuration: Duration.zero,
+                transitionsBuilder:
+                    (context, animation, secondaryAnimation, child) => child,
+                child: const EditUser(),
+              );
+            }),
         GoRoute(
             path: LoginPage.loginPageName,
             name: LoginPage.loginPageName,

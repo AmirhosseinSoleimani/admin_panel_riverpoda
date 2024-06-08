@@ -4,9 +4,8 @@ import 'package:flutter_login/flutter_login.dart';
 import 'package:go_router/go_router.dart';
 
 const users =  {
-  'dribbble@gmail.com': '12345',
+  'admin@gmail.com': '12345',
   'hunter@gmail.com': 'academy',
-  'admin@gamil.com': '123',
 };
 
 class LoginPage extends StatelessWidget {

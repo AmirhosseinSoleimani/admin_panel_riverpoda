@@ -1,5 +1,7 @@
+import 'package:admin_panel/src/app/locale_provider.dart';
 import 'package:admin_panel/src/shared/resources/resources.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:flutter_gen/gen_l10n/app_localizations.dart';
 
 class SettingWidget extends StatefulWidget {
@@ -103,6 +105,13 @@ class _SettingWidgetState extends State<SettingWidget> {
                   onChanged: (String? newKey) {
                     setState(() {
                       selectedKey = newKey;
+                      if(newKey == 'English') {
+                        context.read<LocaleProvider>().changeLocale(const Locale('en'));
+                      } else if (newKey == 'فارسی') {
+                        context.read<LocaleProvider>().changeLocale(const Locale('fa'));
+                      } else{
+                        context.read<LocaleProvider>().changeLocale(const Locale('en'));
+                      }
                     });
                   },
                 ),
