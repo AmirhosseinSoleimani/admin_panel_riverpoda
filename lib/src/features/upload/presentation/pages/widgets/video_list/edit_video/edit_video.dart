@@ -31,7 +31,7 @@ class EditVideo extends StatelessWidget {
                 decoration: BoxDecoration(
                   borderRadius: BorderRadius.circular(AppSize.s12),
                 ),
-                child: VideoPlayerWidget(url: UploadCubit.url,),
+                child: VideoPlayerWidget(),
               ),
               Divider(
                 thickness: AppSize.s1,

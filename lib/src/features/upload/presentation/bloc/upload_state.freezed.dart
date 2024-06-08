@@ -26,6 +26,8 @@ mixin _$UploadState {
     required TResult Function() addContentLoading,
     required TResult Function() deleteContentSuccess,
     required TResult Function() deleteContentLoading,
+    required TResult Function() updateContentSuccess,
+    required TResult Function() updateContentLoading,
   }) =>
       throw _privateConstructorUsedError;
   @optionalTypeArgs
@@ -38,6 +40,8 @@ mixin _$UploadState {
     TResult? Function()? addContentLoading,
     TResult? Function()? deleteContentSuccess,
     TResult? Function()? deleteContentLoading,
+    TResult? Function()? updateContentSuccess,
+    TResult? Function()? updateContentLoading,
   }) =>
       throw _privateConstructorUsedError;
   @optionalTypeArgs
@@ -50,6 +54,8 @@ mixin _$UploadState {
     TResult Function()? addContentLoading,
     TResult Function()? deleteContentSuccess,
     TResult Function()? deleteContentLoading,
+    TResult Function()? updateContentSuccess,
+    TResult Function()? updateContentLoading,
     required TResult orElse(),
   }) =>
       throw _privateConstructorUsedError;
@@ -67,6 +73,10 @@ mixin _$UploadState {
         deleteContentSuccess,
     required TResult Function(UploadStateDeleteContentLoading value)
         deleteContentLoading,
+    required TResult Function(UploadStateUpdateContentSuccess value)
+        updateContentSuccess,
+    required TResult Function(UploadStateUpdateContentLoading value)
+        updateContentLoading,
   }) =>
       throw _privateConstructorUsedError;
   @optionalTypeArgs
@@ -81,6 +91,10 @@ mixin _$UploadState {
         deleteContentSuccess,
     TResult? Function(UploadStateDeleteContentLoading value)?
         deleteContentLoading,
+    TResult? Function(UploadStateUpdateContentSuccess value)?
+        updateContentSuccess,
+    TResult? Function(UploadStateUpdateContentLoading value)?
+        updateContentLoading,
   }) =>
       throw _privateConstructorUsedError;
   @optionalTypeArgs
@@ -95,6 +109,10 @@ mixin _$UploadState {
         deleteContentSuccess,
     TResult Function(UploadStateDeleteContentLoading value)?
         deleteContentLoading,
+    TResult Function(UploadStateUpdateContentSuccess value)?
+        updateContentSuccess,
+    TResult Function(UploadStateUpdateContentLoading value)?
+        updateContentLoading,
     required TResult orElse(),
   }) =>
       throw _privateConstructorUsedError;
@@ -164,6 +182,8 @@ class _$UploadStateIdleImpl implements UploadStateIdle {
     required TResult Function() addContentLoading,
     required TResult Function() deleteContentSuccess,
     required TResult Function() deleteContentLoading,
+    required TResult Function() updateContentSuccess,
+    required TResult Function() updateContentLoading,
   }) {
     return idle();
   }
@@ -179,6 +199,8 @@ class _$UploadStateIdleImpl implements UploadStateIdle {
     TResult? Function()? addContentLoading,
     TResult? Function()? deleteContentSuccess,
     TResult? Function()? deleteContentLoading,
+    TResult? Function()? updateContentSuccess,
+    TResult? Function()? updateContentLoading,
   }) {
     return idle?.call();
   }
@@ -194,6 +216,8 @@ class _$UploadStateIdleImpl implements UploadStateIdle {
     TResult Function()? addContentLoading,
     TResult Function()? deleteContentSuccess,
     TResult Function()? deleteContentLoading,
+    TResult Function()? updateContentSuccess,
+    TResult Function()? updateContentLoading,
     required TResult orElse(),
   }) {
     if (idle != null) {
@@ -217,6 +241,10 @@ class _$UploadStateIdleImpl implements UploadStateIdle {
         deleteContentSuccess,
     required TResult Function(UploadStateDeleteContentLoading value)
         deleteContentLoading,
+    required TResult Function(UploadStateUpdateContentSuccess value)
+        updateContentSuccess,
+    required TResult Function(UploadStateUpdateContentLoading value)
+        updateContentLoading,
   }) {
     return idle(this);
   }
@@ -234,6 +262,10 @@ class _$UploadStateIdleImpl implements UploadStateIdle {
         deleteContentSuccess,
     TResult? Function(UploadStateDeleteContentLoading value)?
         deleteContentLoading,
+    TResult? Function(UploadStateUpdateContentSuccess value)?
+        updateContentSuccess,
+    TResult? Function(UploadStateUpdateContentLoading value)?
+        updateContentLoading,
   }) {
     return idle?.call(this);
   }
@@ -251,6 +283,10 @@ class _$UploadStateIdleImpl implements UploadStateIdle {
         deleteContentSuccess,
     TResult Function(UploadStateDeleteContentLoading value)?
         deleteContentLoading,
+    TResult Function(UploadStateUpdateContentSuccess value)?
+        updateContentSuccess,
+    TResult Function(UploadStateUpdateContentLoading value)?
+        updateContentLoading,
     required TResult orElse(),
   }) {
     if (idle != null) {
@@ -338,6 +374,8 @@ class _$UploadStateErrorImpl implements UploadStateError {
     required TResult Function() addContentLoading,
     required TResult Function() deleteContentSuccess,
     required TResult Function() deleteContentLoading,
+    required TResult Function() updateContentSuccess,
+    required TResult Function() updateContentLoading,
   }) {
     return error(errorMessage);
   }
@@ -353,6 +391,8 @@ class _$UploadStateErrorImpl implements UploadStateError {
     TResult? Function()? addContentLoading,
     TResult? Function()? deleteContentSuccess,
     TResult? Function()? deleteContentLoading,
+    TResult? Function()? updateContentSuccess,
+    TResult? Function()? updateContentLoading,
   }) {
     return error?.call(errorMessage);
   }
@@ -368,6 +408,8 @@ class _$UploadStateErrorImpl implements UploadStateError {
     TResult Function()? addContentLoading,
     TResult Function()? deleteContentSuccess,
     TResult Function()? deleteContentLoading,
+    TResult Function()? updateContentSuccess,
+    TResult Function()? updateContentLoading,
     required TResult orElse(),
   }) {
     if (error != null) {
@@ -391,6 +433,10 @@ class _$UploadStateErrorImpl implements UploadStateError {
         deleteContentSuccess,
     required TResult Function(UploadStateDeleteContentLoading value)
         deleteContentLoading,
+    required TResult Function(UploadStateUpdateContentSuccess value)
+        updateContentSuccess,
+    required TResult Function(UploadStateUpdateContentLoading value)
+        updateContentLoading,
   }) {
     return error(this);
   }
@@ -408,6 +454,10 @@ class _$UploadStateErrorImpl implements UploadStateError {
         deleteContentSuccess,
     TResult? Function(UploadStateDeleteContentLoading value)?
         deleteContentLoading,
+    TResult? Function(UploadStateUpdateContentSuccess value)?
+        updateContentSuccess,
+    TResult? Function(UploadStateUpdateContentLoading value)?
+        updateContentLoading,
   }) {
     return error?.call(this);
   }
@@ -425,6 +475,10 @@ class _$UploadStateErrorImpl implements UploadStateError {
         deleteContentSuccess,
     TResult Function(UploadStateDeleteContentLoading value)?
         deleteContentLoading,
+    TResult Function(UploadStateUpdateContentSuccess value)?
+        updateContentSuccess,
+    TResult Function(UploadStateUpdateContentLoading value)?
+        updateContentLoading,
     required TResult orElse(),
   }) {
     if (error != null) {
@@ -490,6 +544,8 @@ class _$UploadStateSuccessImpl implements UploadStateSuccess {
     required TResult Function() addContentLoading,
     required TResult Function() deleteContentSuccess,
     required TResult Function() deleteContentLoading,
+    required TResult Function() updateContentSuccess,
+    required TResult Function() updateContentLoading,
   }) {
     return success();
   }
@@ -505,6 +561,8 @@ class _$UploadStateSuccessImpl implements UploadStateSuccess {
     TResult? Function()? addContentLoading,
     TResult? Function()? deleteContentSuccess,
     TResult? Function()? deleteContentLoading,
+    TResult? Function()? updateContentSuccess,
+    TResult? Function()? updateContentLoading,
   }) {
     return success?.call();
   }
@@ -520,6 +578,8 @@ class _$UploadStateSuccessImpl implements UploadStateSuccess {
     TResult Function()? addContentLoading,
     TResult Function()? deleteContentSuccess,
     TResult Function()? deleteContentLoading,
+    TResult Function()? updateContentSuccess,
+    TResult Function()? updateContentLoading,
     required TResult orElse(),
   }) {
     if (success != null) {
@@ -543,6 +603,10 @@ class _$UploadStateSuccessImpl implements UploadStateSuccess {
         deleteContentSuccess,
     required TResult Function(UploadStateDeleteContentLoading value)
         deleteContentLoading,
+    required TResult Function(UploadStateUpdateContentSuccess value)
+        updateContentSuccess,
+    required TResult Function(UploadStateUpdateContentLoading value)
+        updateContentLoading,
   }) {
     return success(this);
   }
@@ -560,6 +624,10 @@ class _$UploadStateSuccessImpl implements UploadStateSuccess {
         deleteContentSuccess,
     TResult? Function(UploadStateDeleteContentLoading value)?
         deleteContentLoading,
+    TResult? Function(UploadStateUpdateContentSuccess value)?
+        updateContentSuccess,
+    TResult? Function(UploadStateUpdateContentLoading value)?
+        updateContentLoading,
   }) {
     return success?.call(this);
   }
@@ -577,6 +645,10 @@ class _$UploadStateSuccessImpl implements UploadStateSuccess {
         deleteContentSuccess,
     TResult Function(UploadStateDeleteContentLoading value)?
         deleteContentLoading,
+    TResult Function(UploadStateUpdateContentSuccess value)?
+        updateContentSuccess,
+    TResult Function(UploadStateUpdateContentLoading value)?
+        updateContentLoading,
     required TResult orElse(),
   }) {
     if (success != null) {
@@ -636,6 +708,8 @@ class _$UploadStateLoadingImpl implements UploadStateLoading {
     required TResult Function() addContentLoading,
     required TResult Function() deleteContentSuccess,
     required TResult Function() deleteContentLoading,
+    required TResult Function() updateContentSuccess,
+    required TResult Function() updateContentLoading,
   }) {
     return loading();
   }
@@ -651,6 +725,8 @@ class _$UploadStateLoadingImpl implements UploadStateLoading {
     TResult? Function()? addContentLoading,
     TResult? Function()? deleteContentSuccess,
     TResult? Function()? deleteContentLoading,
+    TResult? Function()? updateContentSuccess,
+    TResult? Function()? updateContentLoading,
   }) {
     return loading?.call();
   }
@@ -666,6 +742,8 @@ class _$UploadStateLoadingImpl implements UploadStateLoading {
     TResult Function()? addContentLoading,
     TResult Function()? deleteContentSuccess,
     TResult Function()? deleteContentLoading,
+    TResult Function()? updateContentSuccess,
+    TResult Function()? updateContentLoading,
     required TResult orElse(),
   }) {
     if (loading != null) {
@@ -689,6 +767,10 @@ class _$UploadStateLoadingImpl implements UploadStateLoading {
         deleteContentSuccess,
     required TResult Function(UploadStateDeleteContentLoading value)
         deleteContentLoading,
+    required TResult Function(UploadStateUpdateContentSuccess value)
+        updateContentSuccess,
+    required TResult Function(UploadStateUpdateContentLoading value)
+        updateContentLoading,
   }) {
     return loading(this);
   }
@@ -706,6 +788,10 @@ class _$UploadStateLoadingImpl implements UploadStateLoading {
         deleteContentSuccess,
     TResult? Function(UploadStateDeleteContentLoading value)?
         deleteContentLoading,
+    TResult? Function(UploadStateUpdateContentSuccess value)?
+        updateContentSuccess,
+    TResult? Function(UploadStateUpdateContentLoading value)?
+        updateContentLoading,
   }) {
     return loading?.call(this);
   }
@@ -723,6 +809,10 @@ class _$UploadStateLoadingImpl implements UploadStateLoading {
         deleteContentSuccess,
     TResult Function(UploadStateDeleteContentLoading value)?
         deleteContentLoading,
+    TResult Function(UploadStateUpdateContentSuccess value)?
+        updateContentSuccess,
+    TResult Function(UploadStateUpdateContentLoading value)?
+        updateContentLoading,
     required TResult orElse(),
   }) {
     if (loading != null) {
@@ -786,6 +876,8 @@ class _$UploadStateAddContentSuccessImpl
     required TResult Function() addContentLoading,
     required TResult Function() deleteContentSuccess,
     required TResult Function() deleteContentLoading,
+    required TResult Function() updateContentSuccess,
+    required TResult Function() updateContentLoading,
   }) {
     return addContentSuccess();
   }
@@ -801,6 +893,8 @@ class _$UploadStateAddContentSuccessImpl
     TResult? Function()? addContentLoading,
     TResult? Function()? deleteContentSuccess,
     TResult? Function()? deleteContentLoading,
+    TResult? Function()? updateContentSuccess,
+    TResult? Function()? updateContentLoading,
   }) {
     return addContentSuccess?.call();
   }
@@ -816,6 +910,8 @@ class _$UploadStateAddContentSuccessImpl
     TResult Function()? addContentLoading,
     TResult Function()? deleteContentSuccess,
     TResult Function()? deleteContentLoading,
+    TResult Function()? updateContentSuccess,
+    TResult Function()? updateContentLoading,
     required TResult orElse(),
   }) {
     if (addContentSuccess != null) {
@@ -839,6 +935,10 @@ class _$UploadStateAddContentSuccessImpl
         deleteContentSuccess,
     required TResult Function(UploadStateDeleteContentLoading value)
         deleteContentLoading,
+    required TResult Function(UploadStateUpdateContentSuccess value)
+        updateContentSuccess,
+    required TResult Function(UploadStateUpdateContentLoading value)
+        updateContentLoading,
   }) {
     return addContentSuccess(this);
   }
@@ -856,6 +956,10 @@ class _$UploadStateAddContentSuccessImpl
         deleteContentSuccess,
     TResult? Function(UploadStateDeleteContentLoading value)?
         deleteContentLoading,
+    TResult? Function(UploadStateUpdateContentSuccess value)?
+        updateContentSuccess,
+    TResult? Function(UploadStateUpdateContentLoading value)?
+        updateContentLoading,
   }) {
     return addContentSuccess?.call(this);
   }
@@ -873,6 +977,10 @@ class _$UploadStateAddContentSuccessImpl
         deleteContentSuccess,
     TResult Function(UploadStateDeleteContentLoading value)?
         deleteContentLoading,
+    TResult Function(UploadStateUpdateContentSuccess value)?
+        updateContentSuccess,
+    TResult Function(UploadStateUpdateContentLoading value)?
+        updateContentLoading,
     required TResult orElse(),
   }) {
     if (addContentSuccess != null) {
@@ -937,6 +1045,8 @@ class _$UploadStateAddContentLoadingImpl
     required TResult Function() addContentLoading,
     required TResult Function() deleteContentSuccess,
     required TResult Function() deleteContentLoading,
+    required TResult Function() updateContentSuccess,
+    required TResult Function() updateContentLoading,
   }) {
     return addContentLoading();
   }
@@ -952,6 +1062,8 @@ class _$UploadStateAddContentLoadingImpl
     TResult? Function()? addContentLoading,
     TResult? Function()? deleteContentSuccess,
     TResult? Function()? deleteContentLoading,
+    TResult? Function()? updateContentSuccess,
+    TResult? Function()? updateContentLoading,
   }) {
     return addContentLoading?.call();
   }
@@ -967,6 +1079,8 @@ class _$UploadStateAddContentLoadingImpl
     TResult Function()? addContentLoading,
     TResult Function()? deleteContentSuccess,
     TResult Function()? deleteContentLoading,
+    TResult Function()? updateContentSuccess,
+    TResult Function()? updateContentLoading,
     required TResult orElse(),
   }) {
     if (addContentLoading != null) {
@@ -990,6 +1104,10 @@ class _$UploadStateAddContentLoadingImpl
         deleteContentSuccess,
     required TResult Function(UploadStateDeleteContentLoading value)
         deleteContentLoading,
+    required TResult Function(UploadStateUpdateContentSuccess value)
+        updateContentSuccess,
+    required TResult Function(UploadStateUpdateContentLoading value)
+        updateContentLoading,
   }) {
     return addContentLoading(this);
   }
@@ -1007,6 +1125,10 @@ class _$UploadStateAddContentLoadingImpl
         deleteContentSuccess,
     TResult? Function(UploadStateDeleteContentLoading value)?
         deleteContentLoading,
+    TResult? Function(UploadStateUpdateContentSuccess value)?
+        updateContentSuccess,
+    TResult? Function(UploadStateUpdateContentLoading value)?
+        updateContentLoading,
   }) {
     return addContentLoading?.call(this);
   }
@@ -1024,6 +1146,10 @@ class _$UploadStateAddContentLoadingImpl
         deleteContentSuccess,
     TResult Function(UploadStateDeleteContentLoading value)?
         deleteContentLoading,
+    TResult Function(UploadStateUpdateContentSuccess value)?
+        updateContentSuccess,
+    TResult Function(UploadStateUpdateContentLoading value)?
+        updateContentLoading,
     required TResult orElse(),
   }) {
     if (addContentLoading != null) {
@@ -1089,6 +1215,8 @@ class _$UploadStateDeleteContentSuccessImpl
     required TResult Function() addContentLoading,
     required TResult Function() deleteContentSuccess,
     required TResult Function() deleteContentLoading,
+    required TResult Function() updateContentSuccess,
+    required TResult Function() updateContentLoading,
   }) {
     return deleteContentSuccess();
   }
@@ -1104,6 +1232,8 @@ class _$UploadStateDeleteContentSuccessImpl
     TResult? Function()? addContentLoading,
     TResult? Function()? deleteContentSuccess,
     TResult? Function()? deleteContentLoading,
+    TResult? Function()? updateContentSuccess,
+    TResult? Function()? updateContentLoading,
   }) {
     return deleteContentSuccess?.call();
   }
@@ -1119,6 +1249,8 @@ class _$UploadStateDeleteContentSuccessImpl
     TResult Function()? addContentLoading,
     TResult Function()? deleteContentSuccess,
     TResult Function()? deleteContentLoading,
+    TResult Function()? updateContentSuccess,
+    TResult Function()? updateContentLoading,
     required TResult orElse(),
   }) {
     if (deleteContentSuccess != null) {
@@ -1142,6 +1274,10 @@ class _$UploadStateDeleteContentSuccessImpl
         deleteContentSuccess,
     required TResult Function(UploadStateDeleteContentLoading value)
         deleteContentLoading,
+    required TResult Function(UploadStateUpdateContentSuccess value)
+        updateContentSuccess,
+    required TResult Function(UploadStateUpdateContentLoading value)
+        updateContentLoading,
   }) {
     return deleteContentSuccess(this);
   }
@@ -1159,6 +1295,10 @@ class _$UploadStateDeleteContentSuccessImpl
         deleteContentSuccess,
     TResult? Function(UploadStateDeleteContentLoading value)?
         deleteContentLoading,
+    TResult? Function(UploadStateUpdateContentSuccess value)?
+        updateContentSuccess,
+    TResult? Function(UploadStateUpdateContentLoading value)?
+        updateContentLoading,
   }) {
     return deleteContentSuccess?.call(this);
   }
@@ -1176,6 +1316,10 @@ class _$UploadStateDeleteContentSuccessImpl
         deleteContentSuccess,
     TResult Function(UploadStateDeleteContentLoading value)?
         deleteContentLoading,
+    TResult Function(UploadStateUpdateContentSuccess value)?
+        updateContentSuccess,
+    TResult Function(UploadStateUpdateContentLoading value)?
+        updateContentLoading,
     required TResult orElse(),
   }) {
     if (deleteContentSuccess != null) {
@@ -1241,6 +1385,8 @@ class _$UploadStateDeleteContentLoadingImpl
     required TResult Function() addContentLoading,
     required TResult Function() deleteContentSuccess,
     required TResult Function() deleteContentLoading,
+    required TResult Function() updateContentSuccess,
+    required TResult Function() updateContentLoading,
   }) {
     return deleteContentLoading();
   }
@@ -1256,6 +1402,8 @@ class _$UploadStateDeleteContentLoadingImpl
     TResult? Function()? addContentLoading,
     TResult? Function()? deleteContentSuccess,
     TResult? Function()? deleteContentLoading,
+    TResult? Function()? updateContentSuccess,
+    TResult? Function()? updateContentLoading,
   }) {
     return deleteContentLoading?.call();
   }
@@ -1271,6 +1419,8 @@ class _$UploadStateDeleteContentLoadingImpl
     TResult Function()? addContentLoading,
     TResult Function()? deleteContentSuccess,
     TResult Function()? deleteContentLoading,
+    TResult Function()? updateContentSuccess,
+    TResult Function()? updateContentLoading,
     required TResult orElse(),
   }) {
     if (deleteContentLoading != null) {
@@ -1294,6 +1444,10 @@ class _$UploadStateDeleteContentLoadingImpl
         deleteContentSuccess,
     required TResult Function(UploadStateDeleteContentLoading value)
         deleteContentLoading,
+    required TResult Function(UploadStateUpdateContentSuccess value)
+        updateContentSuccess,
+    required TResult Function(UploadStateUpdateContentLoading value)
+        updateContentLoading,
   }) {
     return deleteContentLoading(this);
   }
@@ -1311,6 +1465,10 @@ class _$UploadStateDeleteContentLoadingImpl
         deleteContentSuccess,
     TResult? Function(UploadStateDeleteContentLoading value)?
         deleteContentLoading,
+    TResult? Function(UploadStateUpdateContentSuccess value)?
+        updateContentSuccess,
+    TResult? Function(UploadStateUpdateContentLoading value)?
+        updateContentLoading,
   }) {
     return deleteContentLoading?.call(this);
   }
@@ -1328,6 +1486,10 @@ class _$UploadStateDeleteContentLoadingImpl
         deleteContentSuccess,
     TResult Function(UploadStateDeleteContentLoading value)?
         deleteContentLoading,
+    TResult Function(UploadStateUpdateContentSuccess value)?
+        updateContentSuccess,
+    TResult Function(UploadStateUpdateContentLoading value)?
+        updateContentLoading,
     required TResult orElse(),
   }) {
     if (deleteContentLoading != null) {
@@ -1340,4 +1502,344 @@ class _$UploadStateDeleteContentLoadingImpl
 abstract class UploadStateDeleteContentLoading implements UploadState {
   const factory UploadStateDeleteContentLoading() =
       _$UploadStateDeleteContentLoadingImpl;
+}
+
+/// @nodoc
+abstract class _$$UploadStateUpdateContentSuccessImplCopyWith<$Res> {
+  factory _$$UploadStateUpdateContentSuccessImplCopyWith(
+          _$UploadStateUpdateContentSuccessImpl value,
+          $Res Function(_$UploadStateUpdateContentSuccessImpl) then) =
+      __$$UploadStateUpdateContentSuccessImplCopyWithImpl<$Res>;
+}
+
+/// @nodoc
+class __$$UploadStateUpdateContentSuccessImplCopyWithImpl<$Res>
+    extends _$UploadStateCopyWithImpl<$Res,
+        _$UploadStateUpdateContentSuccessImpl>
+    implements _$$UploadStateUpdateContentSuccessImplCopyWith<$Res> {
+  __$$UploadStateUpdateContentSuccessImplCopyWithImpl(
+      _$UploadStateUpdateContentSuccessImpl _value,
+      $Res Function(_$UploadStateUpdateContentSuccessImpl) _then)
+      : super(_value, _then);
+}
+
+/// @nodoc
+
+class _$UploadStateUpdateContentSuccessImpl
+    implements UploadStateUpdateContentSuccess {
+  const _$UploadStateUpdateContentSuccessImpl();
+
+  @override
+  String toString() {
+    return 'UploadState.updateContentSuccess()';
+  }
+
+  @override
+  bool operator ==(Object other) {
+    return identical(this, other) ||
+        (other.runtimeType == runtimeType &&
+            other is _$UploadStateUpdateContentSuccessImpl);
+  }
+
+  @override
+  int get hashCode => runtimeType.hashCode;
+
+  @override
+  @optionalTypeArgs
+  TResult when<TResult extends Object?>({
+    required TResult Function() idle,
+    required TResult Function(String errorMessage) error,
+    required TResult Function() success,
+    required TResult Function() loading,
+    required TResult Function() addContentSuccess,
+    required TResult Function() addContentLoading,
+    required TResult Function() deleteContentSuccess,
+    required TResult Function() deleteContentLoading,
+    required TResult Function() updateContentSuccess,
+    required TResult Function() updateContentLoading,
+  }) {
+    return updateContentSuccess();
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult? whenOrNull<TResult extends Object?>({
+    TResult? Function()? idle,
+    TResult? Function(String errorMessage)? error,
+    TResult? Function()? success,
+    TResult? Function()? loading,
+    TResult? Function()? addContentSuccess,
+    TResult? Function()? addContentLoading,
+    TResult? Function()? deleteContentSuccess,
+    TResult? Function()? deleteContentLoading,
+    TResult? Function()? updateContentSuccess,
+    TResult? Function()? updateContentLoading,
+  }) {
+    return updateContentSuccess?.call();
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult maybeWhen<TResult extends Object?>({
+    TResult Function()? idle,
+    TResult Function(String errorMessage)? error,
+    TResult Function()? success,
+    TResult Function()? loading,
+    TResult Function()? addContentSuccess,
+    TResult Function()? addContentLoading,
+    TResult Function()? deleteContentSuccess,
+    TResult Function()? deleteContentLoading,
+    TResult Function()? updateContentSuccess,
+    TResult Function()? updateContentLoading,
+    required TResult orElse(),
+  }) {
+    if (updateContentSuccess != null) {
+      return updateContentSuccess();
+    }
+    return orElse();
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult map<TResult extends Object?>({
+    required TResult Function(UploadStateIdle value) idle,
+    required TResult Function(UploadStateError value) error,
+    required TResult Function(UploadStateSuccess value) success,
+    required TResult Function(UploadStateLoading value) loading,
+    required TResult Function(UploadStateAddContentSuccess value)
+        addContentSuccess,
+    required TResult Function(UploadStateAddContentLoading value)
+        addContentLoading,
+    required TResult Function(UploadStateDeleteContentSuccess value)
+        deleteContentSuccess,
+    required TResult Function(UploadStateDeleteContentLoading value)
+        deleteContentLoading,
+    required TResult Function(UploadStateUpdateContentSuccess value)
+        updateContentSuccess,
+    required TResult Function(UploadStateUpdateContentLoading value)
+        updateContentLoading,
+  }) {
+    return updateContentSuccess(this);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult? mapOrNull<TResult extends Object?>({
+    TResult? Function(UploadStateIdle value)? idle,
+    TResult? Function(UploadStateError value)? error,
+    TResult? Function(UploadStateSuccess value)? success,
+    TResult? Function(UploadStateLoading value)? loading,
+    TResult? Function(UploadStateAddContentSuccess value)? addContentSuccess,
+    TResult? Function(UploadStateAddContentLoading value)? addContentLoading,
+    TResult? Function(UploadStateDeleteContentSuccess value)?
+        deleteContentSuccess,
+    TResult? Function(UploadStateDeleteContentLoading value)?
+        deleteContentLoading,
+    TResult? Function(UploadStateUpdateContentSuccess value)?
+        updateContentSuccess,
+    TResult? Function(UploadStateUpdateContentLoading value)?
+        updateContentLoading,
+  }) {
+    return updateContentSuccess?.call(this);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult maybeMap<TResult extends Object?>({
+    TResult Function(UploadStateIdle value)? idle,
+    TResult Function(UploadStateError value)? error,
+    TResult Function(UploadStateSuccess value)? success,
+    TResult Function(UploadStateLoading value)? loading,
+    TResult Function(UploadStateAddContentSuccess value)? addContentSuccess,
+    TResult Function(UploadStateAddContentLoading value)? addContentLoading,
+    TResult Function(UploadStateDeleteContentSuccess value)?
+        deleteContentSuccess,
+    TResult Function(UploadStateDeleteContentLoading value)?
+        deleteContentLoading,
+    TResult Function(UploadStateUpdateContentSuccess value)?
+        updateContentSuccess,
+    TResult Function(UploadStateUpdateContentLoading value)?
+        updateContentLoading,
+    required TResult orElse(),
+  }) {
+    if (updateContentSuccess != null) {
+      return updateContentSuccess(this);
+    }
+    return orElse();
+  }
+}
+
+abstract class UploadStateUpdateContentSuccess implements UploadState {
+  const factory UploadStateUpdateContentSuccess() =
+      _$UploadStateUpdateContentSuccessImpl;
+}
+
+/// @nodoc
+abstract class _$$UploadStateUpdateContentLoadingImplCopyWith<$Res> {
+  factory _$$UploadStateUpdateContentLoadingImplCopyWith(
+          _$UploadStateUpdateContentLoadingImpl value,
+          $Res Function(_$UploadStateUpdateContentLoadingImpl) then) =
+      __$$UploadStateUpdateContentLoadingImplCopyWithImpl<$Res>;
+}
+
+/// @nodoc
+class __$$UploadStateUpdateContentLoadingImplCopyWithImpl<$Res>
+    extends _$UploadStateCopyWithImpl<$Res,
+        _$UploadStateUpdateContentLoadingImpl>
+    implements _$$UploadStateUpdateContentLoadingImplCopyWith<$Res> {
+  __$$UploadStateUpdateContentLoadingImplCopyWithImpl(
+      _$UploadStateUpdateContentLoadingImpl _value,
+      $Res Function(_$UploadStateUpdateContentLoadingImpl) _then)
+      : super(_value, _then);
+}
+
+/// @nodoc
+
+class _$UploadStateUpdateContentLoadingImpl
+    implements UploadStateUpdateContentLoading {
+  const _$UploadStateUpdateContentLoadingImpl();
+
+  @override
+  String toString() {
+    return 'UploadState.updateContentLoading()';
+  }
+
+  @override
+  bool operator ==(Object other) {
+    return identical(this, other) ||
+        (other.runtimeType == runtimeType &&
+            other is _$UploadStateUpdateContentLoadingImpl);
+  }
+
+  @override
+  int get hashCode => runtimeType.hashCode;
+
+  @override
+  @optionalTypeArgs
+  TResult when<TResult extends Object?>({
+    required TResult Function() idle,
+    required TResult Function(String errorMessage) error,
+    required TResult Function() success,
+    required TResult Function() loading,
+    required TResult Function() addContentSuccess,
+    required TResult Function() addContentLoading,
+    required TResult Function() deleteContentSuccess,
+    required TResult Function() deleteContentLoading,
+    required TResult Function() updateContentSuccess,
+    required TResult Function() updateContentLoading,
+  }) {
+    return updateContentLoading();
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult? whenOrNull<TResult extends Object?>({
+    TResult? Function()? idle,
+    TResult? Function(String errorMessage)? error,
+    TResult? Function()? success,
+    TResult? Function()? loading,
+    TResult? Function()? addContentSuccess,
+    TResult? Function()? addContentLoading,
+    TResult? Function()? deleteContentSuccess,
+    TResult? Function()? deleteContentLoading,
+    TResult? Function()? updateContentSuccess,
+    TResult? Function()? updateContentLoading,
+  }) {
+    return updateContentLoading?.call();
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult maybeWhen<TResult extends Object?>({
+    TResult Function()? idle,
+    TResult Function(String errorMessage)? error,
+    TResult Function()? success,
+    TResult Function()? loading,
+    TResult Function()? addContentSuccess,
+    TResult Function()? addContentLoading,
+    TResult Function()? deleteContentSuccess,
+    TResult Function()? deleteContentLoading,
+    TResult Function()? updateContentSuccess,
+    TResult Function()? updateContentLoading,
+    required TResult orElse(),
+  }) {
+    if (updateContentLoading != null) {
+      return updateContentLoading();
+    }
+    return orElse();
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult map<TResult extends Object?>({
+    required TResult Function(UploadStateIdle value) idle,
+    required TResult Function(UploadStateError value) error,
+    required TResult Function(UploadStateSuccess value) success,
+    required TResult Function(UploadStateLoading value) loading,
+    required TResult Function(UploadStateAddContentSuccess value)
+        addContentSuccess,
+    required TResult Function(UploadStateAddContentLoading value)
+        addContentLoading,
+    required TResult Function(UploadStateDeleteContentSuccess value)
+        deleteContentSuccess,
+    required TResult Function(UploadStateDeleteContentLoading value)
+        deleteContentLoading,
+    required TResult Function(UploadStateUpdateContentSuccess value)
+        updateContentSuccess,
+    required TResult Function(UploadStateUpdateContentLoading value)
+        updateContentLoading,
+  }) {
+    return updateContentLoading(this);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult? mapOrNull<TResult extends Object?>({
+    TResult? Function(UploadStateIdle value)? idle,
+    TResult? Function(UploadStateError value)? error,
+    TResult? Function(UploadStateSuccess value)? success,
+    TResult? Function(UploadStateLoading value)? loading,
+    TResult? Function(UploadStateAddContentSuccess value)? addContentSuccess,
+    TResult? Function(UploadStateAddContentLoading value)? addContentLoading,
+    TResult? Function(UploadStateDeleteContentSuccess value)?
+        deleteContentSuccess,
+    TResult? Function(UploadStateDeleteContentLoading value)?
+        deleteContentLoading,
+    TResult? Function(UploadStateUpdateContentSuccess value)?
+        updateContentSuccess,
+    TResult? Function(UploadStateUpdateContentLoading value)?
+        updateContentLoading,
+  }) {
+    return updateContentLoading?.call(this);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult maybeMap<TResult extends Object?>({
+    TResult Function(UploadStateIdle value)? idle,
+    TResult Function(UploadStateError value)? error,
+    TResult Function(UploadStateSuccess value)? success,
+    TResult Function(UploadStateLoading value)? loading,
+    TResult Function(UploadStateAddContentSuccess value)? addContentSuccess,
+    TResult Function(UploadStateAddContentLoading value)? addContentLoading,
+    TResult Function(UploadStateDeleteContentSuccess value)?
+        deleteContentSuccess,
+    TResult Function(UploadStateDeleteContentLoading value)?
+        deleteContentLoading,
+    TResult Function(UploadStateUpdateContentSuccess value)?
+        updateContentSuccess,
+    TResult Function(UploadStateUpdateContentLoading value)?
+        updateContentLoading,
+    required TResult orElse(),
+  }) {
+    if (updateContentLoading != null) {
+      return updateContentLoading(this);
+    }
+    return orElse();
+  }
+}
+
+abstract class UploadStateUpdateContentLoading implements UploadState {
+  const factory UploadStateUpdateContentLoading() =
+      _$UploadStateUpdateContentLoadingImpl;
 }

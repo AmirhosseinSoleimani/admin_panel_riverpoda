@@ -35,7 +35,7 @@ class _DescriptionVideoState extends State<DescriptionVideo> {
         Space.h16,
         InkWell(
           onTap: () {
-            context.read<UploadCubit>().updateUsers(videoTitle.text, videoDescription.text);
+            context.read<UploadCubit>().updateContent(videoTitle.text, videoDescription.text);
           },
           child: Text(
               textLocalization.saveEdit

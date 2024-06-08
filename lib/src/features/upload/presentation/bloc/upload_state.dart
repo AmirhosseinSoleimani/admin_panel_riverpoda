@@ -21,8 +21,8 @@ class UploadState with _$UploadState {
 
   const factory UploadState.deleteContentLoading() = UploadStateDeleteContentLoading;
   //
-  // const factory UploadState.updateContentSuccess() = UploadStateUpdateContentSuccess;
-  //
-  // const factory UploadState.updateContentLoading() = UploadStateUpdateContentLoading;
+  const factory UploadState.updateContentSuccess() = UploadStateUpdateContentSuccess;
+
+  const factory UploadState.updateContentLoading() = UploadStateUpdateContentLoading;
 
 }

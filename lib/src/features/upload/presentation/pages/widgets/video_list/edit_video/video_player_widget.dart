@@ -4,16 +4,17 @@ import 'package:chewie/chewie.dart';
 import 'package:flutter/material.dart';
 import 'package:video_player/video_player.dart';
 
+import '../../../../bloc/uplead_cubit.dart';
+
 
 class VideoPlayerWidget extends StatefulWidget {
-  const VideoPlayerWidget({super.key, required this.url});
-  final String url;
+  const VideoPlayerWidget({super.key});
   @override
   State<VideoPlayerWidget> createState() => _VideoPlayerWidgetState();
 }
 
 class _VideoPlayerWidgetState extends State<VideoPlayerWidget> {
-  final videoPlayerController = VideoPlayerController.networkUrl(Uri.parse('https://flutter.github.io/assets-for-api-docs/assets/videos/butterfly.mp4'));
+  final videoPlayerController = VideoPlayerController.networkUrl(Uri.parse('http://172.16.251.80/${UploadCubit.url}'));
   late VideoPlayerController _videoPlayerController1;
   late VideoPlayerController _videoPlayerController2;
   ChewieController? _chewieController;
@@ -34,16 +35,14 @@ class _VideoPlayerWidgetState extends State<VideoPlayerWidget> {
   }
 
   List<String> srcs = [
-    "https://assets.mixkit.co/videos/preview/mixkit-spinning-around-the-earth-29351-large.mp4",
-    "https://assets.mixkit.co/videos/preview/mixkit-daytime-city-traffic-aerial-view-56-large.mp4",
-    "https://assets.mixkit.co/videos/preview/mixkit-a-girl-blowing-a-bubble-gum-at-an-amusement-park-1226-large.mp4"
+    'http://172.16.251.80/${UploadCubit.url}'
   ];
 
   Future<void> initializePlayer() async {
     _videoPlayerController1 =
-        VideoPlayerController.networkUrl(Uri.parse(srcs[currPlayIndex]));
+        VideoPlayerController.networkUrl(Uri.parse('http://172.16.251.80/${UploadCubit.url}'));
     _videoPlayerController2 =
-        VideoPlayerController.networkUrl(Uri.parse(srcs[currPlayIndex]));
+        VideoPlayerController.networkUrl(Uri.parse('http://172.16.251.80/${UploadCubit.url}'));
     await Future.wait([
       _videoPlayerController1.initialize(),
       _videoPlayerController2.initialize()

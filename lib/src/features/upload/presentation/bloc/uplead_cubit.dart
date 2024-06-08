@@ -65,8 +65,8 @@ class UploadCubit extends Cubit<UploadState> {
   //   );
   // }
   //
-  Future updateUsers(String title, String description) async{
-    // emit(const UploadState.updateContentLoading());
+  Future updateContent(String title, String description) async{
+    emit(const UploadState.updateContentLoading());
     final result = await putContentRepository.updateContent(title: title, description: description, id: id);
     result.whenOrNull(
       success: (data) {
