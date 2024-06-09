@@ -9,4 +9,5 @@ class ApiConfig {
 
   static const String getAllUsers = '$baseApiUrl/users';
   static const String getAllContent = '$baseApiUrl/content';
+  static const String uploadVideo = '$baseApiUrl/content/upload';
 }

@@ -28,6 +28,12 @@ mixin _$UploadState {
     required TResult Function() deleteContentLoading,
     required TResult Function() updateContentSuccess,
     required TResult Function() updateContentLoading,
+    required TResult Function() pickedVideoSuccess,
+    required TResult Function(double progress) pickedVideoLoading,
+    required TResult Function() pickedImageSuccess,
+    required TResult Function(double progress) pickedImageLoading,
+    required TResult Function() uploadVideoSuccess,
+    required TResult Function(double progress) uploadVideoLoading,
   }) =>
       throw _privateConstructorUsedError;
   @optionalTypeArgs
@@ -42,6 +48,12 @@ mixin _$UploadState {
     TResult? Function()? deleteContentLoading,
     TResult? Function()? updateContentSuccess,
     TResult? Function()? updateContentLoading,
+    TResult? Function()? pickedVideoSuccess,
+    TResult? Function(double progress)? pickedVideoLoading,
+    TResult? Function()? pickedImageSuccess,
+    TResult? Function(double progress)? pickedImageLoading,
+    TResult? Function()? uploadVideoSuccess,
+    TResult? Function(double progress)? uploadVideoLoading,
   }) =>
       throw _privateConstructorUsedError;
   @optionalTypeArgs
@@ -56,6 +68,12 @@ mixin _$UploadState {
     TResult Function()? deleteContentLoading,
     TResult Function()? updateContentSuccess,
     TResult Function()? updateContentLoading,
+    TResult Function()? pickedVideoSuccess,
+    TResult Function(double progress)? pickedVideoLoading,
+    TResult Function()? pickedImageSuccess,
+    TResult Function(double progress)? pickedImageLoading,
+    TResult Function()? uploadVideoSuccess,
+    TResult Function(double progress)? uploadVideoLoading,
     required TResult orElse(),
   }) =>
       throw _privateConstructorUsedError;
@@ -77,6 +95,18 @@ mixin _$UploadState {
         updateContentSuccess,
     required TResult Function(UploadStateUpdateContentLoading value)
         updateContentLoading,
+    required TResult Function(UploadStatePickedVideoSuccess value)
+        pickedVideoSuccess,
+    required TResult Function(UploadStatePickedVideoLoading value)
+        pickedVideoLoading,
+    required TResult Function(UploadStatePickedImageSuccesss value)
+        pickedImageSuccess,
+    required TResult Function(UploadStatePickedImageLoading value)
+        pickedImageLoading,
+    required TResult Function(UploadStateUploadVideoSuccess value)
+        uploadVideoSuccess,
+    required TResult Function(UploadStateUploadVideoLoading value)
+        uploadVideoLoading,
   }) =>
       throw _privateConstructorUsedError;
   @optionalTypeArgs
@@ -95,6 +125,12 @@ mixin _$UploadState {
         updateContentSuccess,
     TResult? Function(UploadStateUpdateContentLoading value)?
         updateContentLoading,
+    TResult? Function(UploadStatePickedVideoSuccess value)? pickedVideoSuccess,
+    TResult? Function(UploadStatePickedVideoLoading value)? pickedVideoLoading,
+    TResult? Function(UploadStatePickedImageSuccesss value)? pickedImageSuccess,
+    TResult? Function(UploadStatePickedImageLoading value)? pickedImageLoading,
+    TResult? Function(UploadStateUploadVideoSuccess value)? uploadVideoSuccess,
+    TResult? Function(UploadStateUploadVideoLoading value)? uploadVideoLoading,
   }) =>
       throw _privateConstructorUsedError;
   @optionalTypeArgs
@@ -113,6 +149,12 @@ mixin _$UploadState {
         updateContentSuccess,
     TResult Function(UploadStateUpdateContentLoading value)?
         updateContentLoading,
+    TResult Function(UploadStatePickedVideoSuccess value)? pickedVideoSuccess,
+    TResult Function(UploadStatePickedVideoLoading value)? pickedVideoLoading,
+    TResult Function(UploadStatePickedImageSuccesss value)? pickedImageSuccess,
+    TResult Function(UploadStatePickedImageLoading value)? pickedImageLoading,
+    TResult Function(UploadStateUploadVideoSuccess value)? uploadVideoSuccess,
+    TResult Function(UploadStateUploadVideoLoading value)? uploadVideoLoading,
     required TResult orElse(),
   }) =>
       throw _privateConstructorUsedError;
@@ -184,6 +226,12 @@ class _$UploadStateIdleImpl implements UploadStateIdle {
     required TResult Function() deleteContentLoading,
     required TResult Function() updateContentSuccess,
     required TResult Function() updateContentLoading,
+    required TResult Function() pickedVideoSuccess,
+    required TResult Function(double progress) pickedVideoLoading,
+    required TResult Function() pickedImageSuccess,
+    required TResult Function(double progress) pickedImageLoading,
+    required TResult Function() uploadVideoSuccess,
+    required TResult Function(double progress) uploadVideoLoading,
   }) {
     return idle();
   }
@@ -201,6 +249,12 @@ class _$UploadStateIdleImpl implements UploadStateIdle {
     TResult? Function()? deleteContentLoading,
     TResult? Function()? updateContentSuccess,
     TResult? Function()? updateContentLoading,
+    TResult? Function()? pickedVideoSuccess,
+    TResult? Function(double progress)? pickedVideoLoading,
+    TResult? Function()? pickedImageSuccess,
+    TResult? Function(double progress)? pickedImageLoading,
+    TResult? Function()? uploadVideoSuccess,
+    TResult? Function(double progress)? uploadVideoLoading,
   }) {
     return idle?.call();
   }
@@ -218,6 +272,12 @@ class _$UploadStateIdleImpl implements UploadStateIdle {
     TResult Function()? deleteContentLoading,
     TResult Function()? updateContentSuccess,
     TResult Function()? updateContentLoading,
+    TResult Function()? pickedVideoSuccess,
+    TResult Function(double progress)? pickedVideoLoading,
+    TResult Function()? pickedImageSuccess,
+    TResult Function(double progress)? pickedImageLoading,
+    TResult Function()? uploadVideoSuccess,
+    TResult Function(double progress)? uploadVideoLoading,
     required TResult orElse(),
   }) {
     if (idle != null) {
@@ -245,6 +305,18 @@ class _$UploadStateIdleImpl implements UploadStateIdle {
         updateContentSuccess,
     required TResult Function(UploadStateUpdateContentLoading value)
         updateContentLoading,
+    required TResult Function(UploadStatePickedVideoSuccess value)
+        pickedVideoSuccess,
+    required TResult Function(UploadStatePickedVideoLoading value)
+        pickedVideoLoading,
+    required TResult Function(UploadStatePickedImageSuccesss value)
+        pickedImageSuccess,
+    required TResult Function(UploadStatePickedImageLoading value)
+        pickedImageLoading,
+    required TResult Function(UploadStateUploadVideoSuccess value)
+        uploadVideoSuccess,
+    required TResult Function(UploadStateUploadVideoLoading value)
+        uploadVideoLoading,
   }) {
     return idle(this);
   }
@@ -266,6 +338,12 @@ class _$UploadStateIdleImpl implements UploadStateIdle {
         updateContentSuccess,
     TResult? Function(UploadStateUpdateContentLoading value)?
         updateContentLoading,
+    TResult? Function(UploadStatePickedVideoSuccess value)? pickedVideoSuccess,
+    TResult? Function(UploadStatePickedVideoLoading value)? pickedVideoLoading,
+    TResult? Function(UploadStatePickedImageSuccesss value)? pickedImageSuccess,
+    TResult? Function(UploadStatePickedImageLoading value)? pickedImageLoading,
+    TResult? Function(UploadStateUploadVideoSuccess value)? uploadVideoSuccess,
+    TResult? Function(UploadStateUploadVideoLoading value)? uploadVideoLoading,
   }) {
     return idle?.call(this);
   }
@@ -287,6 +365,12 @@ class _$UploadStateIdleImpl implements UploadStateIdle {
         updateContentSuccess,
     TResult Function(UploadStateUpdateContentLoading value)?
         updateContentLoading,
+    TResult Function(UploadStatePickedVideoSuccess value)? pickedVideoSuccess,
+    TResult Function(UploadStatePickedVideoLoading value)? pickedVideoLoading,
+    TResult Function(UploadStatePickedImageSuccesss value)? pickedImageSuccess,
+    TResult Function(UploadStatePickedImageLoading value)? pickedImageLoading,
+    TResult Function(UploadStateUploadVideoSuccess value)? uploadVideoSuccess,
+    TResult Function(UploadStateUploadVideoLoading value)? uploadVideoLoading,
     required TResult orElse(),
   }) {
     if (idle != null) {
@@ -376,6 +460,12 @@ class _$UploadStateErrorImpl implements UploadStateError {
     required TResult Function() deleteContentLoading,
     required TResult Function() updateContentSuccess,
     required TResult Function() updateContentLoading,
+    required TResult Function() pickedVideoSuccess,
+    required TResult Function(double progress) pickedVideoLoading,
+    required TResult Function() pickedImageSuccess,
+    required TResult Function(double progress) pickedImageLoading,
+    required TResult Function() uploadVideoSuccess,
+    required TResult Function(double progress) uploadVideoLoading,
   }) {
     return error(errorMessage);
   }
@@ -393,6 +483,12 @@ class _$UploadStateErrorImpl implements UploadStateError {
     TResult? Function()? deleteContentLoading,
     TResult? Function()? updateContentSuccess,
     TResult? Function()? updateContentLoading,
+    TResult? Function()? pickedVideoSuccess,
+    TResult? Function(double progress)? pickedVideoLoading,
+    TResult? Function()? pickedImageSuccess,
+    TResult? Function(double progress)? pickedImageLoading,
+    TResult? Function()? uploadVideoSuccess,
+    TResult? Function(double progress)? uploadVideoLoading,
   }) {
     return error?.call(errorMessage);
   }
@@ -410,6 +506,12 @@ class _$UploadStateErrorImpl implements UploadStateError {
     TResult Function()? deleteContentLoading,
     TResult Function()? updateContentSuccess,
     TResult Function()? updateContentLoading,
+    TResult Function()? pickedVideoSuccess,
+    TResult Function(double progress)? pickedVideoLoading,
+    TResult Function()? pickedImageSuccess,
+    TResult Function(double progress)? pickedImageLoading,
+    TResult Function()? uploadVideoSuccess,
+    TResult Function(double progress)? uploadVideoLoading,
     required TResult orElse(),
   }) {
     if (error != null) {
@@ -437,6 +539,18 @@ class _$UploadStateErrorImpl implements UploadStateError {
         updateContentSuccess,
     required TResult Function(UploadStateUpdateContentLoading value)
         updateContentLoading,
+    required TResult Function(UploadStatePickedVideoSuccess value)
+        pickedVideoSuccess,
+    required TResult Function(UploadStatePickedVideoLoading value)
+        pickedVideoLoading,
+    required TResult Function(UploadStatePickedImageSuccesss value)
+        pickedImageSuccess,
+    required TResult Function(UploadStatePickedImageLoading value)
+        pickedImageLoading,
+    required TResult Function(UploadStateUploadVideoSuccess value)
+        uploadVideoSuccess,
+    required TResult Function(UploadStateUploadVideoLoading value)
+        uploadVideoLoading,
   }) {
     return error(this);
   }
@@ -458,6 +572,12 @@ class _$UploadStateErrorImpl implements UploadStateError {
         updateContentSuccess,
     TResult? Function(UploadStateUpdateContentLoading value)?
         updateContentLoading,
+    TResult? Function(UploadStatePickedVideoSuccess value)? pickedVideoSuccess,
+    TResult? Function(UploadStatePickedVideoLoading value)? pickedVideoLoading,
+    TResult? Function(UploadStatePickedImageSuccesss value)? pickedImageSuccess,
+    TResult? Function(UploadStatePickedImageLoading value)? pickedImageLoading,
+    TResult? Function(UploadStateUploadVideoSuccess value)? uploadVideoSuccess,
+    TResult? Function(UploadStateUploadVideoLoading value)? uploadVideoLoading,
   }) {
     return error?.call(this);
   }
@@ -479,6 +599,12 @@ class _$UploadStateErrorImpl implements UploadStateError {
         updateContentSuccess,
     TResult Function(UploadStateUpdateContentLoading value)?
         updateContentLoading,
+    TResult Function(UploadStatePickedVideoSuccess value)? pickedVideoSuccess,
+    TResult Function(UploadStatePickedVideoLoading value)? pickedVideoLoading,
+    TResult Function(UploadStatePickedImageSuccesss value)? pickedImageSuccess,
+    TResult Function(UploadStatePickedImageLoading value)? pickedImageLoading,
+    TResult Function(UploadStateUploadVideoSuccess value)? uploadVideoSuccess,
+    TResult Function(UploadStateUploadVideoLoading value)? uploadVideoLoading,
     required TResult orElse(),
   }) {
     if (error != null) {
@@ -546,6 +672,12 @@ class _$UploadStateSuccessImpl implements UploadStateSuccess {
     required TResult Function() deleteContentLoading,
     required TResult Function() updateContentSuccess,
     required TResult Function() updateContentLoading,
+    required TResult Function() pickedVideoSuccess,
+    required TResult Function(double progress) pickedVideoLoading,
+    required TResult Function() pickedImageSuccess,
+    required TResult Function(double progress) pickedImageLoading,
+    required TResult Function() uploadVideoSuccess,
+    required TResult Function(double progress) uploadVideoLoading,
   }) {
     return success();
   }
@@ -563,6 +695,12 @@ class _$UploadStateSuccessImpl implements UploadStateSuccess {
     TResult? Function()? deleteContentLoading,
     TResult? Function()? updateContentSuccess,
     TResult? Function()? updateContentLoading,
+    TResult? Function()? pickedVideoSuccess,
+    TResult? Function(double progress)? pickedVideoLoading,
+    TResult? Function()? pickedImageSuccess,
+    TResult? Function(double progress)? pickedImageLoading,
+    TResult? Function()? uploadVideoSuccess,
+    TResult? Function(double progress)? uploadVideoLoading,
   }) {
     return success?.call();
   }
@@ -580,6 +718,12 @@ class _$UploadStateSuccessImpl implements UploadStateSuccess {
     TResult Function()? deleteContentLoading,
     TResult Function()? updateContentSuccess,
     TResult Function()? updateContentLoading,
+    TResult Function()? pickedVideoSuccess,
+    TResult Function(double progress)? pickedVideoLoading,
+    TResult Function()? pickedImageSuccess,
+    TResult Function(double progress)? pickedImageLoading,
+    TResult Function()? uploadVideoSuccess,
+    TResult Function(double progress)? uploadVideoLoading,
     required TResult orElse(),
   }) {
     if (success != null) {
@@ -607,6 +751,18 @@ class _$UploadStateSuccessImpl implements UploadStateSuccess {
         updateContentSuccess,
     required TResult Function(UploadStateUpdateContentLoading value)
         updateContentLoading,
+    required TResult Function(UploadStatePickedVideoSuccess value)
+        pickedVideoSuccess,
+    required TResult Function(UploadStatePickedVideoLoading value)
+        pickedVideoLoading,
+    required TResult Function(UploadStatePickedImageSuccesss value)
+        pickedImageSuccess,
+    required TResult Function(UploadStatePickedImageLoading value)
+        pickedImageLoading,
+    required TResult Function(UploadStateUploadVideoSuccess value)
+        uploadVideoSuccess,
+    required TResult Function(UploadStateUploadVideoLoading value)
+        uploadVideoLoading,
   }) {
     return success(this);
   }
@@ -628,6 +784,12 @@ class _$UploadStateSuccessImpl implements UploadStateSuccess {
         updateContentSuccess,
     TResult? Function(UploadStateUpdateContentLoading value)?
         updateContentLoading,
+    TResult? Function(UploadStatePickedVideoSuccess value)? pickedVideoSuccess,
+    TResult? Function(UploadStatePickedVideoLoading value)? pickedVideoLoading,
+    TResult? Function(UploadStatePickedImageSuccesss value)? pickedImageSuccess,
+    TResult? Function(UploadStatePickedImageLoading value)? pickedImageLoading,
+    TResult? Function(UploadStateUploadVideoSuccess value)? uploadVideoSuccess,
+    TResult? Function(UploadStateUploadVideoLoading value)? uploadVideoLoading,
   }) {
     return success?.call(this);
   }
@@ -649,6 +811,12 @@ class _$UploadStateSuccessImpl implements UploadStateSuccess {
         updateContentSuccess,
     TResult Function(UploadStateUpdateContentLoading value)?
         updateContentLoading,
+    TResult Function(UploadStatePickedVideoSuccess value)? pickedVideoSuccess,
+    TResult Function(UploadStatePickedVideoLoading value)? pickedVideoLoading,
+    TResult Function(UploadStatePickedImageSuccesss value)? pickedImageSuccess,
+    TResult Function(UploadStatePickedImageLoading value)? pickedImageLoading,
+    TResult Function(UploadStateUploadVideoSuccess value)? uploadVideoSuccess,
+    TResult Function(UploadStateUploadVideoLoading value)? uploadVideoLoading,
     required TResult orElse(),
   }) {
     if (success != null) {
@@ -710,6 +878,12 @@ class _$UploadStateLoadingImpl implements UploadStateLoading {
     required TResult Function() deleteContentLoading,
     required TResult Function() updateContentSuccess,
     required TResult Function() updateContentLoading,
+    required TResult Function() pickedVideoSuccess,
+    required TResult Function(double progress) pickedVideoLoading,
+    required TResult Function() pickedImageSuccess,
+    required TResult Function(double progress) pickedImageLoading,
+    required TResult Function() uploadVideoSuccess,
+    required TResult Function(double progress) uploadVideoLoading,
   }) {
     return loading();
   }
@@ -727,6 +901,12 @@ class _$UploadStateLoadingImpl implements UploadStateLoading {
     TResult? Function()? deleteContentLoading,
     TResult? Function()? updateContentSuccess,
     TResult? Function()? updateContentLoading,
+    TResult? Function()? pickedVideoSuccess,
+    TResult? Function(double progress)? pickedVideoLoading,
+    TResult? Function()? pickedImageSuccess,
+    TResult? Function(double progress)? pickedImageLoading,
+    TResult? Function()? uploadVideoSuccess,
+    TResult? Function(double progress)? uploadVideoLoading,
   }) {
     return loading?.call();
   }
@@ -744,6 +924,12 @@ class _$UploadStateLoadingImpl implements UploadStateLoading {
     TResult Function()? deleteContentLoading,
     TResult Function()? updateContentSuccess,
     TResult Function()? updateContentLoading,
+    TResult Function()? pickedVideoSuccess,
+    TResult Function(double progress)? pickedVideoLoading,
+    TResult Function()? pickedImageSuccess,
+    TResult Function(double progress)? pickedImageLoading,
+    TResult Function()? uploadVideoSuccess,
+    TResult Function(double progress)? uploadVideoLoading,
     required TResult orElse(),
   }) {
     if (loading != null) {
@@ -771,6 +957,18 @@ class _$UploadStateLoadingImpl implements UploadStateLoading {
         updateContentSuccess,
     required TResult Function(UploadStateUpdateContentLoading value)
         updateContentLoading,
+    required TResult Function(UploadStatePickedVideoSuccess value)
+        pickedVideoSuccess,
+    required TResult Function(UploadStatePickedVideoLoading value)
+        pickedVideoLoading,
+    required TResult Function(UploadStatePickedImageSuccesss value)
+        pickedImageSuccess,
+    required TResult Function(UploadStatePickedImageLoading value)
+        pickedImageLoading,
+    required TResult Function(UploadStateUploadVideoSuccess value)
+        uploadVideoSuccess,
+    required TResult Function(UploadStateUploadVideoLoading value)
+        uploadVideoLoading,
   }) {
     return loading(this);
   }
@@ -792,6 +990,12 @@ class _$UploadStateLoadingImpl implements UploadStateLoading {
         updateContentSuccess,
     TResult? Function(UploadStateUpdateContentLoading value)?
         updateContentLoading,
+    TResult? Function(UploadStatePickedVideoSuccess value)? pickedVideoSuccess,
+    TResult? Function(UploadStatePickedVideoLoading value)? pickedVideoLoading,
+    TResult? Function(UploadStatePickedImageSuccesss value)? pickedImageSuccess,
+    TResult? Function(UploadStatePickedImageLoading value)? pickedImageLoading,
+    TResult? Function(UploadStateUploadVideoSuccess value)? uploadVideoSuccess,
+    TResult? Function(UploadStateUploadVideoLoading value)? uploadVideoLoading,
   }) {
     return loading?.call(this);
   }
@@ -813,6 +1017,12 @@ class _$UploadStateLoadingImpl implements UploadStateLoading {
         updateContentSuccess,
     TResult Function(UploadStateUpdateContentLoading value)?
         updateContentLoading,
+    TResult Function(UploadStatePickedVideoSuccess value)? pickedVideoSuccess,
+    TResult Function(UploadStatePickedVideoLoading value)? pickedVideoLoading,
+    TResult Function(UploadStatePickedImageSuccesss value)? pickedImageSuccess,
+    TResult Function(UploadStatePickedImageLoading value)? pickedImageLoading,
+    TResult Function(UploadStateUploadVideoSuccess value)? uploadVideoSuccess,
+    TResult Function(UploadStateUploadVideoLoading value)? uploadVideoLoading,
     required TResult orElse(),
   }) {
     if (loading != null) {
@@ -878,6 +1088,12 @@ class _$UploadStateAddContentSuccessImpl
     required TResult Function() deleteContentLoading,
     required TResult Function() updateContentSuccess,
     required TResult Function() updateContentLoading,
+    required TResult Function() pickedVideoSuccess,
+    required TResult Function(double progress) pickedVideoLoading,
+    required TResult Function() pickedImageSuccess,
+    required TResult Function(double progress) pickedImageLoading,
+    required TResult Function() uploadVideoSuccess,
+    required TResult Function(double progress) uploadVideoLoading,
   }) {
     return addContentSuccess();
   }
@@ -895,6 +1111,12 @@ class _$UploadStateAddContentSuccessImpl
     TResult? Function()? deleteContentLoading,
     TResult? Function()? updateContentSuccess,
     TResult? Function()? updateContentLoading,
+    TResult? Function()? pickedVideoSuccess,
+    TResult? Function(double progress)? pickedVideoLoading,
+    TResult? Function()? pickedImageSuccess,
+    TResult? Function(double progress)? pickedImageLoading,
+    TResult? Function()? uploadVideoSuccess,
+    TResult? Function(double progress)? uploadVideoLoading,
   }) {
     return addContentSuccess?.call();
   }
@@ -912,6 +1134,12 @@ class _$UploadStateAddContentSuccessImpl
     TResult Function()? deleteContentLoading,
     TResult Function()? updateContentSuccess,
     TResult Function()? updateContentLoading,
+    TResult Function()? pickedVideoSuccess,
+    TResult Function(double progress)? pickedVideoLoading,
+    TResult Function()? pickedImageSuccess,
+    TResult Function(double progress)? pickedImageLoading,
+    TResult Function()? uploadVideoSuccess,
+    TResult Function(double progress)? uploadVideoLoading,
     required TResult orElse(),
   }) {
     if (addContentSuccess != null) {
@@ -939,6 +1167,18 @@ class _$UploadStateAddContentSuccessImpl
         updateContentSuccess,
     required TResult Function(UploadStateUpdateContentLoading value)
         updateContentLoading,
+    required TResult Function(UploadStatePickedVideoSuccess value)
+        pickedVideoSuccess,
+    required TResult Function(UploadStatePickedVideoLoading value)
+        pickedVideoLoading,
+    required TResult Function(UploadStatePickedImageSuccesss value)
+        pickedImageSuccess,
+    required TResult Function(UploadStatePickedImageLoading value)
+        pickedImageLoading,
+    required TResult Function(UploadStateUploadVideoSuccess value)
+        uploadVideoSuccess,
+    required TResult Function(UploadStateUploadVideoLoading value)
+        uploadVideoLoading,
   }) {
     return addContentSuccess(this);
   }
@@ -960,6 +1200,12 @@ class _$UploadStateAddContentSuccessImpl
         updateContentSuccess,
     TResult? Function(UploadStateUpdateContentLoading value)?
         updateContentLoading,
+    TResult? Function(UploadStatePickedVideoSuccess value)? pickedVideoSuccess,
+    TResult? Function(UploadStatePickedVideoLoading value)? pickedVideoLoading,
+    TResult? Function(UploadStatePickedImageSuccesss value)? pickedImageSuccess,
+    TResult? Function(UploadStatePickedImageLoading value)? pickedImageLoading,
+    TResult? Function(UploadStateUploadVideoSuccess value)? uploadVideoSuccess,
+    TResult? Function(UploadStateUploadVideoLoading value)? uploadVideoLoading,
   }) {
     return addContentSuccess?.call(this);
   }
@@ -981,6 +1227,12 @@ class _$UploadStateAddContentSuccessImpl
         updateContentSuccess,
     TResult Function(UploadStateUpdateContentLoading value)?
         updateContentLoading,
+    TResult Function(UploadStatePickedVideoSuccess value)? pickedVideoSuccess,
+    TResult Function(UploadStatePickedVideoLoading value)? pickedVideoLoading,
+    TResult Function(UploadStatePickedImageSuccesss value)? pickedImageSuccess,
+    TResult Function(UploadStatePickedImageLoading value)? pickedImageLoading,
+    TResult Function(UploadStateUploadVideoSuccess value)? uploadVideoSuccess,
+    TResult Function(UploadStateUploadVideoLoading value)? uploadVideoLoading,
     required TResult orElse(),
   }) {
     if (addContentSuccess != null) {
@@ -1047,6 +1299,12 @@ class _$UploadStateAddContentLoadingImpl
     required TResult Function() deleteContentLoading,
     required TResult Function() updateContentSuccess,
     required TResult Function() updateContentLoading,
+    required TResult Function() pickedVideoSuccess,
+    required TResult Function(double progress) pickedVideoLoading,
+    required TResult Function() pickedImageSuccess,
+    required TResult Function(double progress) pickedImageLoading,
+    required TResult Function() uploadVideoSuccess,
+    required TResult Function(double progress) uploadVideoLoading,
   }) {
     return addContentLoading();
   }
@@ -1064,6 +1322,12 @@ class _$UploadStateAddContentLoadingImpl
     TResult? Function()? deleteContentLoading,
     TResult? Function()? updateContentSuccess,
     TResult? Function()? updateContentLoading,
+    TResult? Function()? pickedVideoSuccess,
+    TResult? Function(double progress)? pickedVideoLoading,
+    TResult? Function()? pickedImageSuccess,
+    TResult? Function(double progress)? pickedImageLoading,
+    TResult? Function()? uploadVideoSuccess,
+    TResult? Function(double progress)? uploadVideoLoading,
   }) {
     return addContentLoading?.call();
   }
@@ -1081,6 +1345,12 @@ class _$UploadStateAddContentLoadingImpl
     TResult Function()? deleteContentLoading,
     TResult Function()? updateContentSuccess,
     TResult Function()? updateContentLoading,
+    TResult Function()? pickedVideoSuccess,
+    TResult Function(double progress)? pickedVideoLoading,
+    TResult Function()? pickedImageSuccess,
+    TResult Function(double progress)? pickedImageLoading,
+    TResult Function()? uploadVideoSuccess,
+    TResult Function(double progress)? uploadVideoLoading,
     required TResult orElse(),
   }) {
     if (addContentLoading != null) {
@@ -1108,6 +1378,18 @@ class _$UploadStateAddContentLoadingImpl
         updateContentSuccess,
     required TResult Function(UploadStateUpdateContentLoading value)
         updateContentLoading,
+    required TResult Function(UploadStatePickedVideoSuccess value)
+        pickedVideoSuccess,
+    required TResult Function(UploadStatePickedVideoLoading value)
+        pickedVideoLoading,
+    required TResult Function(UploadStatePickedImageSuccesss value)
+        pickedImageSuccess,
+    required TResult Function(UploadStatePickedImageLoading value)
+        pickedImageLoading,
+    required TResult Function(UploadStateUploadVideoSuccess value)
+        uploadVideoSuccess,
+    required TResult Function(UploadStateUploadVideoLoading value)
+        uploadVideoLoading,
   }) {
     return addContentLoading(this);
   }
@@ -1129,6 +1411,12 @@ class _$UploadStateAddContentLoadingImpl
         updateContentSuccess,
     TResult? Function(UploadStateUpdateContentLoading value)?
         updateContentLoading,
+    TResult? Function(UploadStatePickedVideoSuccess value)? pickedVideoSuccess,
+    TResult? Function(UploadStatePickedVideoLoading value)? pickedVideoLoading,
+    TResult? Function(UploadStatePickedImageSuccesss value)? pickedImageSuccess,
+    TResult? Function(UploadStatePickedImageLoading value)? pickedImageLoading,
+    TResult? Function(UploadStateUploadVideoSuccess value)? uploadVideoSuccess,
+    TResult? Function(UploadStateUploadVideoLoading value)? uploadVideoLoading,
   }) {
     return addContentLoading?.call(this);
   }
@@ -1150,6 +1438,12 @@ class _$UploadStateAddContentLoadingImpl
         updateContentSuccess,
     TResult Function(UploadStateUpdateContentLoading value)?
         updateContentLoading,
+    TResult Function(UploadStatePickedVideoSuccess value)? pickedVideoSuccess,
+    TResult Function(UploadStatePickedVideoLoading value)? pickedVideoLoading,
+    TResult Function(UploadStatePickedImageSuccesss value)? pickedImageSuccess,
+    TResult Function(UploadStatePickedImageLoading value)? pickedImageLoading,
+    TResult Function(UploadStateUploadVideoSuccess value)? uploadVideoSuccess,
+    TResult Function(UploadStateUploadVideoLoading value)? uploadVideoLoading,
     required TResult orElse(),
   }) {
     if (addContentLoading != null) {
@@ -1217,6 +1511,12 @@ class _$UploadStateDeleteContentSuccessImpl
     required TResult Function() deleteContentLoading,
     required TResult Function() updateContentSuccess,
     required TResult Function() updateContentLoading,
+    required TResult Function() pickedVideoSuccess,
+    required TResult Function(double progress) pickedVideoLoading,
+    required TResult Function() pickedImageSuccess,
+    required TResult Function(double progress) pickedImageLoading,
+    required TResult Function() uploadVideoSuccess,
+    required TResult Function(double progress) uploadVideoLoading,
   }) {
     return deleteContentSuccess();
   }
@@ -1234,6 +1534,12 @@ class _$UploadStateDeleteContentSuccessImpl
     TResult? Function()? deleteContentLoading,
     TResult? Function()? updateContentSuccess,
     TResult? Function()? updateContentLoading,
+    TResult? Function()? pickedVideoSuccess,
+    TResult? Function(double progress)? pickedVideoLoading,
+    TResult? Function()? pickedImageSuccess,
+    TResult? Function(double progress)? pickedImageLoading,
+    TResult? Function()? uploadVideoSuccess,
+    TResult? Function(double progress)? uploadVideoLoading,
   }) {
     return deleteContentSuccess?.call();
   }
@@ -1251,6 +1557,12 @@ class _$UploadStateDeleteContentSuccessImpl
     TResult Function()? deleteContentLoading,
     TResult Function()? updateContentSuccess,
     TResult Function()? updateContentLoading,
+    TResult Function()? pickedVideoSuccess,
+    TResult Function(double progress)? pickedVideoLoading,
+    TResult Function()? pickedImageSuccess,
+    TResult Function(double progress)? pickedImageLoading,
+    TResult Function()? uploadVideoSuccess,
+    TResult Function(double progress)? uploadVideoLoading,
     required TResult orElse(),
   }) {
     if (deleteContentSuccess != null) {
@@ -1278,6 +1590,18 @@ class _$UploadStateDeleteContentSuccessImpl
         updateContentSuccess,
     required TResult Function(UploadStateUpdateContentLoading value)
         updateContentLoading,
+    required TResult Function(UploadStatePickedVideoSuccess value)
+        pickedVideoSuccess,
+    required TResult Function(UploadStatePickedVideoLoading value)
+        pickedVideoLoading,
+    required TResult Function(UploadStatePickedImageSuccesss value)
+        pickedImageSuccess,
+    required TResult Function(UploadStatePickedImageLoading value)
+        pickedImageLoading,
+    required TResult Function(UploadStateUploadVideoSuccess value)
+        uploadVideoSuccess,
+    required TResult Function(UploadStateUploadVideoLoading value)
+        uploadVideoLoading,
   }) {
     return deleteContentSuccess(this);
   }
@@ -1299,6 +1623,12 @@ class _$UploadStateDeleteContentSuccessImpl
         updateContentSuccess,
     TResult? Function(UploadStateUpdateContentLoading value)?
         updateContentLoading,
+    TResult? Function(UploadStatePickedVideoSuccess value)? pickedVideoSuccess,
+    TResult? Function(UploadStatePickedVideoLoading value)? pickedVideoLoading,
+    TResult? Function(UploadStatePickedImageSuccesss value)? pickedImageSuccess,
+    TResult? Function(UploadStatePickedImageLoading value)? pickedImageLoading,
+    TResult? Function(UploadStateUploadVideoSuccess value)? uploadVideoSuccess,
+    TResult? Function(UploadStateUploadVideoLoading value)? uploadVideoLoading,
   }) {
     return deleteContentSuccess?.call(this);
   }
@@ -1320,6 +1650,12 @@ class _$UploadStateDeleteContentSuccessImpl
         updateContentSuccess,
     TResult Function(UploadStateUpdateContentLoading value)?
         updateContentLoading,
+    TResult Function(UploadStatePickedVideoSuccess value)? pickedVideoSuccess,
+    TResult Function(UploadStatePickedVideoLoading value)? pickedVideoLoading,
+    TResult Function(UploadStatePickedImageSuccesss value)? pickedImageSuccess,
+    TResult Function(UploadStatePickedImageLoading value)? pickedImageLoading,
+    TResult Function(UploadStateUploadVideoSuccess value)? uploadVideoSuccess,
+    TResult Function(UploadStateUploadVideoLoading value)? uploadVideoLoading,
     required TResult orElse(),
   }) {
     if (deleteContentSuccess != null) {
@@ -1387,6 +1723,12 @@ class _$UploadStateDeleteContentLoadingImpl
     required TResult Function() deleteContentLoading,
     required TResult Function() updateContentSuccess,
     required TResult Function() updateContentLoading,
+    required TResult Function() pickedVideoSuccess,
+    required TResult Function(double progress) pickedVideoLoading,
+    required TResult Function() pickedImageSuccess,
+    required TResult Function(double progress) pickedImageLoading,
+    required TResult Function() uploadVideoSuccess,
+    required TResult Function(double progress) uploadVideoLoading,
   }) {
     return deleteContentLoading();
   }
@@ -1404,6 +1746,12 @@ class _$UploadStateDeleteContentLoadingImpl
     TResult? Function()? deleteContentLoading,
     TResult? Function()? updateContentSuccess,
     TResult? Function()? updateContentLoading,
+    TResult? Function()? pickedVideoSuccess,
+    TResult? Function(double progress)? pickedVideoLoading,
+    TResult? Function()? pickedImageSuccess,
+    TResult? Function(double progress)? pickedImageLoading,
+    TResult? Function()? uploadVideoSuccess,
+    TResult? Function(double progress)? uploadVideoLoading,
   }) {
     return deleteContentLoading?.call();
   }
@@ -1421,6 +1769,12 @@ class _$UploadStateDeleteContentLoadingImpl
     TResult Function()? deleteContentLoading,
     TResult Function()? updateContentSuccess,
     TResult Function()? updateContentLoading,
+    TResult Function()? pickedVideoSuccess,
+    TResult Function(double progress)? pickedVideoLoading,
+    TResult Function()? pickedImageSuccess,
+    TResult Function(double progress)? pickedImageLoading,
+    TResult Function()? uploadVideoSuccess,
+    TResult Function(double progress)? uploadVideoLoading,
     required TResult orElse(),
   }) {
     if (deleteContentLoading != null) {
@@ -1448,6 +1802,18 @@ class _$UploadStateDeleteContentLoadingImpl
         updateContentSuccess,
     required TResult Function(UploadStateUpdateContentLoading value)
         updateContentLoading,
+    required TResult Function(UploadStatePickedVideoSuccess value)
+        pickedVideoSuccess,
+    required TResult Function(UploadStatePickedVideoLoading value)
+        pickedVideoLoading,
+    required TResult Function(UploadStatePickedImageSuccesss value)
+        pickedImageSuccess,
+    required TResult Function(UploadStatePickedImageLoading value)
+        pickedImageLoading,
+    required TResult Function(UploadStateUploadVideoSuccess value)
+        uploadVideoSuccess,
+    required TResult Function(UploadStateUploadVideoLoading value)
+        uploadVideoLoading,
   }) {
     return deleteContentLoading(this);
   }
@@ -1469,6 +1835,12 @@ class _$UploadStateDeleteContentLoadingImpl
         updateContentSuccess,
     TResult? Function(UploadStateUpdateContentLoading value)?
         updateContentLoading,
+    TResult? Function(UploadStatePickedVideoSuccess value)? pickedVideoSuccess,
+    TResult? Function(UploadStatePickedVideoLoading value)? pickedVideoLoading,
+    TResult? Function(UploadStatePickedImageSuccesss value)? pickedImageSuccess,
+    TResult? Function(UploadStatePickedImageLoading value)? pickedImageLoading,
+    TResult? Function(UploadStateUploadVideoSuccess value)? uploadVideoSuccess,
+    TResult? Function(UploadStateUploadVideoLoading value)? uploadVideoLoading,
   }) {
     return deleteContentLoading?.call(this);
   }
@@ -1490,6 +1862,12 @@ class _$UploadStateDeleteContentLoadingImpl
         updateContentSuccess,
     TResult Function(UploadStateUpdateContentLoading value)?
         updateContentLoading,
+    TResult Function(UploadStatePickedVideoSuccess value)? pickedVideoSuccess,
+    TResult Function(UploadStatePickedVideoLoading value)? pickedVideoLoading,
+    TResult Function(UploadStatePickedImageSuccesss value)? pickedImageSuccess,
+    TResult Function(UploadStatePickedImageLoading value)? pickedImageLoading,
+    TResult Function(UploadStateUploadVideoSuccess value)? uploadVideoSuccess,
+    TResult Function(UploadStateUploadVideoLoading value)? uploadVideoLoading,
     required TResult orElse(),
   }) {
     if (deleteContentLoading != null) {
@@ -1557,6 +1935,12 @@ class _$UploadStateUpdateContentSuccessImpl
     required TResult Function() deleteContentLoading,
     required TResult Function() updateContentSuccess,
     required TResult Function() updateContentLoading,
+    required TResult Function() pickedVideoSuccess,
+    required TResult Function(double progress) pickedVideoLoading,
+    required TResult Function() pickedImageSuccess,
+    required TResult Function(double progress) pickedImageLoading,
+    required TResult Function() uploadVideoSuccess,
+    required TResult Function(double progress) uploadVideoLoading,
   }) {
     return updateContentSuccess();
   }
@@ -1574,6 +1958,12 @@ class _$UploadStateUpdateContentSuccessImpl
     TResult? Function()? deleteContentLoading,
     TResult? Function()? updateContentSuccess,
     TResult? Function()? updateContentLoading,
+    TResult? Function()? pickedVideoSuccess,
+    TResult? Function(double progress)? pickedVideoLoading,
+    TResult? Function()? pickedImageSuccess,
+    TResult? Function(double progress)? pickedImageLoading,
+    TResult? Function()? uploadVideoSuccess,
+    TResult? Function(double progress)? uploadVideoLoading,
   }) {
     return updateContentSuccess?.call();
   }
@@ -1591,6 +1981,12 @@ class _$UploadStateUpdateContentSuccessImpl
     TResult Function()? deleteContentLoading,
     TResult Function()? updateContentSuccess,
     TResult Function()? updateContentLoading,
+    TResult Function()? pickedVideoSuccess,
+    TResult Function(double progress)? pickedVideoLoading,
+    TResult Function()? pickedImageSuccess,
+    TResult Function(double progress)? pickedImageLoading,
+    TResult Function()? uploadVideoSuccess,
+    TResult Function(double progress)? uploadVideoLoading,
     required TResult orElse(),
   }) {
     if (updateContentSuccess != null) {
@@ -1618,6 +2014,18 @@ class _$UploadStateUpdateContentSuccessImpl
         updateContentSuccess,
     required TResult Function(UploadStateUpdateContentLoading value)
         updateContentLoading,
+    required TResult Function(UploadStatePickedVideoSuccess value)
+        pickedVideoSuccess,
+    required TResult Function(UploadStatePickedVideoLoading value)
+        pickedVideoLoading,
+    required TResult Function(UploadStatePickedImageSuccesss value)
+        pickedImageSuccess,
+    required TResult Function(UploadStatePickedImageLoading value)
+        pickedImageLoading,
+    required TResult Function(UploadStateUploadVideoSuccess value)
+        uploadVideoSuccess,
+    required TResult Function(UploadStateUploadVideoLoading value)
+        uploadVideoLoading,
   }) {
     return updateContentSuccess(this);
   }
@@ -1639,6 +2047,12 @@ class _$UploadStateUpdateContentSuccessImpl
         updateContentSuccess,
     TResult? Function(UploadStateUpdateContentLoading value)?
         updateContentLoading,
+    TResult? Function(UploadStatePickedVideoSuccess value)? pickedVideoSuccess,
+    TResult? Function(UploadStatePickedVideoLoading value)? pickedVideoLoading,
+    TResult? Function(UploadStatePickedImageSuccesss value)? pickedImageSuccess,
+    TResult? Function(UploadStatePickedImageLoading value)? pickedImageLoading,
+    TResult? Function(UploadStateUploadVideoSuccess value)? uploadVideoSuccess,
+    TResult? Function(UploadStateUploadVideoLoading value)? uploadVideoLoading,
   }) {
     return updateContentSuccess?.call(this);
   }
@@ -1660,6 +2074,12 @@ class _$UploadStateUpdateContentSuccessImpl
         updateContentSuccess,
     TResult Function(UploadStateUpdateContentLoading value)?
         updateContentLoading,
+    TResult Function(UploadStatePickedVideoSuccess value)? pickedVideoSuccess,
+    TResult Function(UploadStatePickedVideoLoading value)? pickedVideoLoading,
+    TResult Function(UploadStatePickedImageSuccesss value)? pickedImageSuccess,
+    TResult Function(UploadStatePickedImageLoading value)? pickedImageLoading,
+    TResult Function(UploadStateUploadVideoSuccess value)? uploadVideoSuccess,
+    TResult Function(UploadStateUploadVideoLoading value)? uploadVideoLoading,
     required TResult orElse(),
   }) {
     if (updateContentSuccess != null) {
@@ -1727,6 +2147,12 @@ class _$UploadStateUpdateContentLoadingImpl
     required TResult Function() deleteContentLoading,
     required TResult Function() updateContentSuccess,
     required TResult Function() updateContentLoading,
+    required TResult Function() pickedVideoSuccess,
+    required TResult Function(double progress) pickedVideoLoading,
+    required TResult Function() pickedImageSuccess,
+    required TResult Function(double progress) pickedImageLoading,
+    required TResult Function() uploadVideoSuccess,
+    required TResult Function(double progress) uploadVideoLoading,
   }) {
     return updateContentLoading();
   }
@@ -1744,6 +2170,12 @@ class _$UploadStateUpdateContentLoadingImpl
     TResult? Function()? deleteContentLoading,
     TResult? Function()? updateContentSuccess,
     TResult? Function()? updateContentLoading,
+    TResult? Function()? pickedVideoSuccess,
+    TResult? Function(double progress)? pickedVideoLoading,
+    TResult? Function()? pickedImageSuccess,
+    TResult? Function(double progress)? pickedImageLoading,
+    TResult? Function()? uploadVideoSuccess,
+    TResult? Function(double progress)? uploadVideoLoading,
   }) {
     return updateContentLoading?.call();
   }
@@ -1761,6 +2193,12 @@ class _$UploadStateUpdateContentLoadingImpl
     TResult Function()? deleteContentLoading,
     TResult Function()? updateContentSuccess,
     TResult Function()? updateContentLoading,
+    TResult Function()? pickedVideoSuccess,
+    TResult Function(double progress)? pickedVideoLoading,
+    TResult Function()? pickedImageSuccess,
+    TResult Function(double progress)? pickedImageLoading,
+    TResult Function()? uploadVideoSuccess,
+    TResult Function(double progress)? uploadVideoLoading,
     required TResult orElse(),
   }) {
     if (updateContentLoading != null) {
@@ -1788,6 +2226,18 @@ class _$UploadStateUpdateContentLoadingImpl
         updateContentSuccess,
     required TResult Function(UploadStateUpdateContentLoading value)
         updateContentLoading,
+    required TResult Function(UploadStatePickedVideoSuccess value)
+        pickedVideoSuccess,
+    required TResult Function(UploadStatePickedVideoLoading value)
+        pickedVideoLoading,
+    required TResult Function(UploadStatePickedImageSuccesss value)
+        pickedImageSuccess,
+    required TResult Function(UploadStatePickedImageLoading value)
+        pickedImageLoading,
+    required TResult Function(UploadStateUploadVideoSuccess value)
+        uploadVideoSuccess,
+    required TResult Function(UploadStateUploadVideoLoading value)
+        uploadVideoLoading,
   }) {
     return updateContentLoading(this);
   }
@@ -1809,6 +2259,12 @@ class _$UploadStateUpdateContentLoadingImpl
         updateContentSuccess,
     TResult? Function(UploadStateUpdateContentLoading value)?
         updateContentLoading,
+    TResult? Function(UploadStatePickedVideoSuccess value)? pickedVideoSuccess,
+    TResult? Function(UploadStatePickedVideoLoading value)? pickedVideoLoading,
+    TResult? Function(UploadStatePickedImageSuccesss value)? pickedImageSuccess,
+    TResult? Function(UploadStatePickedImageLoading value)? pickedImageLoading,
+    TResult? Function(UploadStateUploadVideoSuccess value)? uploadVideoSuccess,
+    TResult? Function(UploadStateUploadVideoLoading value)? uploadVideoLoading,
   }) {
     return updateContentLoading?.call(this);
   }
@@ -1830,6 +2286,12 @@ class _$UploadStateUpdateContentLoadingImpl
         updateContentSuccess,
     TResult Function(UploadStateUpdateContentLoading value)?
         updateContentLoading,
+    TResult Function(UploadStatePickedVideoSuccess value)? pickedVideoSuccess,
+    TResult Function(UploadStatePickedVideoLoading value)? pickedVideoLoading,
+    TResult Function(UploadStatePickedImageSuccesss value)? pickedImageSuccess,
+    TResult Function(UploadStatePickedImageLoading value)? pickedImageLoading,
+    TResult Function(UploadStateUploadVideoSuccess value)? uploadVideoSuccess,
+    TResult Function(UploadStateUploadVideoLoading value)? uploadVideoLoading,
     required TResult orElse(),
   }) {
     if (updateContentLoading != null) {
@@ -1842,4 +2304,1373 @@ class _$UploadStateUpdateContentLoadingImpl
 abstract class UploadStateUpdateContentLoading implements UploadState {
   const factory UploadStateUpdateContentLoading() =
       _$UploadStateUpdateContentLoadingImpl;
+}
+
+/// @nodoc
+abstract class _$$UploadStatePickedVideoSuccessImplCopyWith<$Res> {
+  factory _$$UploadStatePickedVideoSuccessImplCopyWith(
+          _$UploadStatePickedVideoSuccessImpl value,
+          $Res Function(_$UploadStatePickedVideoSuccessImpl) then) =
+      __$$UploadStatePickedVideoSuccessImplCopyWithImpl<$Res>;
+}
+
+/// @nodoc
+class __$$UploadStatePickedVideoSuccessImplCopyWithImpl<$Res>
+    extends _$UploadStateCopyWithImpl<$Res, _$UploadStatePickedVideoSuccessImpl>
+    implements _$$UploadStatePickedVideoSuccessImplCopyWith<$Res> {
+  __$$UploadStatePickedVideoSuccessImplCopyWithImpl(
+      _$UploadStatePickedVideoSuccessImpl _value,
+      $Res Function(_$UploadStatePickedVideoSuccessImpl) _then)
+      : super(_value, _then);
+}
+
+/// @nodoc
+
+class _$UploadStatePickedVideoSuccessImpl
+    implements UploadStatePickedVideoSuccess {
+  const _$UploadStatePickedVideoSuccessImpl();
+
+  @override
+  String toString() {
+    return 'UploadState.pickedVideoSuccess()';
+  }
+
+  @override
+  bool operator ==(Object other) {
+    return identical(this, other) ||
+        (other.runtimeType == runtimeType &&
+            other is _$UploadStatePickedVideoSuccessImpl);
+  }
+
+  @override
+  int get hashCode => runtimeType.hashCode;
+
+  @override
+  @optionalTypeArgs
+  TResult when<TResult extends Object?>({
+    required TResult Function() idle,
+    required TResult Function(String errorMessage) error,
+    required TResult Function() success,
+    required TResult Function() loading,
+    required TResult Function() addContentSuccess,
+    required TResult Function() addContentLoading,
+    required TResult Function() deleteContentSuccess,
+    required TResult Function() deleteContentLoading,
+    required TResult Function() updateContentSuccess,
+    required TResult Function() updateContentLoading,
+    required TResult Function() pickedVideoSuccess,
+    required TResult Function(double progress) pickedVideoLoading,
+    required TResult Function() pickedImageSuccess,
+    required TResult Function(double progress) pickedImageLoading,
+    required TResult Function() uploadVideoSuccess,
+    required TResult Function(double progress) uploadVideoLoading,
+  }) {
+    return pickedVideoSuccess();
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult? whenOrNull<TResult extends Object?>({
+    TResult? Function()? idle,
+    TResult? Function(String errorMessage)? error,
+    TResult? Function()? success,
+    TResult? Function()? loading,
+    TResult? Function()? addContentSuccess,
+    TResult? Function()? addContentLoading,
+    TResult? Function()? deleteContentSuccess,
+    TResult? Function()? deleteContentLoading,
+    TResult? Function()? updateContentSuccess,
+    TResult? Function()? updateContentLoading,
+    TResult? Function()? pickedVideoSuccess,
+    TResult? Function(double progress)? pickedVideoLoading,
+    TResult? Function()? pickedImageSuccess,
+    TResult? Function(double progress)? pickedImageLoading,
+    TResult? Function()? uploadVideoSuccess,
+    TResult? Function(double progress)? uploadVideoLoading,
+  }) {
+    return pickedVideoSuccess?.call();
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult maybeWhen<TResult extends Object?>({
+    TResult Function()? idle,
+    TResult Function(String errorMessage)? error,
+    TResult Function()? success,
+    TResult Function()? loading,
+    TResult Function()? addContentSuccess,
+    TResult Function()? addContentLoading,
+    TResult Function()? deleteContentSuccess,
+    TResult Function()? deleteContentLoading,
+    TResult Function()? updateContentSuccess,
+    TResult Function()? updateContentLoading,
+    TResult Function()? pickedVideoSuccess,
+    TResult Function(double progress)? pickedVideoLoading,
+    TResult Function()? pickedImageSuccess,
+    TResult Function(double progress)? pickedImageLoading,
+    TResult Function()? uploadVideoSuccess,
+    TResult Function(double progress)? uploadVideoLoading,
+    required TResult orElse(),
+  }) {
+    if (pickedVideoSuccess != null) {
+      return pickedVideoSuccess();
+    }
+    return orElse();
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult map<TResult extends Object?>({
+    required TResult Function(UploadStateIdle value) idle,
+    required TResult Function(UploadStateError value) error,
+    required TResult Function(UploadStateSuccess value) success,
+    required TResult Function(UploadStateLoading value) loading,
+    required TResult Function(UploadStateAddContentSuccess value)
+        addContentSuccess,
+    required TResult Function(UploadStateAddContentLoading value)
+        addContentLoading,
+    required TResult Function(UploadStateDeleteContentSuccess value)
+        deleteContentSuccess,
+    required TResult Function(UploadStateDeleteContentLoading value)
+        deleteContentLoading,
+    required TResult Function(UploadStateUpdateContentSuccess value)
+        updateContentSuccess,
+    required TResult Function(UploadStateUpdateContentLoading value)
+        updateContentLoading,
+    required TResult Function(UploadStatePickedVideoSuccess value)
+        pickedVideoSuccess,
+    required TResult Function(UploadStatePickedVideoLoading value)
+        pickedVideoLoading,
+    required TResult Function(UploadStatePickedImageSuccesss value)
+        pickedImageSuccess,
+    required TResult Function(UploadStatePickedImageLoading value)
+        pickedImageLoading,
+    required TResult Function(UploadStateUploadVideoSuccess value)
+        uploadVideoSuccess,
+    required TResult Function(UploadStateUploadVideoLoading value)
+        uploadVideoLoading,
+  }) {
+    return pickedVideoSuccess(this);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult? mapOrNull<TResult extends Object?>({
+    TResult? Function(UploadStateIdle value)? idle,
+    TResult? Function(UploadStateError value)? error,
+    TResult? Function(UploadStateSuccess value)? success,
+    TResult? Function(UploadStateLoading value)? loading,
+    TResult? Function(UploadStateAddContentSuccess value)? addContentSuccess,
+    TResult? Function(UploadStateAddContentLoading value)? addContentLoading,
+    TResult? Function(UploadStateDeleteContentSuccess value)?
+        deleteContentSuccess,
+    TResult? Function(UploadStateDeleteContentLoading value)?
+        deleteContentLoading,
+    TResult? Function(UploadStateUpdateContentSuccess value)?
+        updateContentSuccess,
+    TResult? Function(UploadStateUpdateContentLoading value)?
+        updateContentLoading,
+    TResult? Function(UploadStatePickedVideoSuccess value)? pickedVideoSuccess,
+    TResult? Function(UploadStatePickedVideoLoading value)? pickedVideoLoading,
+    TResult? Function(UploadStatePickedImageSuccesss value)? pickedImageSuccess,
+    TResult? Function(UploadStatePickedImageLoading value)? pickedImageLoading,
+    TResult? Function(UploadStateUploadVideoSuccess value)? uploadVideoSuccess,
+    TResult? Function(UploadStateUploadVideoLoading value)? uploadVideoLoading,
+  }) {
+    return pickedVideoSuccess?.call(this);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult maybeMap<TResult extends Object?>({
+    TResult Function(UploadStateIdle value)? idle,
+    TResult Function(UploadStateError value)? error,
+    TResult Function(UploadStateSuccess value)? success,
+    TResult Function(UploadStateLoading value)? loading,
+    TResult Function(UploadStateAddContentSuccess value)? addContentSuccess,
+    TResult Function(UploadStateAddContentLoading value)? addContentLoading,
+    TResult Function(UploadStateDeleteContentSuccess value)?
+        deleteContentSuccess,
+    TResult Function(UploadStateDeleteContentLoading value)?
+        deleteContentLoading,
+    TResult Function(UploadStateUpdateContentSuccess value)?
+        updateContentSuccess,
+    TResult Function(UploadStateUpdateContentLoading value)?
+        updateContentLoading,
+    TResult Function(UploadStatePickedVideoSuccess value)? pickedVideoSuccess,
+    TResult Function(UploadStatePickedVideoLoading value)? pickedVideoLoading,
+    TResult Function(UploadStatePickedImageSuccesss value)? pickedImageSuccess,
+    TResult Function(UploadStatePickedImageLoading value)? pickedImageLoading,
+    TResult Function(UploadStateUploadVideoSuccess value)? uploadVideoSuccess,
+    TResult Function(UploadStateUploadVideoLoading value)? uploadVideoLoading,
+    required TResult orElse(),
+  }) {
+    if (pickedVideoSuccess != null) {
+      return pickedVideoSuccess(this);
+    }
+    return orElse();
+  }
+}
+
+abstract class UploadStatePickedVideoSuccess implements UploadState {
+  const factory UploadStatePickedVideoSuccess() =
+      _$UploadStatePickedVideoSuccessImpl;
+}
+
+/// @nodoc
+abstract class _$$UploadStatePickedVideoLoadingImplCopyWith<$Res> {
+  factory _$$UploadStatePickedVideoLoadingImplCopyWith(
+          _$UploadStatePickedVideoLoadingImpl value,
+          $Res Function(_$UploadStatePickedVideoLoadingImpl) then) =
+      __$$UploadStatePickedVideoLoadingImplCopyWithImpl<$Res>;
+  @useResult
+  $Res call({double progress});
+}
+
+/// @nodoc
+class __$$UploadStatePickedVideoLoadingImplCopyWithImpl<$Res>
+    extends _$UploadStateCopyWithImpl<$Res, _$UploadStatePickedVideoLoadingImpl>
+    implements _$$UploadStatePickedVideoLoadingImplCopyWith<$Res> {
+  __$$UploadStatePickedVideoLoadingImplCopyWithImpl(
+      _$UploadStatePickedVideoLoadingImpl _value,
+      $Res Function(_$UploadStatePickedVideoLoadingImpl) _then)
+      : super(_value, _then);
+
+  @pragma('vm:prefer-inline')
+  @override
+  $Res call({
+    Object? progress = null,
+  }) {
+    return _then(_$UploadStatePickedVideoLoadingImpl(
+      null == progress
+          ? _value.progress
+          : progress // ignore: cast_nullable_to_non_nullable
+              as double,
+    ));
+  }
+}
+
+/// @nodoc
+
+class _$UploadStatePickedVideoLoadingImpl
+    implements UploadStatePickedVideoLoading {
+  const _$UploadStatePickedVideoLoadingImpl(this.progress);
+
+  @override
+  final double progress;
+
+  @override
+  String toString() {
+    return 'UploadState.pickedVideoLoading(progress: $progress)';
+  }
+
+  @override
+  bool operator ==(Object other) {
+    return identical(this, other) ||
+        (other.runtimeType == runtimeType &&
+            other is _$UploadStatePickedVideoLoadingImpl &&
+            (identical(other.progress, progress) ||
+                other.progress == progress));
+  }
+
+  @override
+  int get hashCode => Object.hash(runtimeType, progress);
+
+  @JsonKey(ignore: true)
+  @override
+  @pragma('vm:prefer-inline')
+  _$$UploadStatePickedVideoLoadingImplCopyWith<
+          _$UploadStatePickedVideoLoadingImpl>
+      get copyWith => __$$UploadStatePickedVideoLoadingImplCopyWithImpl<
+          _$UploadStatePickedVideoLoadingImpl>(this, _$identity);
+
+  @override
+  @optionalTypeArgs
+  TResult when<TResult extends Object?>({
+    required TResult Function() idle,
+    required TResult Function(String errorMessage) error,
+    required TResult Function() success,
+    required TResult Function() loading,
+    required TResult Function() addContentSuccess,
+    required TResult Function() addContentLoading,
+    required TResult Function() deleteContentSuccess,
+    required TResult Function() deleteContentLoading,
+    required TResult Function() updateContentSuccess,
+    required TResult Function() updateContentLoading,
+    required TResult Function() pickedVideoSuccess,
+    required TResult Function(double progress) pickedVideoLoading,
+    required TResult Function() pickedImageSuccess,
+    required TResult Function(double progress) pickedImageLoading,
+    required TResult Function() uploadVideoSuccess,
+    required TResult Function(double progress) uploadVideoLoading,
+  }) {
+    return pickedVideoLoading(progress);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult? whenOrNull<TResult extends Object?>({
+    TResult? Function()? idle,
+    TResult? Function(String errorMessage)? error,
+    TResult? Function()? success,
+    TResult? Function()? loading,
+    TResult? Function()? addContentSuccess,
+    TResult? Function()? addContentLoading,
+    TResult? Function()? deleteContentSuccess,
+    TResult? Function()? deleteContentLoading,
+    TResult? Function()? updateContentSuccess,
+    TResult? Function()? updateContentLoading,
+    TResult? Function()? pickedVideoSuccess,
+    TResult? Function(double progress)? pickedVideoLoading,
+    TResult? Function()? pickedImageSuccess,
+    TResult? Function(double progress)? pickedImageLoading,
+    TResult? Function()? uploadVideoSuccess,
+    TResult? Function(double progress)? uploadVideoLoading,
+  }) {
+    return pickedVideoLoading?.call(progress);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult maybeWhen<TResult extends Object?>({
+    TResult Function()? idle,
+    TResult Function(String errorMessage)? error,
+    TResult Function()? success,
+    TResult Function()? loading,
+    TResult Function()? addContentSuccess,
+    TResult Function()? addContentLoading,
+    TResult Function()? deleteContentSuccess,
+    TResult Function()? deleteContentLoading,
+    TResult Function()? updateContentSuccess,
+    TResult Function()? updateContentLoading,
+    TResult Function()? pickedVideoSuccess,
+    TResult Function(double progress)? pickedVideoLoading,
+    TResult Function()? pickedImageSuccess,
+    TResult Function(double progress)? pickedImageLoading,
+    TResult Function()? uploadVideoSuccess,
+    TResult Function(double progress)? uploadVideoLoading,
+    required TResult orElse(),
+  }) {
+    if (pickedVideoLoading != null) {
+      return pickedVideoLoading(progress);
+    }
+    return orElse();
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult map<TResult extends Object?>({
+    required TResult Function(UploadStateIdle value) idle,
+    required TResult Function(UploadStateError value) error,
+    required TResult Function(UploadStateSuccess value) success,
+    required TResult Function(UploadStateLoading value) loading,
+    required TResult Function(UploadStateAddContentSuccess value)
+        addContentSuccess,
+    required TResult Function(UploadStateAddContentLoading value)
+        addContentLoading,
+    required TResult Function(UploadStateDeleteContentSuccess value)
+        deleteContentSuccess,
+    required TResult Function(UploadStateDeleteContentLoading value)
+        deleteContentLoading,
+    required TResult Function(UploadStateUpdateContentSuccess value)
+        updateContentSuccess,
+    required TResult Function(UploadStateUpdateContentLoading value)
+        updateContentLoading,
+    required TResult Function(UploadStatePickedVideoSuccess value)
+        pickedVideoSuccess,
+    required TResult Function(UploadStatePickedVideoLoading value)
+        pickedVideoLoading,
+    required TResult Function(UploadStatePickedImageSuccesss value)
+        pickedImageSuccess,
+    required TResult Function(UploadStatePickedImageLoading value)
+        pickedImageLoading,
+    required TResult Function(UploadStateUploadVideoSuccess value)
+        uploadVideoSuccess,
+    required TResult Function(UploadStateUploadVideoLoading value)
+        uploadVideoLoading,
+  }) {
+    return pickedVideoLoading(this);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult? mapOrNull<TResult extends Object?>({
+    TResult? Function(UploadStateIdle value)? idle,
+    TResult? Function(UploadStateError value)? error,
+    TResult? Function(UploadStateSuccess value)? success,
+    TResult? Function(UploadStateLoading value)? loading,
+    TResult? Function(UploadStateAddContentSuccess value)? addContentSuccess,
+    TResult? Function(UploadStateAddContentLoading value)? addContentLoading,
+    TResult? Function(UploadStateDeleteContentSuccess value)?
+        deleteContentSuccess,
+    TResult? Function(UploadStateDeleteContentLoading value)?
+        deleteContentLoading,
+    TResult? Function(UploadStateUpdateContentSuccess value)?
+        updateContentSuccess,
+    TResult? Function(UploadStateUpdateContentLoading value)?
+        updateContentLoading,
+    TResult? Function(UploadStatePickedVideoSuccess value)? pickedVideoSuccess,
+    TResult? Function(UploadStatePickedVideoLoading value)? pickedVideoLoading,
+    TResult? Function(UploadStatePickedImageSuccesss value)? pickedImageSuccess,
+    TResult? Function(UploadStatePickedImageLoading value)? pickedImageLoading,
+    TResult? Function(UploadStateUploadVideoSuccess value)? uploadVideoSuccess,
+    TResult? Function(UploadStateUploadVideoLoading value)? uploadVideoLoading,
+  }) {
+    return pickedVideoLoading?.call(this);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult maybeMap<TResult extends Object?>({
+    TResult Function(UploadStateIdle value)? idle,
+    TResult Function(UploadStateError value)? error,
+    TResult Function(UploadStateSuccess value)? success,
+    TResult Function(UploadStateLoading value)? loading,
+    TResult Function(UploadStateAddContentSuccess value)? addContentSuccess,
+    TResult Function(UploadStateAddContentLoading value)? addContentLoading,
+    TResult Function(UploadStateDeleteContentSuccess value)?
+        deleteContentSuccess,
+    TResult Function(UploadStateDeleteContentLoading value)?
+        deleteContentLoading,
+    TResult Function(UploadStateUpdateContentSuccess value)?
+        updateContentSuccess,
+    TResult Function(UploadStateUpdateContentLoading value)?
+        updateContentLoading,
+    TResult Function(UploadStatePickedVideoSuccess value)? pickedVideoSuccess,
+    TResult Function(UploadStatePickedVideoLoading value)? pickedVideoLoading,
+    TResult Function(UploadStatePickedImageSuccesss value)? pickedImageSuccess,
+    TResult Function(UploadStatePickedImageLoading value)? pickedImageLoading,
+    TResult Function(UploadStateUploadVideoSuccess value)? uploadVideoSuccess,
+    TResult Function(UploadStateUploadVideoLoading value)? uploadVideoLoading,
+    required TResult orElse(),
+  }) {
+    if (pickedVideoLoading != null) {
+      return pickedVideoLoading(this);
+    }
+    return orElse();
+  }
+}
+
+abstract class UploadStatePickedVideoLoading implements UploadState {
+  const factory UploadStatePickedVideoLoading(final double progress) =
+      _$UploadStatePickedVideoLoadingImpl;
+
+  double get progress;
+  @JsonKey(ignore: true)
+  _$$UploadStatePickedVideoLoadingImplCopyWith<
+          _$UploadStatePickedVideoLoadingImpl>
+      get copyWith => throw _privateConstructorUsedError;
+}
+
+/// @nodoc
+abstract class _$$UploadStatePickedImageSuccesssImplCopyWith<$Res> {
+  factory _$$UploadStatePickedImageSuccesssImplCopyWith(
+          _$UploadStatePickedImageSuccesssImpl value,
+          $Res Function(_$UploadStatePickedImageSuccesssImpl) then) =
+      __$$UploadStatePickedImageSuccesssImplCopyWithImpl<$Res>;
+}
+
+/// @nodoc
+class __$$UploadStatePickedImageSuccesssImplCopyWithImpl<$Res>
+    extends _$UploadStateCopyWithImpl<$Res,
+        _$UploadStatePickedImageSuccesssImpl>
+    implements _$$UploadStatePickedImageSuccesssImplCopyWith<$Res> {
+  __$$UploadStatePickedImageSuccesssImplCopyWithImpl(
+      _$UploadStatePickedImageSuccesssImpl _value,
+      $Res Function(_$UploadStatePickedImageSuccesssImpl) _then)
+      : super(_value, _then);
+}
+
+/// @nodoc
+
+class _$UploadStatePickedImageSuccesssImpl
+    implements UploadStatePickedImageSuccesss {
+  const _$UploadStatePickedImageSuccesssImpl();
+
+  @override
+  String toString() {
+    return 'UploadState.pickedImageSuccess()';
+  }
+
+  @override
+  bool operator ==(Object other) {
+    return identical(this, other) ||
+        (other.runtimeType == runtimeType &&
+            other is _$UploadStatePickedImageSuccesssImpl);
+  }
+
+  @override
+  int get hashCode => runtimeType.hashCode;
+
+  @override
+  @optionalTypeArgs
+  TResult when<TResult extends Object?>({
+    required TResult Function() idle,
+    required TResult Function(String errorMessage) error,
+    required TResult Function() success,
+    required TResult Function() loading,
+    required TResult Function() addContentSuccess,
+    required TResult Function() addContentLoading,
+    required TResult Function() deleteContentSuccess,
+    required TResult Function() deleteContentLoading,
+    required TResult Function() updateContentSuccess,
+    required TResult Function() updateContentLoading,
+    required TResult Function() pickedVideoSuccess,
+    required TResult Function(double progress) pickedVideoLoading,
+    required TResult Function() pickedImageSuccess,
+    required TResult Function(double progress) pickedImageLoading,
+    required TResult Function() uploadVideoSuccess,
+    required TResult Function(double progress) uploadVideoLoading,
+  }) {
+    return pickedImageSuccess();
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult? whenOrNull<TResult extends Object?>({
+    TResult? Function()? idle,
+    TResult? Function(String errorMessage)? error,
+    TResult? Function()? success,
+    TResult? Function()? loading,
+    TResult? Function()? addContentSuccess,
+    TResult? Function()? addContentLoading,
+    TResult? Function()? deleteContentSuccess,
+    TResult? Function()? deleteContentLoading,
+    TResult? Function()? updateContentSuccess,
+    TResult? Function()? updateContentLoading,
+    TResult? Function()? pickedVideoSuccess,
+    TResult? Function(double progress)? pickedVideoLoading,
+    TResult? Function()? pickedImageSuccess,
+    TResult? Function(double progress)? pickedImageLoading,
+    TResult? Function()? uploadVideoSuccess,
+    TResult? Function(double progress)? uploadVideoLoading,
+  }) {
+    return pickedImageSuccess?.call();
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult maybeWhen<TResult extends Object?>({
+    TResult Function()? idle,
+    TResult Function(String errorMessage)? error,
+    TResult Function()? success,
+    TResult Function()? loading,
+    TResult Function()? addContentSuccess,
+    TResult Function()? addContentLoading,
+    TResult Function()? deleteContentSuccess,
+    TResult Function()? deleteContentLoading,
+    TResult Function()? updateContentSuccess,
+    TResult Function()? updateContentLoading,
+    TResult Function()? pickedVideoSuccess,
+    TResult Function(double progress)? pickedVideoLoading,
+    TResult Function()? pickedImageSuccess,
+    TResult Function(double progress)? pickedImageLoading,
+    TResult Function()? uploadVideoSuccess,
+    TResult Function(double progress)? uploadVideoLoading,
+    required TResult orElse(),
+  }) {
+    if (pickedImageSuccess != null) {
+      return pickedImageSuccess();
+    }
+    return orElse();
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult map<TResult extends Object?>({
+    required TResult Function(UploadStateIdle value) idle,
+    required TResult Function(UploadStateError value) error,
+    required TResult Function(UploadStateSuccess value) success,
+    required TResult Function(UploadStateLoading value) loading,
+    required TResult Function(UploadStateAddContentSuccess value)
+        addContentSuccess,
+    required TResult Function(UploadStateAddContentLoading value)
+        addContentLoading,
+    required TResult Function(UploadStateDeleteContentSuccess value)
+        deleteContentSuccess,
+    required TResult Function(UploadStateDeleteContentLoading value)
+        deleteContentLoading,
+    required TResult Function(UploadStateUpdateContentSuccess value)
+        updateContentSuccess,
+    required TResult Function(UploadStateUpdateContentLoading value)
+        updateContentLoading,
+    required TResult Function(UploadStatePickedVideoSuccess value)
+        pickedVideoSuccess,
+    required TResult Function(UploadStatePickedVideoLoading value)
+        pickedVideoLoading,
+    required TResult Function(UploadStatePickedImageSuccesss value)
+        pickedImageSuccess,
+    required TResult Function(UploadStatePickedImageLoading value)
+        pickedImageLoading,
+    required TResult Function(UploadStateUploadVideoSuccess value)
+        uploadVideoSuccess,
+    required TResult Function(UploadStateUploadVideoLoading value)
+        uploadVideoLoading,
+  }) {
+    return pickedImageSuccess(this);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult? mapOrNull<TResult extends Object?>({
+    TResult? Function(UploadStateIdle value)? idle,
+    TResult? Function(UploadStateError value)? error,
+    TResult? Function(UploadStateSuccess value)? success,
+    TResult? Function(UploadStateLoading value)? loading,
+    TResult? Function(UploadStateAddContentSuccess value)? addContentSuccess,
+    TResult? Function(UploadStateAddContentLoading value)? addContentLoading,
+    TResult? Function(UploadStateDeleteContentSuccess value)?
+        deleteContentSuccess,
+    TResult? Function(UploadStateDeleteContentLoading value)?
+        deleteContentLoading,
+    TResult? Function(UploadStateUpdateContentSuccess value)?
+        updateContentSuccess,
+    TResult? Function(UploadStateUpdateContentLoading value)?
+        updateContentLoading,
+    TResult? Function(UploadStatePickedVideoSuccess value)? pickedVideoSuccess,
+    TResult? Function(UploadStatePickedVideoLoading value)? pickedVideoLoading,
+    TResult? Function(UploadStatePickedImageSuccesss value)? pickedImageSuccess,
+    TResult? Function(UploadStatePickedImageLoading value)? pickedImageLoading,
+    TResult? Function(UploadStateUploadVideoSuccess value)? uploadVideoSuccess,
+    TResult? Function(UploadStateUploadVideoLoading value)? uploadVideoLoading,
+  }) {
+    return pickedImageSuccess?.call(this);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult maybeMap<TResult extends Object?>({
+    TResult Function(UploadStateIdle value)? idle,
+    TResult Function(UploadStateError value)? error,
+    TResult Function(UploadStateSuccess value)? success,
+    TResult Function(UploadStateLoading value)? loading,
+    TResult Function(UploadStateAddContentSuccess value)? addContentSuccess,
+    TResult Function(UploadStateAddContentLoading value)? addContentLoading,
+    TResult Function(UploadStateDeleteContentSuccess value)?
+        deleteContentSuccess,
+    TResult Function(UploadStateDeleteContentLoading value)?
+        deleteContentLoading,
+    TResult Function(UploadStateUpdateContentSuccess value)?
+        updateContentSuccess,
+    TResult Function(UploadStateUpdateContentLoading value)?
+        updateContentLoading,
+    TResult Function(UploadStatePickedVideoSuccess value)? pickedVideoSuccess,
+    TResult Function(UploadStatePickedVideoLoading value)? pickedVideoLoading,
+    TResult Function(UploadStatePickedImageSuccesss value)? pickedImageSuccess,
+    TResult Function(UploadStatePickedImageLoading value)? pickedImageLoading,
+    TResult Function(UploadStateUploadVideoSuccess value)? uploadVideoSuccess,
+    TResult Function(UploadStateUploadVideoLoading value)? uploadVideoLoading,
+    required TResult orElse(),
+  }) {
+    if (pickedImageSuccess != null) {
+      return pickedImageSuccess(this);
+    }
+    return orElse();
+  }
+}
+
+abstract class UploadStatePickedImageSuccesss implements UploadState {
+  const factory UploadStatePickedImageSuccesss() =
+      _$UploadStatePickedImageSuccesssImpl;
+}
+
+/// @nodoc
+abstract class _$$UploadStatePickedImageLoadingImplCopyWith<$Res> {
+  factory _$$UploadStatePickedImageLoadingImplCopyWith(
+          _$UploadStatePickedImageLoadingImpl value,
+          $Res Function(_$UploadStatePickedImageLoadingImpl) then) =
+      __$$UploadStatePickedImageLoadingImplCopyWithImpl<$Res>;
+  @useResult
+  $Res call({double progress});
+}
+
+/// @nodoc
+class __$$UploadStatePickedImageLoadingImplCopyWithImpl<$Res>
+    extends _$UploadStateCopyWithImpl<$Res, _$UploadStatePickedImageLoadingImpl>
+    implements _$$UploadStatePickedImageLoadingImplCopyWith<$Res> {
+  __$$UploadStatePickedImageLoadingImplCopyWithImpl(
+      _$UploadStatePickedImageLoadingImpl _value,
+      $Res Function(_$UploadStatePickedImageLoadingImpl) _then)
+      : super(_value, _then);
+
+  @pragma('vm:prefer-inline')
+  @override
+  $Res call({
+    Object? progress = null,
+  }) {
+    return _then(_$UploadStatePickedImageLoadingImpl(
+      null == progress
+          ? _value.progress
+          : progress // ignore: cast_nullable_to_non_nullable
+              as double,
+    ));
+  }
+}
+
+/// @nodoc
+
+class _$UploadStatePickedImageLoadingImpl
+    implements UploadStatePickedImageLoading {
+  const _$UploadStatePickedImageLoadingImpl(this.progress);
+
+  @override
+  final double progress;
+
+  @override
+  String toString() {
+    return 'UploadState.pickedImageLoading(progress: $progress)';
+  }
+
+  @override
+  bool operator ==(Object other) {
+    return identical(this, other) ||
+        (other.runtimeType == runtimeType &&
+            other is _$UploadStatePickedImageLoadingImpl &&
+            (identical(other.progress, progress) ||
+                other.progress == progress));
+  }
+
+  @override
+  int get hashCode => Object.hash(runtimeType, progress);
+
+  @JsonKey(ignore: true)
+  @override
+  @pragma('vm:prefer-inline')
+  _$$UploadStatePickedImageLoadingImplCopyWith<
+          _$UploadStatePickedImageLoadingImpl>
+      get copyWith => __$$UploadStatePickedImageLoadingImplCopyWithImpl<
+          _$UploadStatePickedImageLoadingImpl>(this, _$identity);
+
+  @override
+  @optionalTypeArgs
+  TResult when<TResult extends Object?>({
+    required TResult Function() idle,
+    required TResult Function(String errorMessage) error,
+    required TResult Function() success,
+    required TResult Function() loading,
+    required TResult Function() addContentSuccess,
+    required TResult Function() addContentLoading,
+    required TResult Function() deleteContentSuccess,
+    required TResult Function() deleteContentLoading,
+    required TResult Function() updateContentSuccess,
+    required TResult Function() updateContentLoading,
+    required TResult Function() pickedVideoSuccess,
+    required TResult Function(double progress) pickedVideoLoading,
+    required TResult Function() pickedImageSuccess,
+    required TResult Function(double progress) pickedImageLoading,
+    required TResult Function() uploadVideoSuccess,
+    required TResult Function(double progress) uploadVideoLoading,
+  }) {
+    return pickedImageLoading(progress);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult? whenOrNull<TResult extends Object?>({
+    TResult? Function()? idle,
+    TResult? Function(String errorMessage)? error,
+    TResult? Function()? success,
+    TResult? Function()? loading,
+    TResult? Function()? addContentSuccess,
+    TResult? Function()? addContentLoading,
+    TResult? Function()? deleteContentSuccess,
+    TResult? Function()? deleteContentLoading,
+    TResult? Function()? updateContentSuccess,
+    TResult? Function()? updateContentLoading,
+    TResult? Function()? pickedVideoSuccess,
+    TResult? Function(double progress)? pickedVideoLoading,
+    TResult? Function()? pickedImageSuccess,
+    TResult? Function(double progress)? pickedImageLoading,
+    TResult? Function()? uploadVideoSuccess,
+    TResult? Function(double progress)? uploadVideoLoading,
+  }) {
+    return pickedImageLoading?.call(progress);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult maybeWhen<TResult extends Object?>({
+    TResult Function()? idle,
+    TResult Function(String errorMessage)? error,
+    TResult Function()? success,
+    TResult Function()? loading,
+    TResult Function()? addContentSuccess,
+    TResult Function()? addContentLoading,
+    TResult Function()? deleteContentSuccess,
+    TResult Function()? deleteContentLoading,
+    TResult Function()? updateContentSuccess,
+    TResult Function()? updateContentLoading,
+    TResult Function()? pickedVideoSuccess,
+    TResult Function(double progress)? pickedVideoLoading,
+    TResult Function()? pickedImageSuccess,
+    TResult Function(double progress)? pickedImageLoading,
+    TResult Function()? uploadVideoSuccess,
+    TResult Function(double progress)? uploadVideoLoading,
+    required TResult orElse(),
+  }) {
+    if (pickedImageLoading != null) {
+      return pickedImageLoading(progress);
+    }
+    return orElse();
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult map<TResult extends Object?>({
+    required TResult Function(UploadStateIdle value) idle,
+    required TResult Function(UploadStateError value) error,
+    required TResult Function(UploadStateSuccess value) success,
+    required TResult Function(UploadStateLoading value) loading,
+    required TResult Function(UploadStateAddContentSuccess value)
+        addContentSuccess,
+    required TResult Function(UploadStateAddContentLoading value)
+        addContentLoading,
+    required TResult Function(UploadStateDeleteContentSuccess value)
+        deleteContentSuccess,
+    required TResult Function(UploadStateDeleteContentLoading value)
+        deleteContentLoading,
+    required TResult Function(UploadStateUpdateContentSuccess value)
+        updateContentSuccess,
+    required TResult Function(UploadStateUpdateContentLoading value)
+        updateContentLoading,
+    required TResult Function(UploadStatePickedVideoSuccess value)
+        pickedVideoSuccess,
+    required TResult Function(UploadStatePickedVideoLoading value)
+        pickedVideoLoading,
+    required TResult Function(UploadStatePickedImageSuccesss value)
+        pickedImageSuccess,
+    required TResult Function(UploadStatePickedImageLoading value)
+        pickedImageLoading,
+    required TResult Function(UploadStateUploadVideoSuccess value)
+        uploadVideoSuccess,
+    required TResult Function(UploadStateUploadVideoLoading value)
+        uploadVideoLoading,
+  }) {
+    return pickedImageLoading(this);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult? mapOrNull<TResult extends Object?>({
+    TResult? Function(UploadStateIdle value)? idle,
+    TResult? Function(UploadStateError value)? error,
+    TResult? Function(UploadStateSuccess value)? success,
+    TResult? Function(UploadStateLoading value)? loading,
+    TResult? Function(UploadStateAddContentSuccess value)? addContentSuccess,
+    TResult? Function(UploadStateAddContentLoading value)? addContentLoading,
+    TResult? Function(UploadStateDeleteContentSuccess value)?
+        deleteContentSuccess,
+    TResult? Function(UploadStateDeleteContentLoading value)?
+        deleteContentLoading,
+    TResult? Function(UploadStateUpdateContentSuccess value)?
+        updateContentSuccess,
+    TResult? Function(UploadStateUpdateContentLoading value)?
+        updateContentLoading,
+    TResult? Function(UploadStatePickedVideoSuccess value)? pickedVideoSuccess,
+    TResult? Function(UploadStatePickedVideoLoading value)? pickedVideoLoading,
+    TResult? Function(UploadStatePickedImageSuccesss value)? pickedImageSuccess,
+    TResult? Function(UploadStatePickedImageLoading value)? pickedImageLoading,
+    TResult? Function(UploadStateUploadVideoSuccess value)? uploadVideoSuccess,
+    TResult? Function(UploadStateUploadVideoLoading value)? uploadVideoLoading,
+  }) {
+    return pickedImageLoading?.call(this);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult maybeMap<TResult extends Object?>({
+    TResult Function(UploadStateIdle value)? idle,
+    TResult Function(UploadStateError value)? error,
+    TResult Function(UploadStateSuccess value)? success,
+    TResult Function(UploadStateLoading value)? loading,
+    TResult Function(UploadStateAddContentSuccess value)? addContentSuccess,
+    TResult Function(UploadStateAddContentLoading value)? addContentLoading,
+    TResult Function(UploadStateDeleteContentSuccess value)?
+        deleteContentSuccess,
+    TResult Function(UploadStateDeleteContentLoading value)?
+        deleteContentLoading,
+    TResult Function(UploadStateUpdateContentSuccess value)?
+        updateContentSuccess,
+    TResult Function(UploadStateUpdateContentLoading value)?
+        updateContentLoading,
+    TResult Function(UploadStatePickedVideoSuccess value)? pickedVideoSuccess,
+    TResult Function(UploadStatePickedVideoLoading value)? pickedVideoLoading,
+    TResult Function(UploadStatePickedImageSuccesss value)? pickedImageSuccess,
+    TResult Function(UploadStatePickedImageLoading value)? pickedImageLoading,
+    TResult Function(UploadStateUploadVideoSuccess value)? uploadVideoSuccess,
+    TResult Function(UploadStateUploadVideoLoading value)? uploadVideoLoading,
+    required TResult orElse(),
+  }) {
+    if (pickedImageLoading != null) {
+      return pickedImageLoading(this);
+    }
+    return orElse();
+  }
+}
+
+abstract class UploadStatePickedImageLoading implements UploadState {
+  const factory UploadStatePickedImageLoading(final double progress) =
+      _$UploadStatePickedImageLoadingImpl;
+
+  double get progress;
+  @JsonKey(ignore: true)
+  _$$UploadStatePickedImageLoadingImplCopyWith<
+          _$UploadStatePickedImageLoadingImpl>
+      get copyWith => throw _privateConstructorUsedError;
+}
+
+/// @nodoc
+abstract class _$$UploadStateUploadVideoSuccessImplCopyWith<$Res> {
+  factory _$$UploadStateUploadVideoSuccessImplCopyWith(
+          _$UploadStateUploadVideoSuccessImpl value,
+          $Res Function(_$UploadStateUploadVideoSuccessImpl) then) =
+      __$$UploadStateUploadVideoSuccessImplCopyWithImpl<$Res>;
+}
+
+/// @nodoc
+class __$$UploadStateUploadVideoSuccessImplCopyWithImpl<$Res>
+    extends _$UploadStateCopyWithImpl<$Res, _$UploadStateUploadVideoSuccessImpl>
+    implements _$$UploadStateUploadVideoSuccessImplCopyWith<$Res> {
+  __$$UploadStateUploadVideoSuccessImplCopyWithImpl(
+      _$UploadStateUploadVideoSuccessImpl _value,
+      $Res Function(_$UploadStateUploadVideoSuccessImpl) _then)
+      : super(_value, _then);
+}
+
+/// @nodoc
+
+class _$UploadStateUploadVideoSuccessImpl
+    implements UploadStateUploadVideoSuccess {
+  const _$UploadStateUploadVideoSuccessImpl();
+
+  @override
+  String toString() {
+    return 'UploadState.uploadVideoSuccess()';
+  }
+
+  @override
+  bool operator ==(Object other) {
+    return identical(this, other) ||
+        (other.runtimeType == runtimeType &&
+            other is _$UploadStateUploadVideoSuccessImpl);
+  }
+
+  @override
+  int get hashCode => runtimeType.hashCode;
+
+  @override
+  @optionalTypeArgs
+  TResult when<TResult extends Object?>({
+    required TResult Function() idle,
+    required TResult Function(String errorMessage) error,
+    required TResult Function() success,
+    required TResult Function() loading,
+    required TResult Function() addContentSuccess,
+    required TResult Function() addContentLoading,
+    required TResult Function() deleteContentSuccess,
+    required TResult Function() deleteContentLoading,
+    required TResult Function() updateContentSuccess,
+    required TResult Function() updateContentLoading,
+    required TResult Function() pickedVideoSuccess,
+    required TResult Function(double progress) pickedVideoLoading,
+    required TResult Function() pickedImageSuccess,
+    required TResult Function(double progress) pickedImageLoading,
+    required TResult Function() uploadVideoSuccess,
+    required TResult Function(double progress) uploadVideoLoading,
+  }) {
+    return uploadVideoSuccess();
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult? whenOrNull<TResult extends Object?>({
+    TResult? Function()? idle,
+    TResult? Function(String errorMessage)? error,
+    TResult? Function()? success,
+    TResult? Function()? loading,
+    TResult? Function()? addContentSuccess,
+    TResult? Function()? addContentLoading,
+    TResult? Function()? deleteContentSuccess,
+    TResult? Function()? deleteContentLoading,
+    TResult? Function()? updateContentSuccess,
+    TResult? Function()? updateContentLoading,
+    TResult? Function()? pickedVideoSuccess,
+    TResult? Function(double progress)? pickedVideoLoading,
+    TResult? Function()? pickedImageSuccess,
+    TResult? Function(double progress)? pickedImageLoading,
+    TResult? Function()? uploadVideoSuccess,
+    TResult? Function(double progress)? uploadVideoLoading,
+  }) {
+    return uploadVideoSuccess?.call();
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult maybeWhen<TResult extends Object?>({
+    TResult Function()? idle,
+    TResult Function(String errorMessage)? error,
+    TResult Function()? success,
+    TResult Function()? loading,
+    TResult Function()? addContentSuccess,
+    TResult Function()? addContentLoading,
+    TResult Function()? deleteContentSuccess,
+    TResult Function()? deleteContentLoading,
+    TResult Function()? updateContentSuccess,
+    TResult Function()? updateContentLoading,
+    TResult Function()? pickedVideoSuccess,
+    TResult Function(double progress)? pickedVideoLoading,
+    TResult Function()? pickedImageSuccess,
+    TResult Function(double progress)? pickedImageLoading,
+    TResult Function()? uploadVideoSuccess,
+    TResult Function(double progress)? uploadVideoLoading,
+    required TResult orElse(),
+  }) {
+    if (uploadVideoSuccess != null) {
+      return uploadVideoSuccess();
+    }
+    return orElse();
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult map<TResult extends Object?>({
+    required TResult Function(UploadStateIdle value) idle,
+    required TResult Function(UploadStateError value) error,
+    required TResult Function(UploadStateSuccess value) success,
+    required TResult Function(UploadStateLoading value) loading,
+    required TResult Function(UploadStateAddContentSuccess value)
+        addContentSuccess,
+    required TResult Function(UploadStateAddContentLoading value)
+        addContentLoading,
+    required TResult Function(UploadStateDeleteContentSuccess value)
+        deleteContentSuccess,
+    required TResult Function(UploadStateDeleteContentLoading value)
+        deleteContentLoading,
+    required TResult Function(UploadStateUpdateContentSuccess value)
+        updateContentSuccess,
+    required TResult Function(UploadStateUpdateContentLoading value)
+        updateContentLoading,
+    required TResult Function(UploadStatePickedVideoSuccess value)
+        pickedVideoSuccess,
+    required TResult Function(UploadStatePickedVideoLoading value)
+        pickedVideoLoading,
+    required TResult Function(UploadStatePickedImageSuccesss value)
+        pickedImageSuccess,
+    required TResult Function(UploadStatePickedImageLoading value)
+        pickedImageLoading,
+    required TResult Function(UploadStateUploadVideoSuccess value)
+        uploadVideoSuccess,
+    required TResult Function(UploadStateUploadVideoLoading value)
+        uploadVideoLoading,
+  }) {
+    return uploadVideoSuccess(this);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult? mapOrNull<TResult extends Object?>({
+    TResult? Function(UploadStateIdle value)? idle,
+    TResult? Function(UploadStateError value)? error,
+    TResult? Function(UploadStateSuccess value)? success,
+    TResult? Function(UploadStateLoading value)? loading,
+    TResult? Function(UploadStateAddContentSuccess value)? addContentSuccess,
+    TResult? Function(UploadStateAddContentLoading value)? addContentLoading,
+    TResult? Function(UploadStateDeleteContentSuccess value)?
+        deleteContentSuccess,
+    TResult? Function(UploadStateDeleteContentLoading value)?
+        deleteContentLoading,
+    TResult? Function(UploadStateUpdateContentSuccess value)?
+        updateContentSuccess,
+    TResult? Function(UploadStateUpdateContentLoading value)?
+        updateContentLoading,
+    TResult? Function(UploadStatePickedVideoSuccess value)? pickedVideoSuccess,
+    TResult? Function(UploadStatePickedVideoLoading value)? pickedVideoLoading,
+    TResult? Function(UploadStatePickedImageSuccesss value)? pickedImageSuccess,
+    TResult? Function(UploadStatePickedImageLoading value)? pickedImageLoading,
+    TResult? Function(UploadStateUploadVideoSuccess value)? uploadVideoSuccess,
+    TResult? Function(UploadStateUploadVideoLoading value)? uploadVideoLoading,
+  }) {
+    return uploadVideoSuccess?.call(this);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult maybeMap<TResult extends Object?>({
+    TResult Function(UploadStateIdle value)? idle,
+    TResult Function(UploadStateError value)? error,
+    TResult Function(UploadStateSuccess value)? success,
+    TResult Function(UploadStateLoading value)? loading,
+    TResult Function(UploadStateAddContentSuccess value)? addContentSuccess,
+    TResult Function(UploadStateAddContentLoading value)? addContentLoading,
+    TResult Function(UploadStateDeleteContentSuccess value)?
+        deleteContentSuccess,
+    TResult Function(UploadStateDeleteContentLoading value)?
+        deleteContentLoading,
+    TResult Function(UploadStateUpdateContentSuccess value)?
+        updateContentSuccess,
+    TResult Function(UploadStateUpdateContentLoading value)?
+        updateContentLoading,
+    TResult Function(UploadStatePickedVideoSuccess value)? pickedVideoSuccess,
+    TResult Function(UploadStatePickedVideoLoading value)? pickedVideoLoading,
+    TResult Function(UploadStatePickedImageSuccesss value)? pickedImageSuccess,
+    TResult Function(UploadStatePickedImageLoading value)? pickedImageLoading,
+    TResult Function(UploadStateUploadVideoSuccess value)? uploadVideoSuccess,
+    TResult Function(UploadStateUploadVideoLoading value)? uploadVideoLoading,
+    required TResult orElse(),
+  }) {
+    if (uploadVideoSuccess != null) {
+      return uploadVideoSuccess(this);
+    }
+    return orElse();
+  }
+}
+
+abstract class UploadStateUploadVideoSuccess implements UploadState {
+  const factory UploadStateUploadVideoSuccess() =
+      _$UploadStateUploadVideoSuccessImpl;
+}
+
+/// @nodoc
+abstract class _$$UploadStateUploadVideoLoadingImplCopyWith<$Res> {
+  factory _$$UploadStateUploadVideoLoadingImplCopyWith(
+          _$UploadStateUploadVideoLoadingImpl value,
+          $Res Function(_$UploadStateUploadVideoLoadingImpl) then) =
+      __$$UploadStateUploadVideoLoadingImplCopyWithImpl<$Res>;
+  @useResult
+  $Res call({double progress});
+}
+
+/// @nodoc
+class __$$UploadStateUploadVideoLoadingImplCopyWithImpl<$Res>
+    extends _$UploadStateCopyWithImpl<$Res, _$UploadStateUploadVideoLoadingImpl>
+    implements _$$UploadStateUploadVideoLoadingImplCopyWith<$Res> {
+  __$$UploadStateUploadVideoLoadingImplCopyWithImpl(
+      _$UploadStateUploadVideoLoadingImpl _value,
+      $Res Function(_$UploadStateUploadVideoLoadingImpl) _then)
+      : super(_value, _then);
+
+  @pragma('vm:prefer-inline')
+  @override
+  $Res call({
+    Object? progress = null,
+  }) {
+    return _then(_$UploadStateUploadVideoLoadingImpl(
+      null == progress
+          ? _value.progress
+          : progress // ignore: cast_nullable_to_non_nullable
+              as double,
+    ));
+  }
+}
+
+/// @nodoc
+
+class _$UploadStateUploadVideoLoadingImpl
+    implements UploadStateUploadVideoLoading {
+  const _$UploadStateUploadVideoLoadingImpl(this.progress);
+
+  @override
+  final double progress;
+
+  @override
+  String toString() {
+    return 'UploadState.uploadVideoLoading(progress: $progress)';
+  }
+
+  @override
+  bool operator ==(Object other) {
+    return identical(this, other) ||
+        (other.runtimeType == runtimeType &&
+            other is _$UploadStateUploadVideoLoadingImpl &&
+            (identical(other.progress, progress) ||
+                other.progress == progress));
+  }
+
+  @override
+  int get hashCode => Object.hash(runtimeType, progress);
+
+  @JsonKey(ignore: true)
+  @override
+  @pragma('vm:prefer-inline')
+  _$$UploadStateUploadVideoLoadingImplCopyWith<
+          _$UploadStateUploadVideoLoadingImpl>
+      get copyWith => __$$UploadStateUploadVideoLoadingImplCopyWithImpl<
+          _$UploadStateUploadVideoLoadingImpl>(this, _$identity);
+
+  @override
+  @optionalTypeArgs
+  TResult when<TResult extends Object?>({
+    required TResult Function() idle,
+    required TResult Function(String errorMessage) error,
+    required TResult Function() success,
+    required TResult Function() loading,
+    required TResult Function() addContentSuccess,
+    required TResult Function() addContentLoading,
+    required TResult Function() deleteContentSuccess,
+    required TResult Function() deleteContentLoading,
+    required TResult Function() updateContentSuccess,
+    required TResult Function() updateContentLoading,
+    required TResult Function() pickedVideoSuccess,
+    required TResult Function(double progress) pickedVideoLoading,
+    required TResult Function() pickedImageSuccess,
+    required TResult Function(double progress) pickedImageLoading,
+    required TResult Function() uploadVideoSuccess,
+    required TResult Function(double progress) uploadVideoLoading,
+  }) {
+    return uploadVideoLoading(progress);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult? whenOrNull<TResult extends Object?>({
+    TResult? Function()? idle,
+    TResult? Function(String errorMessage)? error,
+    TResult? Function()? success,
+    TResult? Function()? loading,
+    TResult? Function()? addContentSuccess,
+    TResult? Function()? addContentLoading,
+    TResult? Function()? deleteContentSuccess,
+    TResult? Function()? deleteContentLoading,
+    TResult? Function()? updateContentSuccess,
+    TResult? Function()? updateContentLoading,
+    TResult? Function()? pickedVideoSuccess,
+    TResult? Function(double progress)? pickedVideoLoading,
+    TResult? Function()? pickedImageSuccess,
+    TResult? Function(double progress)? pickedImageLoading,
+    TResult? Function()? uploadVideoSuccess,
+    TResult? Function(double progress)? uploadVideoLoading,
+  }) {
+    return uploadVideoLoading?.call(progress);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult maybeWhen<TResult extends Object?>({
+    TResult Function()? idle,
+    TResult Function(String errorMessage)? error,
+    TResult Function()? success,
+    TResult Function()? loading,
+    TResult Function()? addContentSuccess,
+    TResult Function()? addContentLoading,
+    TResult Function()? deleteContentSuccess,
+    TResult Function()? deleteContentLoading,
+    TResult Function()? updateContentSuccess,
+    TResult Function()? updateContentLoading,
+    TResult Function()? pickedVideoSuccess,
+    TResult Function(double progress)? pickedVideoLoading,
+    TResult Function()? pickedImageSuccess,
+    TResult Function(double progress)? pickedImageLoading,
+    TResult Function()? uploadVideoSuccess,
+    TResult Function(double progress)? uploadVideoLoading,
+    required TResult orElse(),
+  }) {
+    if (uploadVideoLoading != null) {
+      return uploadVideoLoading(progress);
+    }
+    return orElse();
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult map<TResult extends Object?>({
+    required TResult Function(UploadStateIdle value) idle,
+    required TResult Function(UploadStateError value) error,
+    required TResult Function(UploadStateSuccess value) success,
+    required TResult Function(UploadStateLoading value) loading,
+    required TResult Function(UploadStateAddContentSuccess value)
+        addContentSuccess,
+    required TResult Function(UploadStateAddContentLoading value)
+        addContentLoading,
+    required TResult Function(UploadStateDeleteContentSuccess value)
+        deleteContentSuccess,
+    required TResult Function(UploadStateDeleteContentLoading value)
+        deleteContentLoading,
+    required TResult Function(UploadStateUpdateContentSuccess value)
+        updateContentSuccess,
+    required TResult Function(UploadStateUpdateContentLoading value)
+        updateContentLoading,
+    required TResult Function(UploadStatePickedVideoSuccess value)
+        pickedVideoSuccess,
+    required TResult Function(UploadStatePickedVideoLoading value)
+        pickedVideoLoading,
+    required TResult Function(UploadStatePickedImageSuccesss value)
+        pickedImageSuccess,
+    required TResult Function(UploadStatePickedImageLoading value)
+        pickedImageLoading,
+    required TResult Function(UploadStateUploadVideoSuccess value)
+        uploadVideoSuccess,
+    required TResult Function(UploadStateUploadVideoLoading value)
+        uploadVideoLoading,
+  }) {
+    return uploadVideoLoading(this);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult? mapOrNull<TResult extends Object?>({
+    TResult? Function(UploadStateIdle value)? idle,
+    TResult? Function(UploadStateError value)? error,
+    TResult? Function(UploadStateSuccess value)? success,
+    TResult? Function(UploadStateLoading value)? loading,
+    TResult? Function(UploadStateAddContentSuccess value)? addContentSuccess,
+    TResult? Function(UploadStateAddContentLoading value)? addContentLoading,
+    TResult? Function(UploadStateDeleteContentSuccess value)?
+        deleteContentSuccess,
+    TResult? Function(UploadStateDeleteContentLoading value)?
+        deleteContentLoading,
+    TResult? Function(UploadStateUpdateContentSuccess value)?
+        updateContentSuccess,
+    TResult? Function(UploadStateUpdateContentLoading value)?
+        updateContentLoading,
+    TResult? Function(UploadStatePickedVideoSuccess value)? pickedVideoSuccess,
+    TResult? Function(UploadStatePickedVideoLoading value)? pickedVideoLoading,
+    TResult? Function(UploadStatePickedImageSuccesss value)? pickedImageSuccess,
+    TResult? Function(UploadStatePickedImageLoading value)? pickedImageLoading,
+    TResult? Function(UploadStateUploadVideoSuccess value)? uploadVideoSuccess,
+    TResult? Function(UploadStateUploadVideoLoading value)? uploadVideoLoading,
+  }) {
+    return uploadVideoLoading?.call(this);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult maybeMap<TResult extends Object?>({
+    TResult Function(UploadStateIdle value)? idle,
+    TResult Function(UploadStateError value)? error,
+    TResult Function(UploadStateSuccess value)? success,
+    TResult Function(UploadStateLoading value)? loading,
+    TResult Function(UploadStateAddContentSuccess value)? addContentSuccess,
+    TResult Function(UploadStateAddContentLoading value)? addContentLoading,
+    TResult Function(UploadStateDeleteContentSuccess value)?
+        deleteContentSuccess,
+    TResult Function(UploadStateDeleteContentLoading value)?
+        deleteContentLoading,
+    TResult Function(UploadStateUpdateContentSuccess value)?
+        updateContentSuccess,
+    TResult Function(UploadStateUpdateContentLoading value)?
+        updateContentLoading,
+    TResult Function(UploadStatePickedVideoSuccess value)? pickedVideoSuccess,
+    TResult Function(UploadStatePickedVideoLoading value)? pickedVideoLoading,
+    TResult Function(UploadStatePickedImageSuccesss value)? pickedImageSuccess,
+    TResult Function(UploadStatePickedImageLoading value)? pickedImageLoading,
+    TResult Function(UploadStateUploadVideoSuccess value)? uploadVideoSuccess,
+    TResult Function(UploadStateUploadVideoLoading value)? uploadVideoLoading,
+    required TResult orElse(),
+  }) {
+    if (uploadVideoLoading != null) {
+      return uploadVideoLoading(this);
+    }
+    return orElse();
+  }
+}
+
+abstract class UploadStateUploadVideoLoading implements UploadState {
+  const factory UploadStateUploadVideoLoading(final double progress) =
+      _$UploadStateUploadVideoLoadingImpl;
+
+  double get progress;
+  @JsonKey(ignore: true)
+  _$$UploadStateUploadVideoLoadingImplCopyWith<
+          _$UploadStateUploadVideoLoadingImpl>
+      get copyWith => throw _privateConstructorUsedError;
 }

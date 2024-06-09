@@ -64,5 +64,6 @@
   "cancel": "لغو",
   "deletedVideoMessage": "آیا از حذف ویدیو مطمئن هستید؟",
   "deletedUserMessage": "آیا از حذف کاربر مطمئن هستید؟",
-  "deleteUser": "حذف کاربر"
+  "deleteUser": "حذف کاربر",
+  "acceptedFormatesImage": "فرمت های قابل پذیرش: PNG, JPG"
 }

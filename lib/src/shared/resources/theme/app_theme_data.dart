@@ -68,5 +68,27 @@ class DarkAppThemeData extends AppThemeData{
   ThemeData get materialThemeData => ThemeData(
     useMaterial3: true,
     brightness: Brightness.dark,
+
+      textTheme: TextTheme(
+        headlineLarge: getBoldStyle(fontSize: AppSize.s24, color: ColorThemeManager.colorBlack),
+        headlineMedium: getSemiBoldStyle(fontSize: AppSize.s24, color: ColorThemeManager.colorBlack),
+        headlineSmall: getRegularStyle(fontSize: AppSize.s24, color: ColorThemeManager.colorBlack),
+
+        titleLarge: getBoldStyle(fontSize: AppSize.s18, color: ColorThemeManager.colorBlack),
+        titleMedium: getSemiBoldStyle(fontSize: AppSize.s18, color: ColorThemeManager.colorBlack),
+        titleSmall: getRegularStyle(fontSize: AppSize.s18, color: ColorThemeManager.colorBlack),
+
+        displayLarge: getBoldStyle(fontSize: AppSize.s16, color: ColorThemeManager.colorBlack),
+        displayMedium: getSemiBoldStyle(fontSize: AppSize.s16, color: ColorThemeManager.colorBlack),
+        displaySmall: getRegularStyle(fontSize: AppSize.s16, color: ColorThemeManager.colorBlack),
+
+        bodyLarge: getBoldStyle(fontSize: AppSize.s14, color: ColorThemeManager.colorBlack),
+        bodyMedium: getSemiBoldStyle(fontSize: AppSize.s14, color: ColorThemeManager.colorBlack),
+        bodySmall: getRegularStyle(fontSize: AppSize.s14, color: ColorThemeManager.colorBlack),
+
+        labelLarge: getBoldStyle(fontSize: AppSize.s12, color: ColorThemeManager.colorBlack),
+        labelMedium: getSemiBoldStyle(fontSize: AppSize.s12, color: ColorThemeManager.colorBlack),
+        labelSmall: getRegularStyle(fontSize: AppSize.s12, color: ColorThemeManager.colorBlack),
+      ).apply(fontFamily: FontConstants.fontFamily)
   );
 }

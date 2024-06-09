@@ -5,6 +5,8 @@ import 'package:admin_panel/src/features/user_manager/presentation/pages/widgets
 import 'package:flutter/material.dart';
 import 'package:go_router/go_router.dart';
 
+import '../features/upload/presentation/pages/widgets/upload_video/upload_video_page.dart';
+
 class Routes {
   static final parentNavigatorKey = GlobalKey<NavigatorState>();
   static final homeTabNavigatorKey =
@@ -21,6 +23,18 @@ class Routes {
       initialLocation: LoginPage.loginPageName,
       debugLogDiagnostics: true,
       routes: [
+        GoRoute(
+            path: '/upload-video',
+            name: '/upload-video',
+            pageBuilder: (BuildContext context, GoRouterState state) {
+              return CustomTransitionPage(
+                key: state.pageKey,
+                transitionDuration: Duration.zero,
+                transitionsBuilder:
+                    (context, animation, secondaryAnimation, child) => child,
+                child: const UploadVideoPage(),
+              );
+            }),
         GoRoute(
             path: '/edit-content',
             name: '/edit-content',

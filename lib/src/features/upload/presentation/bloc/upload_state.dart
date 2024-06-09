@@ -25,4 +25,17 @@ class UploadState with _$UploadState {
 
   const factory UploadState.updateContentLoading() = UploadStateUpdateContentLoading;
 
+  const factory UploadState.pickedVideoSuccess() = UploadStatePickedVideoSuccess;
+
+  const factory UploadState.pickedVideoLoading(double progress) = UploadStatePickedVideoLoading;
+
+  const factory UploadState.pickedImageSuccess() = UploadStatePickedImageSuccesss;
+
+  const factory UploadState.pickedImageLoading(double progress) = UploadStatePickedImageLoading;
+
+
+  const factory UploadState.uploadVideoSuccess() = UploadStateUploadVideoSuccess;
+
+  const factory UploadState.uploadVideoLoading(double progress) = UploadStateUploadVideoLoading;
+
 }

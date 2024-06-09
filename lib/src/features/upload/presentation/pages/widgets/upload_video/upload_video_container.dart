@@ -1,9 +1,11 @@
+import 'package:admin_panel/src/features/upload/presentation/pages/widgets/upload_video/video_player_widget.dart';
 import 'package:admin_panel/src/shared/resources/resources.dart';
 import 'package:admin_panel/src/shared/ui_kits/ac_elevated_button/ac_elevate_button.dart';
 import 'package:admin_panel/src/shared/ui_kits/ac_text_form_field/ac_text_form_field.dart';
+import 'package:file_picker/file_picker.dart';
 import 'package:flutter/material.dart';
-import 'package:image_picker/image_picker.dart';
 import 'package:flutter_gen/gen_l10n/app_localizations.dart';
+import 'package:go_router/go_router.dart';
 
 
 class UploadVideoContainer extends StatefulWidget {
@@ -14,9 +16,7 @@ class UploadVideoContainer extends StatefulWidget {
 }
 
 class _UploadVideoContainerState extends State<UploadVideoContainer> {
-  ImagePicker picker = ImagePicker();
-  TextEditingController videoTitle = TextEditingController();
-  TextEditingController videoDescription = TextEditingController();
+
   @override
   Widget build(BuildContext context) {
     final textLocalization = AppLocalizations.of(context)!;
@@ -27,54 +27,7 @@ class _UploadVideoContainerState extends State<UploadVideoContainer> {
         Space.h8,
         InkWell(
           onTap: () {
-            showDialog(
-              context: context,
-              builder: (BuildContext context) {
-                return AlertDialog(
-                  content: Column(
-                    children: [
-                      Expanded(
-                        child: InkWell(
-                          onTap: () async{
-                            XFile? image = await picker.pickVideo(source: ImageSource.gallery);
-                          },
-                          child: Container(
-                            width: double.infinity,
-                              decoration: BoxDecoration(
-                                  border: Border.all(
-                                      width: AppSize.s2,
-                                      color: Theme.of(context).colorScheme.onSecondary
-                                  ),
-                                  borderRadius: BorderRadius.circular(AppSize.s12)
-                              ),
-                            child: Column(
-                              mainAxisAlignment: MainAxisAlignment.center,
-                              children: [
-                                Icon(IconManager.uploadFill, size: AppSize.s42, color: Theme.of(context).colorScheme.tertiary),
-                                Text(textLocalization.selectVideo, style: Theme.of(context).textTheme.displayLarge,textAlign: TextAlign.center,),
-                              ],
-                            ),
-                          ),
-                        ),
-                      ),
-                      Space.h8,
-                      ACTextFormField(controller: videoTitle, hintText: textLocalization.title),
-                      Space.h8,
-                      ACTextFormField(
-                        controller: videoDescription,
-                        hintText: textLocalization.description,
-                        maxLines: 6,
-                      ),
-                      Space.h8,
-                      ACElevatedButton(
-                        onTap: () {},
-                        title: textLocalization.upload,
-                      )
-                    ],
-                  ),
-                );
-              },
-            );
+            context.pushNamed('/upload-video');
           },
           borderRadius: BorderRadius.circular(AppSize.s12),
           child: Container(
