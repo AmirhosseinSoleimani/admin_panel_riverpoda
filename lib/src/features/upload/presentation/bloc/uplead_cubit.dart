@@ -26,6 +26,8 @@ class UploadCubit extends Cubit<UploadState> {
   static String title = '';
   static String description = '';
   static String id = '';
+  static String authorName = '';
+  static String publishDate = '';
 
 
   TextEditingController videoTitle = TextEditingController();

@@ -36,7 +36,7 @@
   "darkMode": "تم تاریک",
   "changeLanguage": "تغییر زبان",
   "logOut": "خروج",
-  "saveEdit": "ذخیره تغییرات",
+  "save": "ذخیره",
   "male": "مرد",
   "female": "زن",
   "another": "دیگر",
@@ -51,7 +51,7 @@
   "title": "عنوان",
   "description": "مشخصات",
   "publisher": "منتشرکننده",
-  "publisherDate": "تاریخ انتشار",
+  "date": "تاریخ",
   "videoList": "لیست ویدیوها",
   "uploadYourVideo": "بارگذاری ویدیو من",
   "uploadVideo": "بارگذاری ویدیو",
@@ -60,10 +60,11 @@
   "views": "مشاهده",
   "comment": "نظرات",
   "addComment": "اضافه کردن نظر...",
-  "deleteVideo": "حذف ویدیو",
+  "delete": "حذف",
   "cancel": "لغو",
-  "deletedVideoMessage": "آیا از حذف ویدیو مطمئن هستید؟",
+  "deletedVideoMessage": "آیا از حذف حتوا مطمئن هستید؟",
   "deletedUserMessage": "آیا از حذف کاربر مطمئن هستید؟",
-  "deleteUser": "حذف کاربر",
-  "acceptedFormatesImage": "فرمت های قابل پذیرش: PNG, JPG"
+  "acceptedFormatesImage": "فرمت های قابل پذیرش: PNG, JPG",
+  "attachment": "پیوست",
+  "contentVideo": "محتوای ویدیو"
 }

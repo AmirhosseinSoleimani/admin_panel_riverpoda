@@ -10,20 +10,31 @@ class LargeWidgetUpload extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return const Scaffold(
-      body: SingleChildScrollView(
-        child: Padding(
-          padding: EdgeInsets.all(AppPadding.p16),
-          child: Column(
-            children: [
-              ApprovedVideo(),
-              Space.h16,
-              VideoList(),
-              Space.h16,
-              UploadVideoContainer(),
-
-            ],
-          ),
+    return Scaffold(
+      body: Padding(
+        padding: const EdgeInsets.all(AppPadding.p16),
+        child: Column(
+          children: [
+            SizedBox(
+              height: MediaQuery.of(context).size.height * 0.35,
+              width: double.infinity,
+              child: const Row(
+                crossAxisAlignment: CrossAxisAlignment.stretch,
+                children: [
+                  Expanded(
+                      flex: 3,
+                      child: ApprovedVideo(),
+                  ),
+                  Expanded(
+                      flex: 1,
+                      child: UploadVideoContainer(),
+                  ),
+                ],
+              ),
+            ),
+            Space.h16,
+             const Expanded(child: VideoList()),
+          ],
         ),
       ),
     );

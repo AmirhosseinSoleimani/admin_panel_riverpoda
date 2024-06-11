@@ -120,7 +120,7 @@ class _EditProfileState extends State<EditProfile> {
                         onTap: () {
                           context.pop();
                         },
-                        title: textLocalization.saveEdit,
+                        title: textLocalization.save,
                       )
                     ],
                   ),

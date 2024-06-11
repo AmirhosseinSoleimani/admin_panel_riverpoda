@@ -22,7 +22,7 @@ class DeleteVideo extends StatelessWidget {
                   onTap: () {
                     context.pop();
                   },
-                  child: Text(textLocalization.deleteVideo, style: Theme.of(context).textTheme.bodyMedium?.copyWith(color: Theme.of(context).colorScheme.error),),
+                  child: Text(textLocalization.delete, style: Theme.of(context).textTheme.bodyMedium?.copyWith(color: Theme.of(context).colorScheme.error),),
                 ),
                 Space.w16,
                 InkWell(

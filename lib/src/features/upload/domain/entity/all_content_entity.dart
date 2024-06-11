@@ -16,6 +16,15 @@ class AllContentEntity {
   String? authorName;
   @JsonKey(name: 'CreatedAt')
   String? createdAt;
+  @JsonKey(name: 'image_url')
+  String? imageUrl;
+  @JsonKey(name: 'view_count')
+  int? viewCount;
+  @JsonKey(name: 'duration')
+  String? duration;
+  @JsonKey(name: 'is_live')
+  bool? isLive;
+
 
   AllContentEntity(
       {this.id,
@@ -25,7 +34,12 @@ class AllContentEntity {
         this.categoryId,
         this.authorId,
         this.authorName,
-        this.createdAt});
+        this.createdAt,
+        this.imageUrl,
+        this.viewCount,
+        this.duration,
+        this.isLive
+      });
 
   factory AllContentEntity.fromJson(Map<String, dynamic> json) => _$AllContentEntityFromJson(json);
 

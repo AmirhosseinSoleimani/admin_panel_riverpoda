@@ -5,7 +5,6 @@ class ImageManager {}
 
 
 class IconManager {
-
   // Cupertino Icons
   static const IconData home = CupertinoIcons.home;
   static const IconData homeFill = CupertinoIcons.house_fill;
@@ -27,8 +26,6 @@ class IconManager {
 
 
 
-
-
   // Material Icons
   static const IconData subscription = Icons.shopping_bag;
   static const IconData relief = Icons.miscellaneous_services;
@@ -46,5 +43,15 @@ class IconManager {
   static const IconData visibilityOff = Icons.visibility_off_rounded;
   static const IconData logOut = Icons.logout_outlined;
   static const IconData addPhoto = Icons.add_a_photo_outlined;
+  static const IconData density = Icons.density_small_rounded;
+  static const IconData download = Icons.download_rounded;
+  static const IconData reply = Icons.reply;
+  static const IconData error = Icons.error_outline_outlined;
 
+}
+
+class SvgManager {
+  static const String pdfSvg = "assets/svg/content_management/pdf.svg";
+  static const String powerPointSvg = "assets/svg/content_management/powerpoint.svg";
+  static const String wordSvg = "assets/svg/content_management/word.svg";
 }

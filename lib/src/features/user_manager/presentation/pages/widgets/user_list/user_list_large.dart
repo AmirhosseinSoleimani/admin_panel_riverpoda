@@ -10,10 +10,27 @@ import 'package:flutter_gen/gen_l10n/app_localizations.dart';
 import 'package:go_router/go_router.dart';
 
 import '../../../../../../di/di_setup.dart';
+import '../../../../../../shared/ui_kits/ac_elevated_button/ac_elevate_button.dart';
 import '../../../../../../shared/ui_kits/ac_inkwell_button/ac_inkwell_button.dart';
+import '../../../../../../shared/ui_kits/ac_text_form_field/ac_text_form_field.dart';
+import '../../../../../features.dart';
 
-class UserListLarge extends StatelessWidget {
+class UserListLarge extends StatefulWidget {
   const UserListLarge({super.key});
+
+  @override
+  State<UserListLarge> createState() => _UserListLargeState();
+}
+
+class _UserListLargeState extends State<UserListLarge> {
+
+  final Map<String, String> items = {
+    'Male': '1',
+    'Female': '2',
+    'Another': '3',
+  };
+  bool isShowPassword = false;
+  String? selectedKey;
 
   @override
   Widget build(BuildContext context) {
@@ -38,7 +55,125 @@ class UserListLarge extends StatelessWidget {
                 backgroundColor: Theme.of(context).colorScheme.surfaceContainer,
                 width: AppSize.s150,
                 onTap: () {
-                  context.goNamed('/add-user');
+                  UserManagerCubit.emailController.clear();
+                  UserManagerCubit.userNameController.clear();
+                  UserManagerCubit.passwordController.clear();
+                  showDialog(
+                    context: context,
+                    builder: (BuildContext _) {
+                      return Dialog(
+                        child: SizedBox(
+                          width: MediaQuery.of(context).size.width * 0.4,
+                          height: MediaQuery.of(context).size.height * 0.5,
+                          child: StatefulBuilder(
+                            builder: (BuildContext _, setState) {
+                              return Padding(
+                                padding: const EdgeInsets.all(AppPadding.p16),
+                                child: Column(
+                                  mainAxisAlignment: MainAxisAlignment.center,
+                                  children: [
+                                    Space.h16,
+                                    Row(
+                                      children: [
+                                        Expanded(child: ACTextFormField(controller: UserManagerCubit.userNameController, hintText: textLocalization.userName)),
+                                        Space.w8,
+                                        Expanded(
+                                          child: ACTextFormField(
+                                            controller: UserManagerCubit.passwordController,
+                                            hintText: textLocalization.password,
+                                            isPasswordField: !isShowPassword,
+                                            suffixIcon: InkWell(
+                                              onTap: () {
+                                                setState(() {
+                                                  isShowPassword =! isShowPassword;
+                                                });
+                                              },
+                                              child: Icon(
+                                                  isShowPassword ? IconManager.visibility : IconManager.visibilityOff
+                                              ),
+                                            ),
+                                          ),
+                                        ),
+                                      ],
+                                    ),
+                                    Space.h16,
+                                    Row(
+                                      children: [
+                                        Expanded(
+                                          child: ACTextFormField(
+                                            controller: UserManagerCubit.emailController,
+                                            hintText: textLocalization.email,
+                                          ),
+                                        ),
+                                        Space.w8,
+                                        Expanded(
+                                          child: Row(
+                                            mainAxisAlignment: MainAxisAlignment.spaceAround,
+                                            children: [
+                                              Expanded(
+                                                flex: 3,
+                                                child: DropdownButton<String>(
+                                                  hint: Text(textLocalization.selectAnItem, style: Theme.of(context).textTheme.bodyMedium,),
+                                                  value: selectedKey,
+                                                  items: items.keys.map((String key) {
+                                                    return DropdownMenuItem<String>(
+                                                      value: key,
+                                                      child: Text(key),
+                                                    );
+                                                  }).toList(),
+                                                  onChanged: (String? newKey) {
+                                                    setState(() {
+                                                      selectedKey = newKey;
+                                                    });
+                                                  },
+                                                ),
+                                              ),
+                                              Expanded(
+                                                flex: 2,
+                                                child: Column(
+                                                  mainAxisAlignment: MainAxisAlignment.center,
+                                                  children: [
+                                                    Container(
+                                                      width: AppSize.s60,
+                                                      height: AppSize.s60,
+                                                      decoration: BoxDecoration(
+                                                          shape: BoxShape.circle,
+                                                          color: Theme.of(context).colorScheme.secondaryContainer
+                                                      ),
+                                                      child: const Center(
+                                                        child: Icon(
+                                                            IconManager.add
+                                                        ),
+                                                      ),
+                                                    ),
+                                                    Text(textLocalization.addPhoto, style: Theme.of(context).textTheme.bodyMedium,),
+                                                  ],
+                                                ),
+                                              )
+                                            ],
+                                          ),
+                                        ),
+                                      ],
+                                    ),
+                                    Space.h16,
+                                    ACElevatedButton(
+                                      onTap: () async{
+                                        await context.read<UserManagerCubit>().addUsers(context);
+                                        context.pop();
+                                        context.pushNamed(UserManagerPage.userManagerPageName);
+                                      },
+                                      title: textLocalization.addUser,
+                                    )
+                                  ],
+                                ),
+                              );
+                            },
+                          ),
+                        ),
+                      );
+                    },
+                  );
+                  setState(() {});
                 },
                 child: Row(
                   mainAxisSize: MainAxisSize.min,
@@ -126,7 +261,7 @@ class UserListLarge extends StatelessWidget {
                               .read<UserManagerCubit>()
                               .listAllUsers[index]
                               .createdAt!,
-                          index: index,
+                          index: index + 1,
                           phoneNumber: '+9383202865',
                           birthday: '3/4/1997',
                           job: '---',

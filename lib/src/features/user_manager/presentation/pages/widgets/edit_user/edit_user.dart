@@ -133,7 +133,7 @@ class _EditUserState extends State<EditUser> {
                     context.read<UserManagerCubit>().updateUsers(context, UserManagerCubit.id);
                     context.pushNamed(UserManagerPage.userManagerPageName);
                   },
-                  title: textLocalization.saveEdit,
+                  title: textLocalization.save,
                 )
               ],
             );

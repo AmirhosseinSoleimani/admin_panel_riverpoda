@@ -44,87 +44,114 @@ class _AddUserState extends State<AddUser> {
     },
     child: Scaffold(
       body: Padding(
-        padding: const EdgeInsets.all(AppPadding.p16),
+        padding: const EdgeInsets.symmetric(vertical: AppPadding.p16, horizontal: AppPadding.p32),
         child: BlocBuilder<UserManagerCubit, UserManagerState>(
           builder: (BuildContext context, state) {
             return ListView(
               shrinkWrap: true,
               children: [
                 Space.h16,
-                ACTextFormField(controller: UserManagerCubit.userNameController, hintText: textLocalization.userName),
-                Space.h16,
-                ACTextFormField(
-                  controller: UserManagerCubit.passwordController,
-                  hintText: textLocalization.password,
-                  isPasswordField: isShowPassword,
-                  suffixIcon: InkWell(
-                    onTap: () {
-                      setState(() {
-                        isShowPassword =! isShowPassword;
-                      });
-                    },
-                    child: Icon(
-                        isShowPassword ? IconManager.visibility : IconManager.visibilityOff
-                    ),
-                  ),
-                ),
-                Space.h16,
-                ACTextFormField(
-                  controller: UserManagerCubit.emailController,
-                  hintText: textLocalization.email,
-                ),
                 Row(
-                  mainAxisAlignment: MainAxisAlignment.spaceAround,
                   children: [
+                    Expanded(child: ACTextFormField(controller: UserManagerCubit.userNameController, hintText: textLocalization.userName)),
+                    Space.w8,
                     Expanded(
-                      flex: 3,
-                      child: DropdownButton<String>(
-                        hint: Text(textLocalization.selectAnItem, style: Theme.of(context).textTheme.bodyMedium,),
-                        value: selectedKey,
-                        items: items.keys.map((String key) {
-                          return DropdownMenuItem<String>(
-                            value: key,
-                            child: Text(key),
-                          );
-                        }).toList(),
-                        onChanged: (String? newKey) {
-                          setState(() {
-                            selectedKey = newKey;
-                          });
-                        },
+                      child: ACTextFormField(
+                        controller: UserManagerCubit.passwordController,
+                        hintText: textLocalization.password,
+                        isPasswordField: isShowPassword,
+                        suffixIcon: InkWell(
+                          onTap: () {
+                            setState(() {
+                              isShowPassword =! isShowPassword;
+                            });
+                          },
+                          child: Icon(
+                              isShowPassword ? IconManager.visibility : IconManager.visibilityOff
+                          ),
+                        ),
                       ),
                     ),
-                    Expanded(
-                      flex: 2,
-                      child: Column(
-                        mainAxisAlignment: MainAxisAlignment.center,
-                        children: [
-                          Container(
-                            width: AppSize.s60,
-                            height: AppSize.s60,
-                            decoration: BoxDecoration(
-                                shape: BoxShape.circle,
-                                color: Theme.of(context).colorScheme.secondaryContainer
-                            ),
-                            child: const Center(
-                              child: Icon(
-                                  IconManager.add
-                              ),
-                            ),
-                          ),
-                          Text(textLocalization.addPhoto, style: Theme.of(context).textTheme.bodyMedium,),
-                        ],
-                      ),
-                    )
                   ],
                 ),
                 Space.h16,
-                ACElevatedButton(
-                  onTap: () {
-                    context.read<UserManagerCubit>().addUsers(context);
-                    context.pushNamed(UserManagerPage.userManagerPageName);
-                  },
-                  title: textLocalization.addUser,
+                Row(
+                  children: [
+                    Expanded(
+                      child: ACTextFormField(
+                        controller: UserManagerCubit.emailController,
+                        hintText: textLocalization.email,
+                      ),
+                    ),
+                    Space.w8,
+                    Expanded(
+                      child: Row(
+                        mainAxisAlignment: MainAxisAlignment.spaceAround,
+                        children: [
+                          Expanded(
+                            flex: 3,
+                            child: DropdownButton<String>(
+                              hint: Text(textLocalization.selectAnItem, style: Theme.of(context).textTheme.bodyMedium,),
+                              value: selectedKey,
+                              items: items.keys.map((String key) {
+                                return DropdownMenuItem<String>(
+                                  value: key,
+                                  child: Text(key),
+                                );
+                              }).toList(),
+                              onChanged: (String? newKey) {
+                                setState(() {
+                                  selectedKey = newKey;
+                                });
+                              },
+                            ),
+                          ),
+                          Expanded(
+                            flex: 2,
+                            child: Column(
+                              mainAxisAlignment: MainAxisAlignment.center,
+                              children: [
+                                Container(
+                                  width: AppSize.s60,
+                                  height: AppSize.s60,
+                                  decoration: BoxDecoration(
+                                      shape: BoxShape.circle,
+                                      color: Theme.of(context).colorScheme.secondaryContainer
+                                  ),
+                                  child: const Center(
+                                    child: Icon(
+                                        IconManager.add
+                                    ),
+                                  ),
+                                ),
+                                Text(textLocalization.addPhoto, style: Theme.of(context).textTheme.bodyMedium,),
+                              ],
+                            ),
+                          )
+                        ],
+                      ),
+                    ),
+                  ],
+                ),
+                
+                Space.h16,
+                Row(
+                  children: [
+                    const Expanded(
+                      flex: 3,
+                      child: SizedBox(),
+                    ),
+                    Expanded(
+                      flex: 1,
+                      child: ACElevatedButton(
+                        onTap: () {
+                          context.read<UserManagerCubit>().addUsers(context);
+                          context.pushNamed(UserManagerPage.userManagerPageName);
+                        },
+                        title: textLocalization.addUser,
+                      ),
+                    ),
+                  ],
                 ),
               ],
             );

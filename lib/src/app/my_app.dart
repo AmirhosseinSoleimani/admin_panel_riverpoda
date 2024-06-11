@@ -30,6 +30,7 @@ class MyApp extends StatelessWidget {
               title: 'Panel Admin',
               theme: _lightTheme.materialThemeData,
               darkTheme: _darkTheme.materialThemeData,
+              themeMode: context.watch<ThemeCubit>().isDark? ThemeMode.dark : ThemeMode.light,
               localizationsDelegates: const [
                 AppLocalizations.delegate,
                 GlobalMaterialLocalizations.delegate,

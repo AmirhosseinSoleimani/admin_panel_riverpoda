@@ -24,6 +24,7 @@ class AppPadding{
   static const double p18 = 18.0;
   static const double p20 = 20.0;
   static const double p24 = 24.0;
+  static const double p32 = 32.0;
 }
 
 class AppSize{
@@ -45,6 +46,7 @@ class AppSize{
   static const double s48 = 48.0;
   static const double s60 = 60.0;
   static const double s64 = 64.0;
+  static const double s80 = 80.0;
   static const double s120 = 120.0;
   static const double s150 = 150.0;
 }

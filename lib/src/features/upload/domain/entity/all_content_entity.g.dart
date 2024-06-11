@@ -16,6 +16,10 @@ AllContentEntity _$AllContentEntityFromJson(Map<String, dynamic> json) =>
       authorId: (json['author_id'] as num?)?.toInt(),
       authorName: json['author_name'] as String?,
       createdAt: json['CreatedAt'] as String?,
+      imageUrl: json['image_url'] as String?,
+      viewCount: (json['view_count'] as num?)?.toInt(),
+      duration: json['duration'] as String?,
+      isLive: json['is_live'] as bool?,
     );
 
 Map<String, dynamic> _$AllContentEntityToJson(AllContentEntity instance) =>
@@ -28,4 +32,8 @@ Map<String, dynamic> _$AllContentEntityToJson(AllContentEntity instance) =>
       'author_id': instance.authorId,
       'author_name': instance.authorName,
       'CreatedAt': instance.createdAt,
+      'image_url': instance.imageUrl,
+      'view_count': instance.viewCount,
+      'duration': instance.duration,
+      'is_live': instance.isLive,
     };

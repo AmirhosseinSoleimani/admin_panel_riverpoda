@@ -34,6 +34,8 @@ dependencies:
   video_player: ^2.8.6
   chewie: ^1.8.1
   provider: ^6.1.2
+  flutter_svg: ^2.0.10+1
+  cached_network_image: ^3.3.1
 
 dev_dependencies:
   flutter_test:
@@ -48,10 +50,9 @@ flutter:
   uses-material-design: true
   generate: true
 
-  # To add assets to your application, add an assets section, like this:
   assets:
     - assets/image/
-  #   - images/a_dot_ham.jpeg
+    - assets/svg/content_management/
 
   fonts:
     - family: "iransans_fa"

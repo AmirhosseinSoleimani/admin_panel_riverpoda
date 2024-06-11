@@ -1,6 +1,6 @@
 import 'package:admin_panel/src/features/upload/presentation/bloc/uplead_cubit.dart';
 import 'package:admin_panel/src/features/upload/presentation/bloc/upload_state.dart';
-import 'package:admin_panel/src/features/upload/presentation/pages/widgets/video_list/video_list_container.dart';
+import 'package:admin_panel/src/features/upload/presentation/pages/widgets/video_list/video_list_container/video_list_container.dart';
 import 'package:admin_panel/src/shared/resources/resources.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
@@ -38,17 +38,22 @@ class VideoList extends StatelessWidget {
                   width: AppSize.s20,
                 ),
                 Expanded(
-                    flex: 2,
+                  flex: 2,
+                  child: Center(
+                    child: Text(textLocalization.title, style: Theme.of(context).textTheme.displayMedium,),
+                  ),
+                ),
+                Expanded(
                     child: Center(
                         child: Text(textLocalization.title, style: Theme.of(context).textTheme.displayMedium,),
                     ),
                 ),
                 Expanded(
-                    flex: 3,
+                    flex: 2,
                     child: Center(child: Text(textLocalization.description, style: Theme.of(context).textTheme.displayMedium,)),
                 ),
                 Expanded(child: Center(child: Text(textLocalization.publisher, style: Theme.of(context).textTheme.displayMedium,))),
-                Expanded(child: Center(child: Text(textLocalization.publisherDate, style: Theme.of(context).textTheme.displayMedium,))),
+                Expanded(child: Center(child: Text(textLocalization.date, style: Theme.of(context).textTheme.displayMedium,))),
                 const SizedBox(
                   width: AppSize.s48,
                 ),
@@ -56,31 +61,35 @@ class VideoList extends StatelessWidget {
             ),
           ),
           Space.h12,
-          BlocBuilder<UploadCubit, UploadState>(
-            builder: (BuildContext context, state) {
-              return state.whenOrNull(
-                loading: () => const ACLoading(),
-                success: () {
-                  return SizedBox(
-                    width: double.infinity,
-                    height: MediaQuery.of(context).size.height * 0.4,
-                    child: ListView.builder(
-                      itemCount: context.read<UploadCubit>().listAllContents.length,
-                      itemBuilder: (BuildContext context, int index) {
-                        return VideoListContainer(
-                            titleVideo: context.read<UploadCubit>().listAllContents[index].title!,
-                            descriptionVideo: context.read<UploadCubit>().listAllContents[index].title!,
-                            publisherVideo: context.read<UploadCubit>().listAllContents[index].authorName!,
-                            datePublishVideo: context.read<UploadCubit>().listAllContents[index].createdAt!,
-                            index: index,
-                            url: context.read<UploadCubit>().listAllContents[index].url!,
-                          id: context.read<UploadCubit>().listAllContents[index].id!.toString(),);
-                      },
-                    ),
-                  );
-                }
-              ) ?? const SizedBox();
-            },
+          Expanded(
+            child: BlocBuilder<UploadCubit, UploadState>(
+              builder: (BuildContext context, state) {
+                return state.whenOrNull(
+                  loading: () => const ACLoading(),
+                  success: () {
+                    return SizedBox(
+                      width: double.infinity,
+                      height: MediaQuery.of(context).size.height * 0.4,
+                      child: ListView.builder(
+                        itemCount: context.read<UploadCubit>().listAllContents.length,
+                        itemBuilder: (BuildContext context, int index) {
+                          return VideoListContainer(
+                              titleVideo: context.read<UploadCubit>().listAllContents[index].title ?? '-',
+                              descriptionVideo: context.read<UploadCubit>().listAllContents[index].description ?? '',
+                              publisherVideo: context.read<UploadCubit>().listAllContents[index].authorName ?? '-',
+                              datePublishVideo: context.read<UploadCubit>().listAllContents[index].createdAt ?? '-',
+                              index: index + 1,
+                              url: context.read<UploadCubit>().listAllContents[index].url!,
+                              id: context.read<UploadCubit>().listAllContents[index].id!.toString(),
+                              imageUrl: context.read<UploadCubit>().listAllContents[index].imageUrl ?? '',
+                          );
+                        },
+                      ),
+                    );
+                  }
+                ) ?? const SizedBox();
+              },
+            ),
           )
         ],
       ),

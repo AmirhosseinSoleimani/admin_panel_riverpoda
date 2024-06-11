@@ -1,5 +1,5 @@
 import 'package:admin_panel/src/features/features.dart';
-import 'package:admin_panel/src/features/upload/presentation/pages/widgets/video_list/edit_video/edit_video.dart';
+import 'package:admin_panel/src/features/upload/presentation/pages/widgets/video_list/video_content/video_content.dart';
 import 'package:admin_panel/src/features/user_manager/presentation/pages/widgets/add_user/add_user.dart';
 import 'package:admin_panel/src/features/user_manager/presentation/pages/widgets/edit_user/edit_user.dart';
 import 'package:flutter/material.dart';
@@ -44,7 +44,7 @@ class Routes {
                 transitionDuration: Duration.zero,
                 transitionsBuilder:
                     (context, animation, secondaryAnimation, child) => child,
-                child: const EditVideo(),
+                child: const VideoContent(),
               );
             }),
         GoRoute(

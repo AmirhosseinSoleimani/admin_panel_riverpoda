@@ -7,8 +7,12 @@ import 'package:admin_panel/src/features/user_manager/domain/repository/get_all_
 import 'package:admin_panel/src/features/user_manager/domain/repository/put_user_repository.dart';
 import 'package:admin_panel/src/features/user_manager/presentation/bloc/user_manager_state.dart';
 import 'package:flutter/cupertino.dart';
+import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
+import 'package:go_router/go_router.dart';
 import 'package:injectable/injectable.dart';
+
+import '../../../../shared/ui_kits/ac_inkwell_button/ac_inkwell_button.dart';
 
 @injectable
 class UserManagerCubit extends Cubit<UserManagerState> {
@@ -27,7 +31,7 @@ class UserManagerCubit extends Cubit<UserManagerState> {
   static String id = '';
 
 
-
+  static bool isDeleted = false;
 
   List<AllUsersEntity> listAllUsers = [];
 

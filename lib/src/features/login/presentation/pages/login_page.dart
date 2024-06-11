@@ -44,14 +44,24 @@ class LoginPage extends StatelessWidget {
   }
   @override
   Widget build(BuildContext context) {
-    return FlutterLogin(
-      title: 'ACADEMY Panel',
-      onLogin: _authUser,
-      onSignup: _signupUser,
-      onSubmitAnimationCompleted: () {
-        context.goNamed(HomePage.homePageName);
-      },
-      onRecoverPassword: _recoverPassword,
+    return Scaffold(
+      backgroundColor: Theme.of(context).colorScheme.onPrimary,
+      body: FlutterLogin(
+        theme: LoginTheme(
+          primaryColor: Theme.of(context).colorScheme.primary,
+          pageColorLight: Theme.of(context).colorScheme.onPrimary,
+          cardTheme: CardTheme(
+            color: Theme.of(context).colorScheme.surface
+          )
+        ),
+        title: 'ACADEMY Panel',
+        onLogin: _authUser,
+        onSignup: _signupUser,
+        onSubmitAnimationCompleted: () {
+          context.goNamed(HomePage.homePageName);
+        },
+        onRecoverPassword: _recoverPassword,
+      ),
     );
   }
 }
