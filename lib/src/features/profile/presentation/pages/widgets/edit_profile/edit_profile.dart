@@ -60,69 +60,76 @@ class _EditProfileState extends State<EditProfile> {
           builder: (BuildContext context) {
             return StatefulBuilder(
               builder: (context, setState) {
-                return AlertDialog(
-                  content: Column(
-                    children: [
-                      Row(
+                return Dialog(
+                  child: SizedBox(
+                    width: MediaQuery.of(context).size.width * 0.4,
+                    height: MediaQuery.of(context).size.height * 0.4,
+                    child: Padding(
+                      padding: const EdgeInsets.symmetric(horizontal: AppPadding.p16, vertical: AppPadding.p12),
+                      child: Column(
                         children: [
-                          Expanded(
-                              child: ACTextFormField(controller: firstNameController, hintText: textLocalization.firstName),
+                          Row(
+                            children: [
+                              Expanded(
+                                child: ACTextFormField(controller: firstNameController, hintText: textLocalization.firstName),
+                              ),
+                              Space.w16,
+                              Expanded(child: ACTextFormField(controller: middleNameController, hintText: textLocalization.middleName)),
+                            ],
                           ),
-                          Space.w16,
-                          Expanded(child: ACTextFormField(controller: middleNameController, hintText: textLocalization.middleName)),
-                        ],
-                      ),
-                      Space.h16,
-                      Row(
-                        mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                        children: [
-                          Expanded(child: ACTextFormField(controller: lastNameController, hintText: textLocalization.lastName)),
-                          Space.w16,
-                          Expanded(child: ACTextFormField(controller: emailController, hintText: textLocalization.email)),
-                        ],
-                      ),
-                      Space.h16,
-                      Row(
-                        mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                        children: [
-                          Expanded(child: ACTextFormField(controller: phoneNumberController, hintText: textLocalization.mobile)),
-                          Space.w16,
-                          Expanded(child: ACTextFormField(controller: birthdayController, hintText: textLocalization.birthday)),
-                        ],
-                      ),
-                      Space.h16,
-                      Row(
-                        mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                        children: [
-                          Expanded(
-                            child: DropdownButton<String>(
-                              hint: Text(textLocalization.selectAnItem, style: Theme.of(context).textTheme.bodyMedium,),
-                              value: selectedKey,
-                              items: items.keys.map((String key) {
-                                return DropdownMenuItem<String>(
-                                  value: key,
-                                  child: Text(key),
-                                );
-                              }).toList(),
-                              onChanged: (String? newKey) {
-                                setState(() {
-                                  selectedKey = newKey;
-                                });
-                              },
-                            ),
+                          Space.h16,
+                          Row(
+                            mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                            children: [
+                              Expanded(child: ACTextFormField(controller: lastNameController, hintText: textLocalization.lastName)),
+                              Space.w16,
+                              Expanded(child: ACTextFormField(controller: emailController, hintText: textLocalization.email)),
+                            ],
                           ),
-                          Space.w16,
-                          Expanded(child: ACTextFormField(controller: jobController, hintText: textLocalization.job)),
+                          Space.h16,
+                          Row(
+                            mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                            children: [
+                              Expanded(child: ACTextFormField(controller: phoneNumberController, hintText: textLocalization.mobile)),
+                              Space.w16,
+                              Expanded(child: ACTextFormField(controller: birthdayController, hintText: textLocalization.birthday)),
+                            ],
+                          ),
+                          Space.h16,
+                          Row(
+                            mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                            children: [
+                              Expanded(
+                                child: DropdownButton<String>(
+                                  hint: Text(textLocalization.selectAnItem, style: Theme.of(context).textTheme.bodyMedium,),
+                                  value: selectedKey,
+                                  items: items.keys.map((String key) {
+                                    return DropdownMenuItem<String>(
+                                      value: key,
+                                      child: Text(key),
+                                    );
+                                  }).toList(),
+                                  onChanged: (String? newKey) {
+                                    setState(() {
+                                      selectedKey = newKey;
+                                    });
+                                  },
+                                ),
+                              ),
+                              Space.w16,
+                              Expanded(child: ACTextFormField(controller: jobController, hintText: textLocalization.job)),
+                            ],
+                          ),
+                          const Spacer(),
+                          ACElevatedButton(
+                            onTap: () {
+                              context.pop();
+                            },
+                            title: textLocalization.save,
+                          )
                         ],
                       ),
-                      const Spacer(),
-                      ACElevatedButton(
-                        onTap: () {
-                          context.pop();
-                        },
-                        title: textLocalization.save,
-                      )
-                    ],
+                    ),
                   ),
                 );
               },
